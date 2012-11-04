@@ -5,7 +5,7 @@
 * 模块一键安装 - 告别手动下载模块，一个命令行即可安装所有模块
 * 模块依赖管理 - 告别人肉管理模块依赖，解放双方
 * AMD、CMD模块打包 - 集成requirejs、seajs模块加载器
-* CSS 模块打包 - CSSS @import 模块合并打包
+* CSS 模块打包 - CSS @import 模块合并打包
 * 压缩合并一体化 - HTML CSS Javascript 压缩合并 so easy
 * 源码智能化压缩 - 零配置自动识别源码是否被压缩过，避免二次压缩带来的问题
 * 图片自动无损压缩 - 零配置自动识别图片，支持 PNG、JPG、GIF 图片压缩
@@ -76,20 +76,20 @@ $ mod install backbone
 ## 内置任务
 ```
   help            显示帮助
-  search          搜索可用的模块
-  install         安装指定的模块
-  upgrade         升级模块至最新的版本
-  uninstall       从模块目录下移除指定的模块
+  search          模块搜索
+  install         模块安装
+  upgrade         模块升级
+  uninstall       模块移除
   compile         模块编译与打包
   clean           清除未使用的模块
-  ls              列出已安装的模块
+  ls              模块已安装列表
   clear-cache     清除本地模块缓存
-  publish         发布模块至服务器仓库
-  unpublish       移除远程仓库中指定的模块
+  publish         模块发布至远程仓库
+  unpublish       移除远程仓库的模块
   link            本地创建连接至开发中的模块
-  pack            创建 tar.gz 格式压缩包
+  pack            创建压缩包
   rebuild         重新生成 模块加载器 与 配置选项
-  create          通过样板创建项目
+  
   min             压缩与优化CSS、JS、HTML、Image文件
   lint            对CSS、JS、HTML文件进行规范性检测
   opti-image      Image 无损压缩
@@ -100,11 +100,18 @@ $ mod install backbone
   uglifyjs        JS 压缩
   htmlminifier    HTML 压缩
   datauri         图片 URL 转换成 Datauri 格式
-  concat          文本文件合并
+  create          通过样板创建项目
+  init            通过样板创建项目
+  target          任务预处理
   rev             文件 MD5 计算
+
   replace         文本替换
-  bom-strip       文件 BOM 清除
-  deploy          部署
+  cat             文本文件合并
+  cp              文件复制
+  mkdir           新建目录
+  mv              移动文件或目录
+  rm              移除
+  fmt             文件格式化
 ```
 
 ### 命令行参数
@@ -112,11 +119,24 @@ $ mod install backbone
 如可分别通过 模块名, Git地址, URL地址, 本地地址,package.json配置 安装模块：
 
 ```
+// 安装最新的版本
 mod install jquery
-mod install git://github.com/jquery/jquery.git
+// 安装指定的版本
+mod install jquery@1.8.2
+// 从远程 tarball 地址安装
+mod install https://github.com/jquery/jquery/tarball/1.8.2
+// 从本地 tarball 路径安装
+mod install ./path/to/jquery-jquery-1.8.2-0-g6e99558.tar.gz
+// 从单独的模块文件安装
 mod install http://code.jquery.com/jquery-1.8.2.js
-mod install ./modules/jquery
-
+// 从本地目录安装
+mod install ./path/to/jquery
+// 从 git 库安装
+mod install git://github.com/jquery/jquery.git
+// 从 Github 库安装的简写方式: gh:user/repository/branch, branch为可选，默认为master
+mod install gh:jquery/jquery
+// 从 package.json 配置安装
+mod install ./package.json
 {
     "name": "your app name"
   , "version": "0.0.1"
@@ -124,27 +144,28 @@ mod install ./modules/jquery
       "jquery": ">=1.8.0"
   }
 }
-
-mod install .
 ```
 
 ### package.json 配置
 
-Mod package.json 配置是对NPM配置的扩展，只引入了 mod 配置项，避免配置规则的冲突：
+Mod package.json 配置是对NPM配置的扩展，只引入了 mod 顶级配置项，避免配置规则的冲突：
 ```
 {
    "name": "playground",
    "version": "1.0.0",
    "mod": {
       "loader" : "seajs"
-      ,"main" : "./modulejs"
+      ,"main" : "./src/odulejs"
       ,"repositories" : [
             "http://mycorporation.com:5984/repository/"
            ,"http://modjs.org/repository"
       ]
-      ,"package_dir : "vendor"
+      // 模块目录，默认为 modules
+      ,"modules" : "vendor"
+
+      // 配置安装插件对应的名称，不配置则按约定名称关系查找，如 reload 对应 mod-reload 模块
       ,"plugins": {
-          "reload" : "mod-reload"
+          "reload" : "mod-reloadx"
           ,"ghpages-deploy" : "mod-ghpages-deploy"
       }
 
@@ -154,21 +175,44 @@ Mod package.json 配置是对NPM配置的扩展，只引入了 mod 配置项，�
            ,"underscore": ">=0.0.2"
       }
 
+    // task 配置
+     ,"configs":{
+
+      }
+
       // task 是单个任务的抽象
       ,"tasks": {
+            "min" : {
+                "source": "./test/cat/ab.js",
+                "dest": "./test/min/ab.js"
+            },
+
+            "lint" : {
+                "source": "./test/cat/ab.js"
+            },
+
+            "mkdir": {
+               "target" : "./test/mkdir/"
+            },
+
+            "cp":{
+               "source" : "./test/min/ab.js",
+                "dest" : "./test/mkdir/ab.js"
+            },
+
+            "cat": {
+                "source":["./test/cat/a.js","./test/cat/b.js"],
+                "dest":"./test/cat/ab.js"
+            }
 
       }
 
       // target 是多个任务协同的抽象
       ,"targets":{
-
+          "all" : "mkdir cat lint min cp"
       }
    }
 
-   , "license": {
-         "type": "MIT",
-         "url": "https://github.com/modulejs/playground/raw/master/LICENSE"
-   },
 }
 ```
 
@@ -201,7 +245,7 @@ exports.repositories = [
 ];
 
 // 修改默认的 ./modules 目录
-exports.package_dir = 'vendor';
+exports.modules = 'vendor';
 
 // modjs 任务插件配置
 exports.plugins = {
@@ -216,22 +260,31 @@ exports.proxyExcludeHost = "*.oa.com"
 
 ### 版本规则
 
-版本号主体由 3 组数字组成的 Major.minor.patch 格式，并且约定开发中的模块版本号应加上 -dev 后缀：
+版本号主体由 3 组数字组成的 <主版本号>.<次版本号>.<补丁版本号> 格式，并且约定开发中的模块版本号应加上 -dev 后缀：
+
 ```
 1.0.0
 0.1.1-dev
 ```
+
+* 进行不向下兼容的修改时增长主版本号
+* 增加API但保持向下兼容时增长次版本号
+* Bug修复但不影响API时增长补丁版本号
+
+更多语义版本内容请访问 http://semver.org/
+
+
 ### 模块依赖版本条件
 ```
-latest
->1.2.3
-<1.2.3
-1.2.3 - 2.3.4 := >=1.2.3 <=2.3.4
-~1.2.3 := >=1.2.3 <1.3.0
-~1.2 := >=1.2.0 <2.0.0
-~1 := >=1.0.0 <2.0.0
-1.2.x := >=1.2.0 <1.3.0
-1.x := >=1.0.0 <2.0.0
+latest        :=    latest
+>1.2.3        :=    >1.2.3
+<1.2.3        :=    <1.2.3
+~1.2.3        :=    >=1.2.3 <1.3.0
+~1.2          :=    >=1.2.0 <2.0.0
+~1            :=    >=1.0.0 <2.0.0
+1.2.x         :=    >=1.2.0 <1.3.0
+1.x           :=    >=1.0.0 <2.0.0
+1.2.3 - 2.3.4 :=    >=1.2.3 <=2.3.4
 ```
 
 ### 文件匹配规则
@@ -261,17 +314,57 @@ a{b,c{d,e}}x{y,z}.js  => abxy.js abxz.js  acdxy.js acdxz.js acexy.js acexz.js
 
 ### 开发插件
 ```
-// mod-reload.js
-exports.run = function (args, taskConfig, rc, tasks, configs) {
+exports.summary = '小白爱插件';
 
-}
+exports.usage = '<source> [options]';
+
+exports.options = {
+    "d" : {
+        alias : 'dest'
+        ,default : '<source>'
+        ,describe : 'destination file'
+    },
+
+    "c" : {
+        alias : 'charset'
+        ,default : 'utf-8'
+        ,describe : 'file encoding type'
+    }
+};
+
+exports.run = function (opt, config, callback) {
+    var target = opt.target;
+    // ...
+};
 ```
 
-* args: 命令行参数
-* taskConfig： 当前任务在 package.json 中的配置
-* rc: .modrc 文件配置
-* tasks: 任务索引，通过 tasks.min.run() 执行指定任务
-* configs： package.json 文件配置
+* opt: 命令行参数
+* config： 当前任务在 package.json 中的配置
+* callback： 任务回调
+
+### 插件API
+```
+exports.taskName
+exports.loadTask
+exports.runTask
+
+exports.getArgs
+exports.getGlobalRC
+exports.getPackageJSON
+
+exports.log
+exports.error
+exports.warn
+exports.debug
+
+exports.file
+exports.utils
+
+exports._
+exports.async
+exports.request
+exports.prompt
+```
 
 ### 发布插件
 
@@ -296,7 +389,17 @@ Mod 致力于模块化前端开发模式，简化前端构建的繁琐流程，�
 
 Mod 是来自腾讯的开源项目，目前由腾讯的前端工程师在维护与使用，也诚邀有梦想的您可以加入我们一起共同筑造。
 
-## 感谢
+## Issues
+
+发现bug了吗，亲？ 请移步 Github: https://github.com/modulejs/modjs/issues
+
+## Authors
+
+* 元彦
+    * http://github.com/yuanyan
+    * http://weibo.com/caoyuanyan
+
+## Thanks
 
 感谢 modjs 依赖的开源项目：
 
