@@ -56,7 +56,7 @@ Open a [new issue](https://github.com/modulejs/modjs/issues/new).
 
 ## About
 
-Mod is an open-source project by [Tencent](http://tencent.com) which builds on top of [Node.js](https://nodejs.org).
+Mod is an open-source project by [Tencent](http://www.tencent.com/en-us/) which builds on top of [Node.js](https://nodejs.org).
 We utilize a number of useful open-source solutions including:
 
 * UglifyJS
