@@ -12,7 +12,7 @@ Mod is installed using [Node](http://nodejs.org/) and [NPM](http://npmjs.org/)(N
 npm install -g modjs
 ```
 
-## Built-in tasks
+## Built-in Tasks
 
 Mod supports a powerful set of high-level commands:
 
@@ -40,7 +40,7 @@ mod update jquery                 # Update to latest version
 mod uninstall jquery              # Uninstall jquery package
 ```
 
-## Custom tasks
+## Custom Tasks
 
 In addition to the built-in tasks, you can create your own tasks.
 
@@ -62,8 +62,8 @@ We utilize a number of useful open-source solutions including:
 * UglifyJS
 * JSHint
 * CleanCSS
-* HTMLMinifiler
 * CSSLint
+* HTMLMinifiler
 * Seajs
 * Requirejs
 * Twitter Bootstrap
