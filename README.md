@@ -6,7 +6,7 @@ Mod is a task-based build tool, it help developers quickly build beautiful web a
 
 ## Installation
 
-Mod is installed using [Node](http://nodejs.org/) and [NPM](http://npmjs.org/)(Node Package Manager)
+Mod is installed using [NPM](http://npmjs.org/)(Node Package Manager)
 
 ```shell
 npm install -g modjs
