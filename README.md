@@ -6,7 +6,7 @@ Mod is a task-based build tool, it help developers quickly build beautiful web a
 
 ## Installation
 
-Mod is installed using [NPM](http://npmjs.org/)(Node Package Manager)
+Mod is installed using [NPM(Node Package Manager)](http://npmjs.org/)
 
 ```shell
 npm install -g modjs
@@ -49,9 +49,9 @@ In addition to the built-in tasks, you can create your own tasks.
 Mod support Windows , OS X , Linux.
 
 
-## Issue submission
+## Issue Submission
 
-Open a [new issue](https://github.com/modulejs/modjs/issues/new).
+Submit a [new issue](https://github.com/modulejs/modjs/issues/new).
 
 
 ## About
