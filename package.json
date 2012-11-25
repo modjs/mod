@@ -1,0 +1,89 @@
+{
+    "name": "modjs",
+    "version": "0.1.1",
+    "description": "modern build tool for web",
+    "maintainers": [
+        {"name": "yuanyan", "web": "https://github.com/yuanyan"}
+    ],
+    "dependencies": {
+        "tar": "~0.1.13",
+        "fstream-ignore": "~0.0.5",
+        "fstream": "~0.1.18",
+        "mkdirp": "~0.3.4",
+        "inherits": "~1.0.0",
+        "async": "~0.1.21",
+        "mime": "~1.2.4",
+        "underscore": "~1.3.3",
+        "prompt": "~0.2.8",
+        "rimraf": "~2.0.1",
+        "semver": "~1.0.9",
+        "ncp": "~0.2.6",
+        "requirejs": "~2.0.6",
+        "almond": "~0.1.4",
+        "seajs": "~1.2.1",
+        "seajs-build": "*",
+        "request": "~2.9.203",
+        "minimatch": "~0.2.9",
+        "clean-css": "~0.6.0",
+        "uglify-js": "~1.3.4",
+        "esprima": "~1.0.2",
+        "html-minifier": "~0.4.5",
+        "jshint": "~0.7.3",
+        "csslint": "~0.9.8",
+        "connect": "*",
+        "colors": "~0.6.0",
+        "optimist": "~0.3.5"
+    },
+    "devDependencies": {
+        "node-inspector": "0.1.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/modulejs/modjs.git"
+    },
+    "engines": {"node": ">= 0.6.x"},
+    "bugs": {"url": "http://github.com/modulejs/modjs/issues"},
+    "bin": {
+        "mod": "./bin/mod.js"
+    },
+
+    "main":"index.js",
+    "loader" : "seajs",
+    "modules" : "modules",
+
+    "tasks": {
+        "min" : {
+            "source": "./test/cat/ab.js",
+            "dest": "./test/min/ab.js"
+        },
+
+        "lint" : {
+            "source": "./test/cat/ab.js"
+        },
+
+        "mkdir": {
+           "target" : "./test/mkdir/"
+        },
+
+        "cp":{
+           "source" : "./test/min/ab.js",
+            "dest" : "./test/mkdir/ab.js"
+        },
+
+        "cat": {
+            "source":["./test/cat/a.js","./test/cat/b.js"],
+            "dest":"./test/cat/ab.js"
+        },
+
+       "watch" : {
+            "source": ["*"],
+            "tasks": ""
+       }
+    },
+
+    "targets" : {
+        "all" : "mkdir cat lint min cp"
+    }
+
+
+}
