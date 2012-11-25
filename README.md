@@ -1,10 +1,10 @@
-# Mod [![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
+# Mod - Modern build tool for web[![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
 
 ## What is Mod?
 
 Mod is a task-based build tool, it help developers quickly build beautiful web applications.
 
-## Installation
+## Npm Installation
 
 Mod is installed using [NPM(Node Package Manager)](http://npmjs.org/)
 
@@ -17,11 +17,31 @@ npm install -g modjs
 Mod supports a powerful set of high-level commands:
 
 ```shell
-mod init      # Initialize and scaffold a new project
-mod mini      # Minify js css html image files
+                          __   _
+   ____ ___   ____   ____/ /  (_)_____
+  / __ `__ \ / __ \ / __  /  / // ___/
+ / / / / / // /_/ // /_/ /  / /(__  )
+/_/ /_/ /_/ \____/ \__,_/__/ //____/
+                        /___/
+
+Usage: mod COMMAND [ARGS]
+
+mod cat       # Concatenate the content of files
+mod cp        # Copy one or more files to another location
+mod mkdir     # Create new folder
+mod mv        # Move or rename files or directories
+mod rm        # Remove files
+mod fmt       # Formatting tools.
+
+mod min       # Minify js css html image files
 mod lint      # Validate js css files
-mod compile   # Build an optimized version of your app, ready to deploy
-mod server    # Launch a preview server which will begin watching for changes
+mod build     # Build an optimized version of your app, ready to deploy
+
+mod create    # Generate a project skeleton include project directory
+mod init      # Generate a project skeleton in target directory
+mod server    # Start a static web server
+mod pack      # Create a tarball from a module
+mod hash      # Rename file with it hash value
 
 mod install   # Install a package from the client-side package registry
 mod uninstall # Uninstall the package
