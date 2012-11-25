@@ -2,6 +2,7 @@
     "name": "modjs",
     "version": "0.1.1",
     "description": "modern build tool for web",
+    "keywords": ["minify", "lint", "build", "server", "tool"],
     "maintainers": [
         {"name": "yuanyan", "web": "https://github.com/yuanyan"}
     ],
@@ -46,11 +47,11 @@
     "bin": {
         "mod": "./bin/mod.js"
     },
-
+    "preferGlobal": true,
+	
     "main":"index.js",
     "loader" : "seajs",
     "modules" : "modules",
-
     "tasks": {
         "min" : {
             "source": "./test/cat/ab.js",
@@ -74,7 +75,6 @@
             "source":["./test/cat/a.js","./test/cat/b.js"],
             "dest":"./test/cat/ab.js"
         },
-
        "watch" : {
             "source": ["*"],
             "tasks": ""
@@ -84,6 +84,5 @@
     "targets" : {
         "all" : "mkdir cat lint min cp"
     }
-
 
 }
