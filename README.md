@@ -46,7 +46,7 @@ In addition to the built-in tasks, you can create your own tasks.
 
 ## Platform Support
 
-Mod support Windows , OS X , Linux.
+Mod support Windows, OS X, Linux.
 
 
 ## Issue Submission
