@@ -1,8 +1,16 @@
-# Mod - Modern build tool for web[![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
+# Mod - Modern build tool for web [![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
 
 ## What is Mod?
 
 Mod is a task-based build tool, it help developers quickly build beautiful web applications.
+
+## Why another one?
+
+* more built-in tasks
+* more simplicity of use
+* configuration less, do more, even zero
+* json format configuration support
+* business background, community support
 
 ## Npm Installation
 
