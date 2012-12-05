@@ -2,15 +2,34 @@
 
 ## What is Mod?
 
-Mod is a task-based build tool, it help developers quickly build beautiful web applications.
+Mod is a task-based build tool, it help developers quickly build robust and high-performance web applications.
 
 ## Why another one?
 
-* more built-in tasks
-* more simplicity of use
-* configuration less, do more, even zero
-* json format configuration support
-* business background, community support
+* More built-in tasks
+* More simplicity to use
+* Configuration less, do more, even zero
+* Business background, community support
+
+## Features
+
+* Task-based builds
+* Minify everything: JS, CSS, HTML, Images
+* Source linting: JS, CSS
+* Modular JS for the web: AMD, CMD(will support CommonJS and LMD soon)
+* CSS import file combination
+* HTML conditional comments for target build
+* Source stripping, automatically remove debugging code
+* Common action: cat, rm, mv, mkdir, cp, hash, pack
+* File watcher, trigger custom tasks
+* Live Browser Reloads, instantly see changes in your browser
+* Image Optimization, reduce JPEG, PNG and GIF file sizes
+* Package manager: install, uninstall, update, search, ls
+* Project boilerplate generate
+* Built-in Web Server
+* Github as one default public registry
+* Extensible, easily write plugins
+* Works on most platforms: Windows, Linux, Mac OS X, Unix...
 
 ## Npm Installation
 
@@ -39,7 +58,7 @@ mod cp        # Copy one or more files to another location
 mod mkdir     # Create new folder
 mod mv        # Move or rename files or directories
 mod rm        # Remove files
-mod fmt       # Formatting tools.
+mod strip     # Source stripping
 
 mod min       # Minify js css html image files
 mod lint      # Validate js css files
@@ -48,7 +67,7 @@ mod build     # Build an optimized version of your app, ready to deploy
 mod create    # Generate a project skeleton include project directory
 mod init      # Generate a project skeleton in target directory
 mod server    # Start a static web server
-mod pack      # Create a tarball from a module
+mod pack      # Create a tarball with target directory
 mod hash      # Rename file with it hash value
 
 mod install   # Install a package from the client-side package registry
@@ -68,9 +87,115 @@ mod update jquery                 # Update to latest version
 mod uninstall jquery              # Uninstall jquery package
 ```
 
+## Modfile
+
+Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：
+
+```js
+module.exports = {
+    tasks: {
+    },
+
+    targets: {
+    }
+};
+```
+
+## Compression Table
+
+```sh
+| Feature                  | Mod    | Grunt    | Yeoman      |
+|--------------------------+--------+----------+-------------|
+| Minifier                 | ✓     | ✓         | ✓          |
+| Linter                   | ✓     | ✓         | ✓          |
+| HTML Conditional Comments| ✓     | ✗         | ✗           |
+| CSS Combination          | ✓     | ✗         | ✗           |
+| Image Optimization       | ✓     | ✗         | ✓           |
+| Source stripper          | ✓     | ✗         | ✗           |
+| Modular JS               | ✓     | ✗         | ✗           |
+| File Watcher             | ✓     | ✓         | ✓          |
+| Live Browser Reloads     | ✓     | ✗         | ✓          |
+| Built-in WebServer       | ✓     | ✓         | ✓          |
+| Skeletons (Boilerplates) | ✓     | ✓         | ✓          |
+| Headless browser Testing | ✗     | ✓         | ✓          |
+| Package manager          | ✓     | ✗         | ✓          |
+| Private registry support | ✓     | ✗         | ✗           |
+| Extensible plugins       | ✓     | ✓         | ✓          |
+| Cross-platform           | ✓     | ✓         | ✗          |
+```
+
+## Package Defining
+
+You can create a `package.json` file in your project's root,
+for avoid conflict with NPM's 'dependencies', Mod use 'webDependencies' to specifying all of its dependencies.
+
+```json
+{
+  "name": "myProject",
+  "description": "myProject is myProject",
+  "version": "0.0.1",
+  "main": "./path/to/main.js",
+  "webDependencies": {
+    "jquery": "~1.8.2"
+  }
+}
+```
+
+Mod recognizes versions that follow the (semver)[http://semver.org/] specification.
+
 ## Custom Tasks
 
-In addition to the built-in tasks, you can create your own tasks.
+In addition to the built-in tasks, you can create your own tasks:
+
+### Plugin Example
+```js
+exports.summary = 'my task';
+
+exports.usage = '<source> [options]';
+
+exports.options = {
+    "d" : {
+        alias : 'dest'
+        ,default : '<source>'
+        ,describe : 'destination file'
+    },
+
+    "c" : {
+        alias : 'charset'
+        ,default : 'utf-8'
+        ,describe : 'file encoding type'
+    }
+};
+
+exports.run = function (options, callback) {
+    var target = options.target;
+    // ...
+};
+```
+
+### Plugin API
+```js
+exports.taskName
+exports.loadTask()
+exports.runTask()
+
+exports.getArgs()
+exports.getConfig()
+exports.getTaskConfig()
+
+exports.log()
+exports.error()
+exports.warn()
+exports.debug()
+
+exports.file
+exports.utils
+
+exports._
+exports.async
+exports.request
+exports.prompt
+```
 
 ## Platform Support
 
@@ -92,7 +217,6 @@ We utilize a number of useful open-source solutions including:
 * CleanCSS
 * CSSLint
 * HTMLMinifiler
-* Seajs
 * Requirejs
 * Twitter Bootstrap
 * HTML5 Boilerplate
