@@ -132,6 +132,12 @@ module.exports = {
 };
 ```
 
+Then run 'dist' target: 
+
+```sh
+mod dist
+```
+
 ## Compression Table
 
 ```sh
