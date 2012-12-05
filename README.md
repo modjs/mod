@@ -94,9 +94,40 @@ Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：
 ```js
 module.exports = {
     tasks: {
+        "rm" : {
+            "target": "./dist"
+        },
+        "min" : {
+            "img": {
+                "source": "./img/*.png",
+                "dest": "./dist/img"
+            },
+            "css": {
+                "source": "./dist/css/*.css",
+                "dest": "./dist/css"
+            },
+            "html": {
+                "source": "*.html",
+                "dest": "./dist/"
+            },
+            "js": {
+                "source": "./dist/js/*.js",
+                "dest": "./dist/js"
+            }
+        },
+        "cat": {
+            "source":["./dist/js/a.js","./dist/js/b.js"],
+            "dest":  "./dist/js/ab.js"
+        },
+
+        "watch" : {
+            "source": ["*"],
+            "tasks": ""
+        },
     },
 
     targets: {
+        dist: "rm min cat"
     }
 };
 ```
