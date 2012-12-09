@@ -33,16 +33,35 @@
 
 <h2>What is Mod?</h2>
 
-<p>Mod is a task-based build tool, it help developers quickly build beautiful web applications.</p>
+<p>Mod is a task-based build tool, it help developers quickly build robust and high-performance web applications.</p>
 
 <h2>Why another one?</h2>
 
 <ul>
-<li>more built-in tasks</li>
-<li>more simplicity of use</li>
-<li>configuration less, do more, even zero</li>
-<li>json format configuration support</li>
-<li>business background, community support</li>
+<li>More built-in tasks</li>
+<li>More simplicity to use</li>
+<li>Configuration less, do more, even zero</li>
+<li>Business background, community support</li>
+</ul><h2>Features</h2>
+
+<ul>
+<li>Task-based builds</li>
+<li>Minify everything: JS, CSS, HTML, Images</li>
+<li>Source linting: JS, CSS</li>
+<li>Modular JS for the web: AMD, CMD(will support CommonJS and LMD soon)</li>
+<li>CSS import file combination</li>
+<li>HTML conditional comments for target build</li>
+<li>Source stripping, automatically remove debugging code</li>
+<li>Common action: cat, rm, mv, mkdir, cp, hash, pack</li>
+<li>File watcher, trigger custom tasks</li>
+<li>Live Browser Reloads, instantly see changes in your browser</li>
+<li>Image Optimization, reduce JPEG, PNG and GIF file sizes</li>
+<li>Package manager: install, uninstall, update, search, ls</li>
+<li>Project boilerplate generate</li>
+<li>Built-in Web Server</li>
+<li>Github as one default public registry</li>
+<li>Extensible, easily write plugins</li>
+<li>Works on most platforms: Windows, Linux, Mac OS X, Unix...</li>
 </ul><h2>Npm Installation</h2>
 
 <p>Mod is installed using <a href="http://npmjs.org/">NPM(Node Package Manager)</a></p>
@@ -68,7 +87,7 @@ mod cp        <span class="c"># Copy one or more files to another location</span
 mod mkdir     <span class="c"># Create new folder</span>
 mod mv        <span class="c"># Move or rename files or directories</span>
 mod rm        <span class="c"># Remove files</span>
-mod fmt       <span class="c"># Formatting tools.</span>
+mod strip     <span class="c"># Source stripping</span>
 
 mod min       <span class="c"># Minify js css html image files</span>
 mod lint      <span class="c"># Validate js css files</span>
@@ -77,7 +96,7 @@ mod build     <span class="c"># Build an optimized version of your app, ready to
 mod create    <span class="c"># Generate a project skeleton include project directory</span>
 mod init      <span class="c"># Generate a project skeleton in target directory</span>
 mod server    <span class="c"># Start a static web server</span>
-mod pack      <span class="c"># Create a tarball from a module</span>
+mod pack      <span class="c"># Create a tarball with target directory</span>
 mod <span class="nb">hash</span>      <span class="c"># Rename file with it hash value</span>
 
 mod install   <span class="c"># Install a package from the client-side package registry</span>
@@ -96,9 +115,148 @@ mod update jquery                 <span class="c"># Update to latest version</sp
 mod uninstall jquery              <span class="c"># Uninstall jquery package</span>
 </pre></div>
 
+<h2>Modfile</h2>
+
+<p>Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：</p>
+
+<div class="highlight"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">tasks</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"rm"</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">"target"</span><span class="o">:</span> <span class="s2">"./dist"</span>
+        <span class="p">},</span>
+        <span class="s2">"min"</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">"img"</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"./img/*.png"</span><span class="p">,</span>
+                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/img"</span>
+            <span class="p">},</span>
+            <span class="s2">"css"</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"./dist/css/*.css"</span><span class="p">,</span>
+                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/css"</span>
+            <span class="p">},</span>
+            <span class="s2">"html"</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"*.html"</span><span class="p">,</span>
+                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/"</span>
+            <span class="p">},</span>
+            <span class="s2">"js"</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"./dist/js/*.js"</span><span class="p">,</span>
+                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/js"</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">"cat"</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">"source"</span><span class="o">:</span><span class="p">[</span><span class="s2">"./dist/js/a.js"</span><span class="p">,</span><span class="s2">"./dist/js/b.js"</span><span class="p">],</span>
+            <span class="s2">"dest"</span><span class="o">:</span>  <span class="s2">"./dist/js/ab.js"</span>
+        <span class="p">},</span>
+
+        <span class="s2">"watch"</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">"source"</span><span class="o">:</span> <span class="p">[</span><span class="s2">"*"</span><span class="p">],</span>
+            <span class="s2">"tasks"</span><span class="o">:</span> <span class="s2">""</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+
+    <span class="nx">targets</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">dist</span><span class="o">:</span> <span class="s2">"rm min cat"</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+
+<p>Then run 'dist' target: </p>
+
+<div class="highlight"><pre>mod dist
+</pre></div>
+
+<h2>Compression Table</h2>
+
+<div class="highlight"><pre>| Feature                  | Mod    | Grunt    | Yeoman      |
+|--------------------------+--------+----------+-------------|
+| Minifier                 | ✓     | ✓         | ✓          |
+| Linter                   | ✓     | ✓         | ✓          |
+| HTML Conditional Comments| ✓     | ✗         | ✗           |
+| CSS Combination          | ✓     | ✗         | ✗           |
+| Image Optimization       | ✓     | ✗         | ✓           |
+| Source stripper          | ✓     | ✗         | ✗           |
+| Modular JS               | ✓     | ✗         | ✗           |
+| File Watcher             | ✓     | ✓         | ✓          |
+| Live Browser Reloads     | ✓     | ✗         | ✓          |
+| Built-in WebServer       | ✓     | ✓         | ✓          |
+| Skeletons <span class="o">(</span>Boilerplates<span class="o">)</span> | ✓     | ✓         | ✓          |
+| Headless browser Testing | ✗     | ✓         | ✓          |
+| Package manager          | ✓     | ✗         | ✓          |
+| Private registry support | ✓     | ✗         | ✗           |
+| Extensible plugins       | ✓     | ✓         | ✓          |
+| Cross-platform           | ✓     | ✓         | ✗          |
+</pre></div>
+
+<h2>Package Defining</h2>
+
+<p>You can create a <code>package.json</code> file in your project's root,
+for avoid conflict with NPM's 'dependencies', Mod use 'webDependencies' to specifying all of its dependencies.</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"myProject"</span><span class="p">,</span>
+  <span class="nt">"description"</span><span class="p">:</span> <span class="s2">"myProject is myProject"</span><span class="p">,</span>
+  <span class="nt">"version"</span><span class="p">:</span> <span class="s2">"0.0.1"</span><span class="p">,</span>
+  <span class="nt">"main"</span><span class="p">:</span> <span class="s2">"./path/to/main.js"</span><span class="p">,</span>
+  <span class="nt">"webDependencies"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"jquery"</span><span class="p">:</span> <span class="s2">"~1.8.2"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Mod recognizes versions that follow the (semver)[<a href="http://semver.org/">http://semver.org/</a>] specification.</p>
+
 <h2>Custom Tasks</h2>
 
-<p>In addition to the built-in tasks, you can create your own tasks.</p>
+<p>In addition to the built-in tasks, you can create your own tasks:</p>
+
+<h3>Plugin Example</h3>
+
+<div class="highlight"><pre><span class="nx">exports</span><span class="p">.</span><span class="nx">summary</span> <span class="o">=</span> <span class="s1">'my task'</span><span class="p">;</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">usage</span> <span class="o">=</span> <span class="s1">'&lt;source&gt; [options]'</span><span class="p">;</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"d"</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="nx">alias</span> <span class="o">:</span> <span class="s1">'dest'</span>
+        <span class="p">,</span><span class="k">default</span> <span class="o">:</span> <span class="s1">'&lt;source&gt;'</span>
+        <span class="p">,</span><span class="nx">describe</span> <span class="o">:</span> <span class="s1">'destination file'</span>
+    <span class="p">},</span>
+
+    <span class="s2">"c"</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="nx">alias</span> <span class="o">:</span> <span class="s1">'charset'</span>
+        <span class="p">,</span><span class="k">default</span> <span class="o">:</span> <span class="s1">'utf-8'</span>
+        <span class="p">,</span><span class="nx">describe</span> <span class="o">:</span> <span class="s1">'file encoding type'</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
+    <span class="c1">// ...</span>
+<span class="p">};</span>
+</pre></div>
+
+<h3>Plugin API</h3>
+
+<div class="highlight"><pre><span class="nx">exports</span><span class="p">.</span><span class="nx">taskName</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">loadTask</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">runTask</span><span class="p">()</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">getArgs</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">getTaskConfig</span><span class="p">()</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">log</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">error</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">warn</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">debug</span><span class="p">()</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">file</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">utils</span>
+
+<span class="nx">exports</span><span class="p">.</span><span class="nx">_</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">async</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">request</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">prompt</span>
+</pre></div>
 
 <h2>Platform Support</h2>
 
@@ -119,7 +277,6 @@ We utilize a number of useful open-source solutions including:</p>
 <li>CleanCSS</li>
 <li>CSSLint</li>
 <li>HTMLMinifiler</li>
-<li>Seajs</li>
 <li>Requirejs</li>
 <li>Twitter Bootstrap</li>
 <li>HTML5 Boilerplate</li>
