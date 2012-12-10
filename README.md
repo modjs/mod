@@ -1,4 +1,4 @@
-# Mod - Modern build tool for web [![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
+# Mod - Modern project management and comprehension tool for the web [![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
 
 ## What is Mod?
 
@@ -16,7 +16,7 @@ Mod is a task-based build tool, it help developers quickly build robust and high
 * Task-based builds
 * Minify everything: JS, CSS, HTML, Images
 * Source linting: JS, CSS
-* Modular JS for the web: AMD, CMD(will support CommonJS and LMD soon)
+* Modular JS for the web: AMD, CMD(will support CommonJS soon)
 * CSS import file combination
 * HTML conditional comments for target build
 * Source stripping, automatically remove debugging code
@@ -132,7 +132,7 @@ module.exports = {
 };
 ```
 
-Then run 'dist' target: 
+Then run 'dist' target:
 
 ```sh
 mod dist
@@ -141,24 +141,24 @@ mod dist
 ## Compression Table
 
 ```sh
-| Feature                  | Mod    | Grunt    | Yeoman      |
-|--------------------------+--------+----------+-------------|
-| Minifier                 | ✓     | ✓         | ✓          |
-| Linter                   | ✓     | ✓         | ✓          |
-| HTML Conditional Comments| ✓     | ✗         | ✗           |
-| CSS Combination          | ✓     | ✗         | ✗           |
-| Image Optimization       | ✓     | ✗         | ✓           |
-| Source stripper          | ✓     | ✗         | ✗           |
-| Modular JS               | ✓     | ✗         | ✗           |
-| File Watcher             | ✓     | ✓         | ✓          |
-| Live Browser Reloads     | ✓     | ✗         | ✓          |
-| Built-in WebServer       | ✓     | ✓         | ✓          |
-| Skeletons (Boilerplates) | ✓     | ✓         | ✓          |
-| Headless browser Testing | ✗     | ✓         | ✓          |
-| Package manager          | ✓     | ✗         | ✓          |
-| Private registry support | ✓     | ✗         | ✗           |
-| Extensible plugins       | ✓     | ✓         | ✓          |
-| Cross-platform           | ✓     | ✓         | ✗          |
+| Feature                  | Mod    | Grunt      | Yeoman    |
+|--------------------------+--------+------------+-----------|
+| Minifier                 | ✓     | ✓         | ✓        |
+| Linter                   | ✓     | ✓         | ✓        |
+| HTML Conditional Comments| ✓     | ✗         | ✗        |
+| CSS Combination          | ✓     | ✗         | ✗        |
+| Image Optimization       | ✓     | ✗         | ✓        |
+| Source stripper          | ✓     | ✗         | ✗        |
+| Modular JS               | ✓     | ✗         | ✗        |
+| File Watcher             | ✓     | ✓         | ✓        |
+| Live Browser Reloads     | ✓     | ✗         | ✓        |
+| Built-in WebServer       | ✓     | ✓         | ✓        |
+| Skeletons (Boilerplates) | ✓     | ✓         | ✓        |
+| Headless browser Testing | ✗     | ✓         | ✓        |
+| Package manager          | ✓     | ✗         | ✓        |
+| Private registry support | ✓     | ✗         | ✗        |
+| Extensible plugins       | ✓     | ✓         | ✓        |
+| Cross-platform           | ✓     | ✓         | ✗        |
 ```
 
 ## Package Defining
@@ -243,7 +243,6 @@ Mod support Windows, OS X, Linux.
 
 Submit a [new issue](https://github.com/modulejs/modjs/issues/new).
 
-
 ## About
 
 Mod is an open-source project by [Tencent](http://www.tencent.com/en-us/) which builds on top of [Node.js](https://nodejs.org).
@@ -258,6 +257,10 @@ We utilize a number of useful open-source solutions including:
 * Twitter Bootstrap
 * HTML5 Boilerplate
 
+## Used by people within
+
+![webqq](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
+![qqconnect](http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png)
 
 ## License
 
