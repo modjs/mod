@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="List of Bower components">
+    <meta name="author" content="yuanyan">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mod components</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="css/components.css">
+    <!--[if lt IE 9]>
+    <script src="vendor/shim/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <header class="header row">
+        <div class="span12">
+            <h1>Components</h1>
+        </div>
+    </header>
+    <hr>
+    <section class="main">
+        <div id="loading">
+            <p>Loading components...</p>
+            <p><small>Might take some time on first load</small></p>
+        </div>
+        <div id="components"></div>
+    </section>
+    <footer class="credit row">
+        <div class="span12"><a href="http://github.com/modulejs"> <img src="http://gravatar.com/avatar/cd822c0bacb048f5e2d66dce1fe78a73.png?s=50" width="25" height="25" alt="modulejs">modulejs</a></div>
+    </footer>
+</div>
+</body>
+
+<script type="text/template" id="components-template">
+    <table class="table">
+        <caption>
+            <input style="display:none" class="search input-medium search-query" type="search" placeholder="Search in <%= components.length %> components..." autofocus>
+        </caption>
+        <thead>
+        <tr>
+            <th class="sort" data-sort="name">Name</th>
+            <th class="sort" data-sort="url">Url</th>
+        </tr>
+        </thead>
+        <tbody class="list">
+        <% _.each( components, function( el ) { %>
+        <% var webUrl = el.url.replace('git://', 'https://').replace(/.git$/, ''); %>
+        <tr>
+            <td class="name"><a href="<%- webUrl %>"><%- el.name %></a></td>
+            <td class="url"><a href="<%- webUrl %>"><%- el.url %></a></td>
+        </tr>
+        <% }); %>
+        </tbody>
+    </table>
+</script>​
+
+<script src="vendor/jquery/jquery-1.7.2.min.js"></script>
+<script src="vendor/jquery/jquery-ajax-localstorage-cache.js"></script>
+<script src="vendor/lodash/lodash.min.js"></script>
+<script src="vendor/list/list.min.js"></script>
+<script src="js/components.js"></script>
+</html>

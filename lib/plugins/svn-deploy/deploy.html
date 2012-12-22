@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+		<title>部署</title>
+		<style>
+			p{
+				background-color: #333;
+				color: white;
+				font-size: 19px;
+				line-height: 40px;
+				margin: 10px;
+				border: 1px solid #EEE;
+				border: 1px solid rgba(0, 0, 0, 0.05);
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+			}
+			form {
+				margin: 10px;
+				min-height: 20px;
+				padding: 19px;
+				margin-bottom: 20px;
+				background-color: whiteSmoke;
+				border: 1px solid #EEE;
+				border: 1px solid rgba(0, 0, 0, 0.05);
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+			}
+			button{
+				width:61px;
+				margin:3px;
+				display: inline-block;
+				padding: 4px 10px 4px;
+				margin-bottom: 0;
+				font-size: 13px;
+				line-height: 18px;
+				color: #333;
+				text-align: center;
+				text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+				vertical-align: middle;
+				background-color: whiteSmoke;
+				background-image: -moz-linear-gradient(top, white, #E6E6E6);
+				background-image: -ms-linear-gradient(top, white, #E6E6E6);
+				background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6));
+				background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+				background-image: -o-linear-gradient(top, white, #E6E6E6);
+				background-image: linear-gradient(top, white, #E6E6E6);
+				background-repeat: repeat-x;
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+				border-color: #E6E6E6 #E6E6E6 #BFBFBF;
+				border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+				filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+				border: 1px solid #CCC;
+				border-bottom-color: #B3B3B3;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+				cursor: pointer;
+			}
+			a:hover {
+				background-color: #333;
+				color: white;
+			}
+			input{
+				width: 500px;
+				margin: 5px;
+				line-height: 18px;
+			}
+			select{
+				width: 287px;
+				margin: 5px;
+				line-height: 18px;
+				display: inline-block;
+			}
+			span {
+				cursor:pointer;
+				width : 30px;
+				display:inline-block;
+			}
+			li{
+			    margin:0;padding:0;
+			    list-style-type:none;
+			}
+			#svn_tree_box{
+				display:none;
+				position: absolute;
+				top: 262px;
+				left: 41px;
+				background-color: #D9EDF7;
+				border-color: #BCE8F1;
+				color: #3A87AD;
+				padding: 8px 35px 8px 14px;
+				margin-bottom: 18px;
+				text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+				border: 1px solid #FBEED5;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+			}
+			#close{
+				position: relative;
+				top: -2px;
+				right: -21px;
+				line-height: 18px;
+				cursor: pointer;
+				float: right;
+				font-size: 20px;
+				font-weight: bold;
+				color: black;
+				text-shadow: 0 1px 0 white;
+				opacity: 0.2;
+				filter: alpha(opacity=20);
+			}
+			label.environment{
+				color:red;
+			}
+			::selection { background: #fe57a1; } 
+			::-moz-selection { background: #fe57a1; }
+		</style>
+	</head>
+	<body>
+		<p>部署前端,需要输入svn帐号与密码:</p>
+		<div>
+			<form id='svn_info' action='/deploy' method="POST">
+				<label>svn帐号(需要有svn目录下工程的读权限): </label>
+				<br>
+				<input name='name'>
+				<br>
+				<label>svn密码: </label>
+				<br>
+				<input  name='password' type='password'>
+				<br>
+				<label>svn主干或分支</label>
+				<br>
+				<button  id='svn_ls'>选择...</button>或者手动输入:
+				<br>
+				<input  name='svn'>
+				<br>
+				<label>工程路径(如 appx/playground 或 module/share): </label>
+				<br>
+				<input  name='target'>
+				<br>
+				<label class='environment' for='environment'>部署类型(开发环境?仿真环境?) </label>
+				<select name='environment'>
+					<option value="dev">开发环境</option>
+					<option value="online" selected>仿真环境</option>
+				</select>
+				<br>
+				<button  id='svn_submit'>
+					部署
+				</button>
+			</form>
+		</div>
+		<div id='svn_tree_box'>
+			<a id="close" >×</a>
+			<ul id="svn_tree"></ul>
+		</div>
+		<script src="http://js.t.sinajs.cn/STK/js/gaea_1_19.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src='client.js' charset="utf-8"></script>
+	</body>
+</html>

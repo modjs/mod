@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var utils = require('../lib/utils'),
+    logger = require('../lib/utils/logger'),
+    core = require('../lib/core');
+
+var args = process.argv.slice(2);
+var cmd = args.shift();
+
+for (var i = 0; i < args.length; i += 1) {
+    if (args[i] === '--debug') {
+        args.splice(i, 1);
+        logger.level = 'debug';
+    }
+}
+
+if (cmd === '-h' || cmd === '--help') {
+    core.run('help');
+}
+else if (cmd === '-v' || cmd === '--version') {
+    utils.getVersion(function (err, ver) {
+        if (err) {
+            return logger.error(err);
+        }
+        logger.end();
+        console.log(ver);
+    });
+}else{
+    core.run(cmd);
+}

@@ -1,0 +1,96 @@
+body {
+    color: #444;
+    font-family: "Microsoft YaHei", Helvetica, tahoma, Arial, serif;
+}
+
+hr {
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed white;
+}
+
+.header h2 {
+    float: left;
+    margin-right: 20px;
+}
+
+.main p {
+    text-align: center;
+}
+
+.search {
+    width: 220px;
+}
+
+.table caption {
+    margin-bottom: 15px;
+}
+
+.table th {
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.table th:hover {
+    text-decoration: underline;
+}
+
+.table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table td:first-child {
+    font-size: 18px;
+}
+
+.url a {
+    opacity: 0.7;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.credit img {
+    margin-right: 3px;
+    border-radius: 25px;
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 70px;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    input[type='search'] {
+        font-size: 16px;
+    }
+
+    .table {
+        width: auto;
+    }
+
+    .table th:first-child,
+    .table td:first-child {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .table th[data-sort='url'],
+    .table td.url {
+        display: none;
+    }
+}

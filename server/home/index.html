@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MOD - Modular Build Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOD - Modular Build Tools">
+    <meta name="author" content="yuanyan@tencent.com">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="css/gangnam.css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="vendor/shim/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="gangnam">
+<!--
+
+-->
+
+<div class="container">
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="row-fluid hero-unit">
+        <div class="span12">
+
+            <h1>MOD</h1>
+            <p>Mod 是可信赖的现代前端构建工具, 旨在帮助开发人员快速构建健壮的高性能的Web应用程序。</p>
+
+            <!--<p><a class="btn btn-primary btn-large" href="#">Learn more &raquo;</a></p>-->
+
+            <p id="install">安装 <code>npm install -g modjs</code>  当前版本 <code>0.1.7</code></p>
+
+            <p>
+                <iframe width="100px" scrolling="0" height="20px" frameborder="0" allowtransparency="true" src="http://ghbtns.com/github-btn.html?user=modulejs&amp;repo=modjs&amp;type=watch&amp;count=true" class="github-btn"></iframe>
+                <iframe width="100px" scrolling="0" height="20px" frameborder="0" allowtransparency="true" src="http://ghbtns.com/github-btn.html?user=modulejs&amp;repo=modjs&amp;type=fork&amp;count=true" class="github-btn"></iframe>
+
+                <!--<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://modulejs.github.com/modjs" data-text="MOD: Modern build tool for web">Tweet</a>-->
+                <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
+
+                <!-- ShareTo Button BEGIN -->
+                <a class="shareto_button" href="http://shareto.com.cn/share.html"><img src="http://s.shareto.com.cn/btn/lg-share-cn.gif" width="125" height="20" alt="分享道" style="border:0"/></a>
+                <script type="text/javascript" src="http://s.shareto.com.cn/js/shareto_button.js" charset="utf-8"></script>
+                <!-- ShareTo Button END -->
+
+            </p>
+
+        </div>
+
+        <!--<div class="span6">-->
+        <!--<img id="hero-logo" src="image/home-hero.png">-->
+        <!--</div>-->
+    </div>
+
+    <div class="features row-fluid">
+        <div class="span4">
+            <h2>模块一键安装</h2>
+            <img src="image/features/1.png">
+            <p>告别手动下载模块，一个命令行即可安装所有模块</p>
+        </div>
+
+        <div class="span4">
+            <h2>模块依赖管理</h2>
+            <img src="image/features/2.png">
+            <p>告别人肉管理模块依赖，解放双方</p>
+        </div>
+
+        <div class="span4">
+            <h2>AMD、CMD模块打包</h2>
+            <img src="image/features/3.png">
+            <p>集成requirejs、seajs模块加载器</p>
+        </div>
+
+     </div>
+    <hr>
+    <div class="features row-fluid">
+        <div class="span4">
+            <h2>CSS 模块打包</h2>
+            <img src="image/features/4.png">
+            <p>CSS @import 模块合并打包</p>
+        </div>
+
+        <div class="span4">
+            <h2>压缩合并一体化</h2>
+            <img src="image/features/5.png">
+            <p>HTML CSS Javascript 压缩合并 so easy</p>
+        </div>
+
+        <div class="span4">
+            <h2>源码智能化压缩</h2>
+            <img src="image/features/6.png">
+            <p>零配置自动识别源码是否被压缩过，避免二次压缩带来的问题</p>
+        </div>
+
+    </div>
+    <hr>
+    <div class="features row-fluid">
+        <div class="span4">
+            <h2>源码规范检测</h2>
+            <img src="image/features/7.png">
+            <p>HTML CSS Javascript 规范性检测</p>
+        </div>
+
+        <div class="span4">
+            <h2>源码自定义检测</h2>
+            <img src="image/features/8.png">
+            <p>自定义规则检测， 避免 alert 等疏忽</p>
+        </div>
+
+        <div class="span4">
+            <h2>工具跨平台支持</h2>
+            <img src="image/features/9.png">
+            <p>基于 Nodejs</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Tencent 2012</p>
+    </footer>
+
+</div> <!-- /container -->
+
+<script src="vendor/jquery/jquery-1.7.2.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(".features img").hover(
+            function () {
+                $(this).addClass('animated tada');
+            },
+            function () {
+                $(this).removeClass('animated tada')
+            }
+    );
+    // 4.1
+    $(".hero-unit h1").click(function(evt) {
+        $('html').addClass('fool');
+        evt.preventDefault();
+
+
+    });
+</script>
+
+</body>
+</html>

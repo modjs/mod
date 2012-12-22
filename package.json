@@ -19,9 +19,9 @@
         "rimraf": "~2.0.1",
         "semver": "~1.0.9",
         "ncp": "~0.2.6",
-        "requirejs": "~2.0.6",
-        "almond": "~0.1.4",
-        "seajs": "~1.2.1",
+        "requirejs": "*",
+        "almond": "*",
+        "seajs": "*",
         "seajs-build": "*",
         "request": "~2.9.203",
         "minimatch": "~0.2.9",
@@ -47,42 +47,5 @@
     "bin": {
         "mod": "./bin/mod.js"
     },
-    "preferGlobal": true,
-	
-    "main":"index.js",
-    "loader" : "seajs",
-    "modules" : "modules",
-    "tasks": {
-        "min" : {
-            "source": "./test/cat/ab.js",
-            "dest": "./test/min/ab.js"
-        },
-
-        "lint" : {
-            "source": "./test/cat/ab.js"
-        },
-
-        "mkdir": {
-           "target" : "./test/mkdir/"
-        },
-
-        "cp":{
-           "source" : "./test/min/ab.js",
-            "dest" : "./test/mkdir/ab.js"
-        },
-
-        "cat": {
-            "source":["./test/cat/a.js","./test/cat/b.js"],
-            "dest":"./test/cat/ab.js"
-        },
-       "watch" : {
-            "source": ["*"],
-            "tasks": ""
-       }
-    },
-
-    "targets" : {
-        "all" : "mkdir cat lint min cp"
-    }
-
+    "preferGlobal": true
 }

@@ -1,0 +1,8 @@
+// More info: https://github.com/modulejs/modjs/doc/
+module.exports = {
+    "tasks": {
+    },
+
+    "targets" : {
+    }
+};

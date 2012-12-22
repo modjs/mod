@@ -1,0 +1,17 @@
+{
+    "name": "{{project}}",
+    "version": "0.0.1",
+    "description": "{{description}}",
+    "homepage": "",
+    "author": "{{author}}",
+    "repository": {
+        "type": "",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    },
+    "license": "",
+    "dependencies": {
+    }
+}
