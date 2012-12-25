@@ -1,5 +1,7 @@
 # Mod - Modern project management and comprehension tool for the web [![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
 
+![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
+
 ## What is Mod?
 
 Mod is a task-based build tool, it help developers quickly build robust and high-performance web applications.
