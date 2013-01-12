@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.1.3",
+    "version": "0.1.5",
     "description": "modern build tool for web",
     "keywords": ["minify", "lint", "build", "server", "tool"],
     "maintainers": [
