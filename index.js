@@ -1,3 +1,3 @@
-
-exports =  require('./lib/core');
+// exports modjs api
+module.exports =  require('./lib/core');
 

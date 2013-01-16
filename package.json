@@ -1,11 +1,12 @@
 {
     "name": "modjs",
-    "version": "0.1.5",
-    "description": "modern build tool for web",
-    "keywords": ["minify", "lint", "build", "server", "tool"],
+    "version": "0.1.6",
+    "description": "modern project management and comprehension tool for the web ",
+    "keywords": ["csslint", "cleancss","jshint", "uglifyjs", "seajs", "requirejs", "tools", "build","packages"],
     "maintainers": [
         {"name": "yuanyan", "web": "https://github.com/yuanyan"}
     ],
+    "homepage": "http://modulejs.github.com/modjs",
     "dependencies": {
         "tar": "~0.1.13",
         "fstream-ignore": "~0.0.5",
@@ -45,7 +46,7 @@
     "engines": {"node": ">= 0.6.x"},
     "bugs": {"url": "http://github.com/modulejs/modjs/issues"},
     "bin": {
-        "mod": "./bin/mod.js"
+        "mod": "./bin/mod"
     },
     "preferGlobal": true
 }
