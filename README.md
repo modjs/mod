@@ -72,7 +72,7 @@ mod server    # Start a static web server
 mod pack      # Create a tarball with target directory
 mod hash      # Rename file with it hash value
 
-mod install   # Install a package from the client-side package registry
+mod install   # Install a package from the server-side package registry
 mod uninstall # Uninstall the package
 mod update    # Update a package to the latest version
 mod ls        # List the packages currently installed
