@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var utils = require('../lib/utils'),
     logger = require('../lib/utils/logger'),
     core = require('../lib/core');
