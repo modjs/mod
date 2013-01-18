@@ -9,7 +9,7 @@ Mod is a task-based build tool, it help developers quickly build robust and high
 ## Wiki
 * [Project Roadmap](https://github.com/modulejs/modjs/wiki/Roadmap)
 * [Modfile Config](https://github.com/modulejs/modjs/wiki/Modfile)
-* 
+
 ## Why another one?
 
 * More built-in tasks
