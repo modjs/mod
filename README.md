@@ -8,7 +8,7 @@ Mod is a task-based build tool, it help developers quickly build robust and high
 
 ## Wiki
 * [Project Roadmap](https://github.com/modulejs/modjs/wiki/Roadmap)
-* [Modfile Configuration](https://github.com/modulejs/modjs/wiki/Modfile)
+* [Real Modfile](https://github.com/modulejs/modulejs/blob/master/Modfile)
 
 ## Why another one?
 
