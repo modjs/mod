@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.1.6",
+    "version": "0.1.8",
     "description": "modern project management and comprehension tool for the web ",
     "keywords": ["csslint", "cleancss","jshint", "uglifyjs", "seajs", "requirejs", "tools", "build","packages"],
     "maintainers": [
