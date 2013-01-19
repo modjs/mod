@@ -19,6 +19,7 @@
         "prompt": "~0.2.8",
         "rimraf": "~2.0.1",
         "semver": "~1.0.9",
+        "faye-websocket": "~0.4.3",
         "ncp": "~0.2.6",
         "requirejs": "*",
         "almond": "*",
