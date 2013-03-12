@@ -1,0 +1,52 @@
+// QQ Find Project Modfile
+module.exports = {
+    tasks:{
+        rm:{
+            clean: {
+                target:'dist'
+            },
+            tmp: {
+                target: './css/find.css'
+            }
+        },
+        mkdir:{
+            target:'dist'
+        },
+        compile:{
+            js: {
+                source: "main.js",
+                dest: "./dist/find.js",
+                baseUrl: "./js",
+                miniLoader: true
+            },
+            html: {
+                source: "index.html",
+                dest: "./dist/index.html",
+                target: "dist"
+            },
+            css: {
+                source: "./css/main.css",
+                dest: "./css/find.css"
+            }
+        },
+        datauri: {
+            source: "./css/find.css"
+            ,dest: "./dist/find.css"
+        },
+
+        min : {
+            js:{
+                source: "./dist/*.js"
+                ,dest: "./dist/"
+            }
+            ,css:{
+                source: "./dist/*.css"
+                ,dest: "./dist/"
+            }
+        }
+    },
+    targets:{
+        dev: "rm:clean mkdir compile datauri rm:tmp",
+        dist: "rm:clean mkdir compile datauri min rm:tmp"
+    }
+};
