@@ -1,7 +1,7 @@
 {
     "name": "modjs",
-    "version": "0.1.13",
-    "description": "modern project management and comprehension tool for the web",
+    "version": "0.1.14",
+    "description": "modern build tools for web",
     "keywords": ["csslint", "cleancss","jshint", "uglifyjs", "seajs", "requirejs", "tools", "build","packages"],
     "maintainers": [
         {"name": "yuanyan", "web": "https://github.com/yuanyan"}
