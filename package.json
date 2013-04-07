@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.1.17",
+    "version": "0.1.18",
     "description": "modern build tools for web",
     "keywords": ["csslint", "cleancss","jshint", "uglifyjs", "seajs", "requirejs", "tools", "build","packages"],
     "maintainers": [

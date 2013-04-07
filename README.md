@@ -99,6 +99,11 @@ Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：
 
 ```js
 module.exports = {
+    plugins: {
+        sprite: "mod-sprite",
+        datauri: "mod-datauri"
+    },
+
     tasks: {
         "rm" : {
             "target": "./dist"
