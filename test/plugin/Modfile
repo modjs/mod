@@ -1,0 +1,7 @@
+
+module.exports = {
+    plugins: {
+        sprite: "mod-sprite",
+        datauri: "mod-datauri"
+    }
+};
