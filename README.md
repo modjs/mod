@@ -4,7 +4,7 @@
 
 ## What is Mod?
 
-Mod is a task-based build tool, it help developers quickly build robust and high-performance web applications.
+Mod is a task-based build tool for the web, it help developers quickly build robust and high-performance web applications.
 
 ## Wiki
 * [Project Roadmap](https://github.com/modulejs/modjs/wiki/Roadmap)
@@ -15,7 +15,7 @@ Mod is a task-based build tool, it help developers quickly build robust and high
 
 * More built-in tasks
 * More simplicity to use
-* Configuration less, do more, even zero
+* Configuration less(even zero), do more
 * Business background, community support
 
 ## Features
@@ -28,13 +28,11 @@ Mod is a task-based build tool, it help developers quickly build robust and high
 * HTML conditional comments for target build
 * Source stripping, automatically remove debugging code
 * Common action: cat, rm, mv, mkdir, cp, hash, pack
-* File watcher, trigger custom tasks
+* File watcher, trigger custom tasks when file change
 * Live Browser Reloads, instantly see changes in your browser
 * Image Optimization, reduce JPEG, PNG and GIF file sizes
-* Package manager: install, uninstall, update, search, ls
 * Project boilerplate generate
 * Built-in Web Server
-* Github as one default public registry
 * Extensible, easily write plugins
 * Works on most platforms: Windows, Linux, Mac OS X, Unix...
 
@@ -76,12 +74,6 @@ mod init      # Generate a project skeleton in target directory
 mod server    # Start a static web server
 mod pack      # Create a tarball with target directory
 mod hash      # Rename file with it hash value
-
-mod install   # Install a package from the server-side package registry
-mod uninstall # Uninstall the package
-mod update    # Update a package to the latest version
-mod ls        # List the packages currently installed
-mod search    # Query the registry for matching package names
 ```
 
 Some more examples of how to use our commands include:
@@ -167,30 +159,9 @@ mod dist
 | Built-in WebServer       | ✓     | ✓         | ✓        |
 | Skeletons (Boilerplates) | ✓     | ✓         | ✓        |
 | Headless browser Testing | ✗     | ✓         | ✓        |
-| Package manager          | ✓     | ✗         | ✓        |
-| Private registry support | ✓     | ✗         | ✗        |
 | Extensible plugins       | ✓     | ✓         | ✓        |
 | Cross-platform           | ✓     | ✓         | ✗        |
 ```
-
-## Package Defining
-
-You can create a `package.json` file in your project's root,
-for avoid conflict with NPM's 'dependencies', Mod use 'webDependencies' to specifying all of its dependencies.
-
-```json
-{
-  "name": "myProject",
-  "description": "myProject is myProject",
-  "version": "0.0.1",
-  "main": "./path/to/main.js",
-  "webDependencies": {
-    "jquery": "~1.8.2"
-  }
-}
-```
-
-Mod recognizes versions that follow the (semver)[http://semver.org/] specification.
 
 ## Custom Tasks
 
@@ -271,7 +242,7 @@ We utilize a number of useful open-source solutions including:
 
 ## Used by people within
 
-![webqq](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
+![qqfind](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
 ![qqconnect](http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png)
 
 ## License

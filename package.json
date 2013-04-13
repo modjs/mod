@@ -1,8 +1,8 @@
 {
     "name": "modjs",
-    "version": "0.1.19",
-    "description": "modern build tools for web",
-    "keywords": ["csslint", "cleancss","jshint", "uglifyjs", "seajs", "requirejs", "tools", "build","packages"],
+    "version": "0.2.0",
+    "description": "A build tools for the web",
+    "keywords": ["css", "js", "image", "build", "CMD", "AMD", "task", "build"],
     "maintainers": [
         {"name": "yuanyan", "web": "https://github.com/yuanyan"}
     ],
@@ -21,10 +21,6 @@
         "semver": "~1.0.9",
         "faye-websocket": "~0.4.3",
         "ncp": "~0.2.6",
-        "requirejs": "*",
-        "almond": "*",
-        "seajs": "*",
-        "seajs-build": "*",
         "request": "~2.9.203",
         "minimatch": "~0.2.9",
         "clean-css": "~0.6.0",
@@ -33,9 +29,13 @@
         "html-minifier": "~0.4.5",
         "jshint": "~0.7.3",
         "csslint": "~0.9.8",
-        "connect": "*",
         "colors": "~0.6.0",
-        "optimist": "~0.3.5"
+        "optimist": "~0.3.5",
+        "connect": "*",
+        "requirejs": "*",
+        "almond": "*",
+        "seajs": "*",
+        "seajs-build": "*"
     },
     "devDependencies": {
         "node-inspector": "0.1.10"
