@@ -16,6 +16,7 @@ for (var i = 0; i < args.length; i += 1) {
 if (cmd === '-h' || cmd === '--help') {
     core.run('help');
 }
+
 else if (cmd === '-v' || cmd === '--version') {
     utils.getVersion(function (err, ver) {
         if (err) {
