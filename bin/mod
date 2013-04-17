@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var utils = require('../lib/utils'),
     logger = require('../lib/utils/logger'),
     core = require('../lib/core');
@@ -15,9 +16,8 @@ for (var i = 0; i < args.length; i += 1) {
 
 if (cmd === '-h' || cmd === '--help') {
     core.run('help');
-}
 
-else if (cmd === '-v' || cmd === '--version') {
+}else if (cmd === '-v' || cmd === '--version') {
     utils.getVersion(function (err, ver) {
         if (err) {
             return logger.error(err);
@@ -28,3 +28,4 @@ else if (cmd === '-v' || cmd === '--version') {
 }else{
     core.run(cmd);
 }
+
