@@ -28,7 +28,7 @@ var Terminal = Terminal || function(containerId) {
     var histpos = 0;
     var histtemp = 0;
     // deploy token
-    var token = null;
+    var token = '';
     var cwd = '';
 
     // Create terminal and cache DOM nodes;
@@ -262,21 +262,6 @@ var Terminal = Terminal || function(containerId) {
                     });
 
                     break;
-                case 'rm':
-                    exec(this.value, function(result) {
-                        output(result);
-                    });
-                    break;
-                case 'rmdir':
-                    exec(this.value, function(result) {
-                        output(result);
-                    });
-                    break;
-                case 'sudo':
-                    exec(this.value, function(result) {
-                        output(result);
-                    });
-                    break;
                 case 'theme':
                     var theme = args.join(' ');
                     if (!theme) {
@@ -321,9 +306,9 @@ var Terminal = Terminal || function(containerId) {
                         ' - By: yuanyan &lt;yuanyan@tencent.com&gt;');
                     break;
                 default:
-                    if (cmd) {
-                        output(cmd + ': command not found');
-                    }
+                    exec(this.value, function(result) {
+                        output(result);
+                    });
             };
 
             this.value = ''; // Clear/setup line for next input.
@@ -344,7 +329,7 @@ var Terminal = Terminal || function(containerId) {
             entries.length <= 3 ? 'height: ' + (entries.length * 18) + 'px;' : '';
 
         // ~12px monospace font yields ~8px screen width.
-        var colWidth = maxName.length * 16;//;8;
+        var colWidth = maxName.length * 16; //8
 
         return ['<div class="ls-files" style="-webkit-column-width:',
             colWidth, 'px;', height, '">'];
@@ -393,12 +378,15 @@ var Terminal = Terminal || function(containerId) {
         xhr.onerror = function(e) {
             output('ERROR: ' + this.status + ' ' + this.statusText);
         };
-        xhr.open('POST', './deploy', true);
-        xhr.send(['token='+ token, 'command='+cmd, 'cwd='+cwd].join('&'));
+        var baseUrl = './deploy?';
+        var params = ['token='+ token, 'command='+cmd, 'cwd='+cwd].join('&');
+        var url = baseUrl + params;
+        xhr.open('GET', url, true);
+        xhr.send(null);
     }
 
     return {
-        init: function(persistent, size) {
+        init: function() {
             output('<div>Welcome to ' + document.title +
                 '! (v' + VERSION + ')</div>');
             output((new Date()).toLocaleString());
@@ -428,7 +416,7 @@ function toggleHelp() {
 
 (function() {
     var term = new Terminal('container');
-    term.init(false, 1024 * 1024);
+    term.init();
 
     if (document.location.hash) {
         var theme = document.location.hash.substring(1).split('=')[1];

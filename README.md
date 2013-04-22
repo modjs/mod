@@ -74,17 +74,9 @@ mod init      # Generate a project skeleton in target directory
 mod server    # Start a static web server
 mod pack      # Create a tarball with target directory
 mod hash      # Rename file with it hash value
+mod search    # Search the Github
 ```
 
-Some more examples of how to use our commands include:
-
-```shell
-# Package management
-mod search jquery                 # Lookup jQuery in the Mod registry
-mod install jquery@1.7.2          # Install a package and dependencies
-mod update jquery                 # Update to latest version
-mod uninstall jquery              # Uninstall jquery package
-```
 
 ## Modfile
 
