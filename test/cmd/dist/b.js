@@ -1,0 +1,1 @@
+define(function(require){return require("./c"),{b:2}})

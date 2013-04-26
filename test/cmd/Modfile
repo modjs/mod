@@ -1,0 +1,40 @@
+module.exports = {
+    loader: 'seajs',
+
+    tasks: {
+        compile:{
+            // source and dest, it's clear
+            demo1: {
+                source: "./js/a.js",
+                dest: "./dist/all.js"
+            },
+            // use default output rule
+            demo2: {
+                source: "./js/a.js",
+                dest: "./dist/"
+            },
+            // suffix setting
+            demo3: {
+                source: "./js/a.js",
+                suffix: ".pack",
+                dest: "./dist/"
+            },
+            // do not combine all require module
+            demo4: {
+                source: "./js/*.js",
+                dest: "./dist/",
+                combine: false
+            }
+
+        }
+    },
+
+    targets: {
+        all: "compile",
+        demo1: "compile:demo1",
+        demo2: "compile:demo2",
+        demo3: "compile:demo3",
+        demo4: "compile:demo4"
+    }
+
+};
