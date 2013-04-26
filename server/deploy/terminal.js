@@ -205,26 +205,6 @@ var Terminal = function(containerId) {
                     output('<p>Commands: <span class="folder">' + CMDS.join('   ') + '</span></p>');
                     output('<p>More help: <span class="folder">yuanyan &lt;yuanyan@tencent.com&gt;</span></p>');
                     break;
-                case 'ls':
-                    // TODO
-                    exec(this.value, function(result) {
-
-                        var html = [];
-                        var entries = result.split(" ");
-                        entries.forEach(function(entry, i) {
-                            html.push(
-                                '<span class="folder">', entry, '</span> ');
-                        });
-                        output(html.join(''));
-                    });
-
-                    break;
-                case 'pwd':
-                    // TODO
-                    exec(this.value, function(result) {
-                        output(result);
-                    });
-                    break;
                 case 'cd':
                     // TODO
                     var dest = args.join(' ') || '/';
@@ -232,9 +212,9 @@ var Terminal = function(containerId) {
                     process._cwd = path.resolve(path.relative(process.cwd(), dest));
                     exec('pwd', function(result) {
                         output(result);
+                        process._cwd = result;
+                        updateCWD();
                     });
-
-                    updateCWD();
 
                     break;
                 case 'mkdir':
@@ -290,9 +270,9 @@ var Terminal = function(containerId) {
                     break;
                 default:
                     exec(this.value, function(result) {
-                        output(result);
+                        output('<pre>' + result + '</pre>');
                     });
-            };
+            }
 
             this.value = ''; // Clear/setup line for next input.
         }
