@@ -1,81 +1,78 @@
-var util = util || {};
-util.toArray = function(list) {
-    return Array.prototype.slice.call(list || [], 0);
-};
-
-// Cross-browser impl to get document's height.
-util.getDocHeight = function() {
-    var d = document;
-    return Math.max(
-        Math.max(d.body.scrollHeight, d.documentElement.scrollHeight),
-        Math.max(d.body.offsetHeight, d.documentElement.offsetHeight),
-        Math.max(d.body.clientHeight, d.documentElement.clientHeight)
-    );
-};
-
-
-var Terminal = Terminal || function(containerId) {
+var Terminal = function(containerId) {
     window.URL = window.URL || window.webkitURL;
 
     const VERSION = '1.0.0';
     const CMDS = [
-        'token', 'cat', 'cd', 'cp', 'clear', 'date', 'help', 'ls', 'mkdir',
-        'mv', 'pwd', 'rm', 'rmdir', 'theme', 'version', 'who', 'wget'
+        'token', 'exit', 'theme', 'version', 'help',
+        'cat', 'cd', 'cp', 'clear', 'date', 'ls', 'mkdir', 'mv', 'pwd', 'rm', 'rmdir'
     ];
     const THEMES = ['default', 'cream'];
 
     var history = [];
     var histpos = 0;
     var histtemp = 0;
-    // deploy token
-    var token = '';
-    var cwd = '';
 
     // Create terminal and cache DOM nodes;
     var container = document.getElementById(containerId);
-    container.insertAdjacentHTML('beforeEnd',
-        ['<output></output>',
-            '<div id="input-line" class="input-line">',
-            '<div class="prompt">$&gt;</div><div><input class="cmdline" autofocus /></div>',
-            '</div>'].join(''));
-    var cmdLine = container.querySelector('#input-line .cmdline');
-    var outputContainer = container.querySelector('output');
-    var interlace = document.querySelector('.interlace');
+    var outputContainer;
+    var cmdLine;
+    var interlace;
+    var cwd;
+
+    function updateCWD(){
+        cwd.innerHTML = [process.cwd(), '&gt;'].join('');
+    }
+
+    function initDOM(){
+
+        container.insertAdjacentHTML('beforeEnd',
+            ['<output></output>',
+                '<div id="input-line" class="input-line">',
+                '<div class="prompt">', process.cwd(), '&gt;</div><div><input class="cmdline" autofocus /></div>',
+                '</div>'].join(''));
+
+        cwd = container.querySelector('#input-line .prompt');
+        outputContainer = container.querySelector('output');
+        cmdLine = container.querySelector('#input-line .cmdline');
+        interlace = document.querySelector('.interlace');
 
 
-    // Hackery to resize the interlace background image as the container grows.
-    outputContainer.addEventListener('DOMSubtreeModified', function(e) {
-        var docHeight = util.getDocHeight();
-        document.documentElement.style.height = docHeight + 'px';
-        //document.body.style.background = '-webkit-radial-gradient(center ' + (Math.round(docHeight / 2)) + 'px, contain, rgba(0,75,0,0.8), black) center center no-repeat, black';
-        interlace.style.height = docHeight + 'px';
-        setTimeout(function() { // Need this wrapped in a setTimeout. Chrome is jupming to top :(
+        // Hackery to resize the interlace background image as the container grows.
+        outputContainer.addEventListener('DOMSubtreeModified', function(e) {
+            var docHeight = util.getDocHeight();
+            document.documentElement.style.height = docHeight + 'px';
+            //document.body.style.background = '-webkit-radial-gradient(center ' + (Math.round(docHeight / 2)) + 'px, contain, rgba(0,75,0,0.8), black) center center no-repeat, black';
+            interlace.style.height = docHeight + 'px';
+            setTimeout(function() { // Need this wrapped in a setTimeout. Chrome is jupming to top :(
+                //window.scrollTo(0, docHeight);
+                cmdLine.scrollIntoView();
+            }, 0);
             //window.scrollTo(0, docHeight);
-            cmdLine.scrollIntoView();
-        }, 0);
-        //window.scrollTo(0, docHeight);
-    }, false);
+        }, false);
 
-    outputContainer.addEventListener('click', function(e) {
-        var el = e.target;
-        if (el.classList.contains('file') || el.classList.contains('folder')) {
-            cmdLine.value += ' ' + el.textContent;
-        }
-    }, false);
+        outputContainer.addEventListener('click', function(e) {
+            var el = e.target;
+            if (el.classList.contains('file') || el.classList.contains('folder')) {
+                cmdLine.value += ' ' + el.textContent;
+            }
+        }, false);
 
-    window.addEventListener('click', function(e) {
-        //if (!document.body.classList.contains('offscreen')) {
-        cmdLine.focus();
-        //}
-    }, false);
+        window.addEventListener('click', function(e) {
+            //if (!document.body.classList.contains('offscreen')) {
+            cmdLine.focus();
+            //}
+        }, false);
 
-    // Always force text cursor to end of input line.
-    cmdLine.addEventListener('click', inputTextClick, false);
+        // Always force text cursor to end of input line.
+        cmdLine.addEventListener('click', inputTextClick, false);
 
-    // Handle up/down key presses for shell history and enter for new command.
-    cmdLine.addEventListener('keydown', keyboardShortcutHandler, false);
-    cmdLine.addEventListener('keyup', historyHandler, false); // keyup needed for input blinker to appear at end of input.
-    cmdLine.addEventListener('keydown', processNewCommand, false);
+        // Handle up/down key presses for shell history and enter for new command.
+        cmdLine.addEventListener('keydown', keyboardShortcutHandler, false);
+        cmdLine.addEventListener('keyup', historyHandler, false); // keyup needed for input blinker to appear at end of input.
+        cmdLine.addEventListener('keydown', processNewCommand, false);
+    }
+
+
 
     /*window.addEventListener('beforeunload', function(e) {
      return "Don't leave me!";
@@ -170,18 +167,20 @@ var Terminal = Terminal || function(containerId) {
 
             switch (cmd) {
                 case 'token':
+                    // global set
                     var token = args[0];
+                    localStorage.token = token;
                     if (!token) {
-                        output(['usage: ', cmd, ' value'].join(''));
+                        output(['Usage: ', cmd, ' value'].join(''));
                         break;
                     }
-                    output('Token set success!');
+                    output('Success set token!');
                     break;
                 case 'cat':
                     var fileName = args.join(' ');
 
                     if (!fileName) {
-                        output('usage: ' + cmd + ' filename');
+                        output('Usage: ' + cmd + ' filename');
                         break;
                     }
 
@@ -197,10 +196,14 @@ var Terminal = Terminal || function(containerId) {
                     output((new Date()).toLocaleString());
                     break;
                 case 'exit':
-                    token = null;
+                    localStorage.token = null;
                     break;
                 case 'help':
-                    output('<div class="ls-files">' + CMDS.join('<br>') + '</div>');
+                    output('<p>Set token if deploy server must require: <span class="folder">token i-am-token</span></p>');
+                    output('<p>Execution your command: <span class="folder">svn co i-am-svn-path</span></p>');
+                    output('<p>Clear your token: <span class="folder">exit</span></p>');
+                    output('<p>Commands: <span class="folder">' + CMDS.join('   ') + '</span></p>');
+                    output('<p>More help: <span class="folder">yuanyan &lt;yuanyan@tencent.com&gt;</span></p>');
                     break;
                 case 'ls':
                     // TODO
@@ -225,7 +228,14 @@ var Terminal = Terminal || function(containerId) {
                 case 'cd':
                     // TODO
                     var dest = args.join(' ') || '/';
-                    cwd = dest;
+                    // global set
+                    process._cwd = path.resolve(path.relative(process.cwd(), dest));
+                    exec('pwd', function(result) {
+                        output(result);
+                    });
+
+                    updateCWD();
+
                     break;
                 case 'mkdir':
                     var dashP = false;
@@ -236,7 +246,7 @@ var Terminal = Terminal || function(containerId) {
                     }
 
                     if (!args.length) {
-                        output('usage: ' + cmd + ' [-p] directory<br>');
+                        output('Usage: ' + cmd + ' [-p] directory<br>');
                         break;
                     }
 
@@ -251,7 +261,7 @@ var Terminal = Terminal || function(containerId) {
                     var dest = args[1];
 
                     if (!src || !dest) {
-                        output(['usage: ', cmd, ' source target<br>',
+                        output(['Usage: ', cmd, ' source target<br>',
                             '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', cmd,
                             ' source directory/'].join(''));
                         break;
@@ -265,7 +275,7 @@ var Terminal = Terminal || function(containerId) {
                 case 'theme':
                     var theme = args.join(' ');
                     if (!theme) {
-                        output(['usage: ', cmd, ' ' + THEMES.join(',')].join(''));
+                        output(['Usage: ', cmd, ' ' + THEMES.join(',')].join(''));
                     } else {
                         if (THEMES.indexOf(theme) != -1) {
                             setTheme(theme);
@@ -277,33 +287,6 @@ var Terminal = Terminal || function(containerId) {
                 case 'version':
                 case 'ver':
                     output(VERSION);
-                    break;
-                case 'wget':
-                    var url = args[0];
-                    if (!url) {
-                        output(['usage: ', cmd, ' missing URL'].join(''));
-                        break;
-                    } else if (url.search('^http://') == -1) {
-                        url = 'http://' + url;
-                    }
-                    var xhr = new XMLHttpRequest();
-                    xhr.onload = function(e) {
-                        if (this.status == 200 && this.readyState == 4) {
-                            output('<textarea>' + this.response + '</textarea>');
-                        } else {
-                            output('ERROR: ' + this.status + ' ' + this.statusText);
-                        }
-                    };
-                    xhr.onerror = function(e) {
-                        output('ERROR: ' + this.status + ' ' + this.statusText);
-                        output('Could not fetch ' + url);
-                    };
-                    xhr.open('GET', url, true);
-                    xhr.send();
-                    break;
-                case 'who':
-                    output(document.title +
-                        ' - By: yuanyan &lt;yuanyan@tencent.com&gt;');
                     break;
                 default:
                     exec(this.value, function(result) {
@@ -366,7 +349,7 @@ var Terminal = Terminal || function(containerId) {
         cmdLine.scrollIntoView();
     }
 
-    function exec(cmd, cb){
+    function ajax(url, cb){
         var xhr = new XMLHttpRequest();
         xhr.onload = function(e) {
             if (this.status == 200 && this.readyState == 4) {
@@ -378,24 +361,37 @@ var Terminal = Terminal || function(containerId) {
         xhr.onerror = function(e) {
             output('ERROR: ' + this.status + ' ' + this.statusText);
         };
-        var baseUrl = './deploy?';
-        var params = ['token='+ token, 'command='+cmd, 'cwd='+cwd].join('&');
-        var url = baseUrl + params;
         xhr.open('GET', url, true);
         xhr.send(null);
     }
 
-    return {
-        init: function() {
+    function exec(cmd, cb){
+        var baseUrl = './deploy?';
+        var params = ['token='+ localStorage.token || '', 'command='+cmd, 'cwd='+ process.cwd()].join('&');
+        var url = baseUrl + params;
+        ajax(url, cb);
+    }
+
+    function init(){
+        var baseUrl = './deploy?';
+        var params = ['init=true'].join('&');
+        var url = baseUrl + params;
+        ajax(url, function(cwd){
+            process._cwd = cwd;
+            initDOM();
             output('<div>Welcome to ' + document.title +
                 '! (v' + VERSION + ')</div>');
-            output((new Date()).toLocaleString());
-            output('<p>Documentation: type "help"</p>');
 
+            output('<p>Documentation: type "help"</p>');
+        });
+    }
+
+    return {
+        init: function() {
+            init();
         },
         output: output,
         setTheme: setTheme,
-        getCmdLine: function() { return cmdLine; },
         addDroppedFiles: function(files) {
             util.toArray(files).forEach(function(file, i) {
                 // TODO
@@ -455,6 +451,6 @@ function toggleHelp() {
         e.preventDefault();
         this.classList.remove('dropping');
         term.addDroppedFiles(e.dataTransfer.files);
-        term.output('<div>File(s) added!</div>');
+        // term.output('<div>File(s) added!</div>');
     }, false);
 })();
