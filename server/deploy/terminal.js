@@ -196,7 +196,7 @@ var Terminal = function(containerId) {
                     output((new Date()).toLocaleString());
                     break;
                 case 'exit':
-                    localStorage.token = null;
+                    localStorage.token = '';
                     break;
                 case 'help':
                     output('<p>Set token if deploy server must require: <span class="folder">token i-am-token</span></p>');
@@ -347,7 +347,7 @@ var Terminal = function(containerId) {
 
     function exec(cmd, cb){
         var baseUrl = './deploy?';
-        var params = ['token='+ localStorage.token || '', 'command='+cmd, 'cwd='+ process.cwd()].join('&');
+        var params = ['token='+ (localStorage.token || ''), 'command='+cmd, 'cwd='+ process.cwd()].join('&');
         var url = baseUrl + params;
         ajax(url, cb);
     }
