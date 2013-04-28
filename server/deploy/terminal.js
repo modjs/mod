@@ -3,8 +3,8 @@ var Terminal = function(containerId) {
 
     const VERSION = '1.0.0';
     const CMDS = [
-        'token', 'exit', 'theme', 'version', 'help',
-        'cat', 'cd', 'cp', 'clear', 'date', 'ls', 'mkdir', 'mv', 'pwd', 'rm', 'rmdir'
+        'token', 'exit', 'theme', 'version', 'help', 'date', 'clear',
+        'cat', 'cd', 'cp', 'ls', 'mkdir', 'mv', 'pwd', 'rm', 'rmdir', 'svn', 'bash'
     ];
     const THEMES = ['default', 'cream'];
 
