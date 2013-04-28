@@ -200,7 +200,7 @@ var Terminal = function(containerId) {
                     break;
                 case 'help':
                     output('<p>Set token if deploy server must require: <span class="folder">token i-am-token</span></p>');
-                    output('<p>Execution your command: <span class="folder">svn co i-am-svn-path</span></p>');
+                    output('<p>Execution your command: <span class="folder">svn checkout URL[@REV] --username ARG --password ARG</span></p>');
                     output('<p>Clear your token: <span class="folder">exit</span></p>');
                     output('<p>Commands: <span class="folder">' + CMDS.join('   ') + '</span></p>');
                     output('<p>More help: <span class="folder">yuanyan &lt;yuanyan@tencent.com&gt;</span></p>');
