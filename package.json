@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.2.16",
+    "version": "0.2.17",
     "description": "A build tools for the web",
     "keywords": ["css", "js", "image", "build", "CMD", "AMD", "task", "build"],
     "maintainers": [
@@ -31,6 +31,8 @@
         "csslint": "~0.9.8",
         "colors": "~0.6.0",
         "optimist": "~0.3.5",
+        "optipng-bin": "*",
+        "jpegtran-bin": "*",
         "connect": "*",
         "requirejs": "*",
         "almond": "*",

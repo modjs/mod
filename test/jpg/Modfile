@@ -1,0 +1,10 @@
+
+module.exports = {
+    tasks: {
+        min: {
+            source: "test.jpg",
+            dest: "test.min.jpg",
+            verbose: true
+        }
+    }
+};
