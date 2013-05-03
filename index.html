@@ -35,14 +35,20 @@
 
 <h2>What is Mod?</h2>
 
-<p>Mod is a task-based build tool, it help developers quickly build robust and high-performance web applications.</p>
+<p>Mod is a task-based build tool for the web, it help developers quickly build robust and high-performance web applications.</p>
 
-<h2>Why another one?</h2>
+<h2>Wiki</h2>
+
+<ul>
+<li><a href="https://github.com/modulejs/modjs/wiki/Roadmap">Project Roadmap</a></li>
+<li><a href="https://github.com/modulejs/modjs/wiki/Plugins">Mod Plugin List</a></li>
+<li><a href="https://github.com/modulejs/modulejs/blob/master/Modfile">Real Modfile Example</a></li>
+</ul><h2>Why another one?</h2>
 
 <ul>
 <li>More built-in tasks</li>
 <li>More simplicity to use</li>
-<li>Configuration less, do more, even zero</li>
+<li>Configuration less(even zero), do more</li>
 <li>Business background, community support</li>
 </ul><h2>Features</h2>
 
@@ -55,73 +61,62 @@
 <li>HTML conditional comments for target build</li>
 <li>Source stripping, automatically remove debugging code</li>
 <li>Common action: cat, rm, mv, mkdir, cp, hash, pack</li>
-<li>File watcher, trigger custom tasks</li>
+<li>File watcher, trigger custom tasks when file change</li>
 <li>Live Browser Reloads, instantly see changes in your browser</li>
 <li>Image Optimization, reduce JPEG, PNG and GIF file sizes</li>
-<li>Package manager: install, uninstall, update, search, ls</li>
 <li>Project boilerplate generate</li>
 <li>Built-in Web Server</li>
-<li>Github as one default public registry</li>
 <li>Extensible, easily write plugins</li>
 <li>Works on most platforms: Windows, Linux, Mac OS X, Unix...</li>
 </ul><h2>Npm Installation</h2>
 
 <p>Mod is installed using <a href="http://npmjs.org/">NPM(Node Package Manager)</a></p>
 
-<div class="highlight"><pre>npm install -g modjs
-</pre></div>
+<pre lang="shell"><code>npm install -g modjs
+</code></pre>
 
 <h2>Built-in Tasks</h2>
 
 <p>Mod supports a powerful set of high-level commands:</p>
 
-<div class="highlight"><pre>                          __   _
-   ____ ___   ____   ____/ /  <span class="o">(</span>_<span class="o">)</span>_____
-  / __ <span class="sb">`</span>__ <span class="se">\ </span>/ __ <span class="se">\ </span>/ __  /  / // ___/
- / / / / / // /_/ // /_/ /  / /<span class="o">(</span>__  <span class="o">)</span>
-/_/ /_/ /_/ <span class="se">\_</span>___/ <span class="se">\_</span>_,_/__/ //____/
+<pre lang="shell"><code>                          __   _
+   ____ ___   ____   ____/ /  (_)_____
+  / __ `__ \ / __ \ / __  /  / // ___/
+ / / / / / // /_/ // /_/ /  / /(__  )
+/_/ /_/ /_/ \____/ \__,_/__/ //____/
                         /___/
 
-Usage: mod COMMAND <span class="o">[</span>ARGS<span class="o">]</span>
+Usage: mod COMMAND [ARGS]
 
-mod cat       <span class="c"># Concatenate the content of files</span>
-mod cp        <span class="c"># Copy one or more files to another location</span>
-mod mkdir     <span class="c"># Create new folder</span>
-mod mv        <span class="c"># Move or rename files or directories</span>
-mod rm        <span class="c"># Remove files</span>
-mod strip     <span class="c"># Source stripping</span>
+mod cat       # Concatenate the content of files
+mod cp        # Copy one or more files to another location
+mod mkdir     # Create new folder
+mod mv        # Move or rename files or directories
+mod rm        # Remove files
+mod strip     # Source stripping
 
-mod min       <span class="c"># Minify js css html image files</span>
-mod lint      <span class="c"># Validate js css files</span>
-mod build     <span class="c"># Build an optimized version of your app, ready to deploy</span>
+mod min       # Minify js css html image files
+mod lint      # Validate js css files
+mod build     # Build an optimized version of your app, ready to deploy
 
-mod create    <span class="c"># Generate a project skeleton include project directory</span>
-mod init      <span class="c"># Generate a project skeleton in target directory</span>
-mod server    <span class="c"># Start a static web server</span>
-mod pack      <span class="c"># Create a tarball with target directory</span>
-mod <span class="nb">hash</span>      <span class="c"># Rename file with it hash value</span>
-
-mod install   <span class="c"># Install a package from the client-side package registry</span>
-mod uninstall <span class="c"># Uninstall the package</span>
-mod update    <span class="c"># Update a package to the latest version</span>
-mod ls        <span class="c"># List the packages currently installed</span>
-mod search    <span class="c"># Query the registry for matching package names</span>
-</pre></div>
-
-<p>Some more examples of how to use our commands include:</p>
-
-<div class="highlight"><pre><span class="c"># Package management</span>
-mod search jquery                 <span class="c"># Lookup jQuery in the Mod registry</span>
-mod install jquery@1.7.2          <span class="c"># Install a package and dependencies</span>
-mod update jquery                 <span class="c"># Update to latest version</span>
-mod uninstall jquery              <span class="c"># Uninstall jquery package</span>
-</pre></div>
+mod create    # Generate a project skeleton include project directory
+mod init      # Generate a project skeleton in target directory
+mod server    # Start a static web server
+mod pack      # Create a tarball with target directory
+mod hash      # Rename file with it hash value
+mod search    # Search the Github
+</code></pre>
 
 <h2>Modfile</h2>
 
 <p>Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：</p>
 
 <div class="highlight"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">sprite</span><span class="o">:</span> <span class="s2">"mod-sprite"</span><span class="p">,</span>
+        <span class="nx">datauri</span><span class="o">:</span> <span class="s2">"mod-datauri"</span>
+    <span class="p">},</span>
+
     <span class="nx">tasks</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">"rm"</span> <span class="o">:</span> <span class="p">{</span>
             <span class="s2">"target"</span><span class="o">:</span> <span class="s2">"./dist"</span>
@@ -182,29 +177,9 @@ mod uninstall jquery              <span class="c"># Uninstall jquery package</sp
 | Built-in WebServer       | ✓     | ✓         | ✓        |
 | Skeletons <span class="o">(</span>Boilerplates<span class="o">)</span> | ✓     | ✓         | ✓        |
 | Headless browser Testing | ✗     | ✓         | ✓        |
-| Package manager          | ✓     | ✗         | ✓        |
-| Private registry support | ✓     | ✗         | ✗        |
 | Extensible plugins       | ✓     | ✓         | ✓        |
 | Cross-platform           | ✓     | ✓         | ✗        |
 </pre></div>
-
-<h2>Package Defining</h2>
-
-<p>You can create a <code>package.json</code> file in your project's root,
-for avoid conflict with NPM's 'dependencies', Mod use 'webDependencies' to specifying all of its dependencies.</p>
-
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"myProject"</span><span class="p">,</span>
-  <span class="nt">"description"</span><span class="p">:</span> <span class="s2">"myProject is myProject"</span><span class="p">,</span>
-  <span class="nt">"version"</span><span class="p">:</span> <span class="s2">"0.0.1"</span><span class="p">,</span>
-  <span class="nt">"main"</span><span class="p">:</span> <span class="s2">"./path/to/main.js"</span><span class="p">,</span>
-  <span class="nt">"webDependencies"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">"jquery"</span><span class="p">:</span> <span class="s2">"~1.8.2"</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-<p>Mod recognizes versions that follow the (semver)[<a href="http://semver.org/">http://semver.org/</a>] specification.</p>
 
 <h2>Custom Tasks</h2>
 
@@ -284,7 +259,7 @@ We utilize a number of useful open-source solutions including:</p>
 <li>HTML5 Boilerplate</li>
 </ul><h2>Used by people within</h2>
 
-<p><img src="http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png" alt="webqq"><img src="http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png" alt="qqconnect"></p>
+<p><img src="http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png" alt="qqfind"><img src="http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png" alt="qqconnect"></p>
 
 <h2>License</h2>
 
