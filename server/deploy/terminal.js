@@ -270,7 +270,8 @@ var Terminal = function(containerId) {
                     break;
                 default:
                     exec(this.value, function(result) {
-                        output('<pre>' + result + '</pre>');
+                        // strip color codes
+                        output('<pre>' + result.replace(/\[\d+m/g,'') + '</pre>');
                     });
             }
 
