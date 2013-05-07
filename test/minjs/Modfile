@@ -1,0 +1,9 @@
+
+module.exports = {
+    tasks: {
+        min: {
+            source: "./*.js",
+            dest: "./dist"
+        }
+    }
+};

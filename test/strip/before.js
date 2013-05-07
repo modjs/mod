@@ -2,8 +2,8 @@ define(function (require) {
 
     if(true) {
         // @keep
-		alert(123);
-	}
+        alert(123);
+    }
     true && alert( 123);
     /*
     @ignore

@@ -1,0 +1,9 @@
+
+module.exports = {
+    tasks: {
+        min: {
+            source: "test.css",
+            dest: "test.min.css"
+        }
+    }
+};

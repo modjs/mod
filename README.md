@@ -77,6 +77,17 @@ mod hash      # Rename file with it hash value
 mod search    # Search the Github
 ```
 
+## Simple Examples
+* [Concatenate Files](https://github.com/modulejs/modjs/tree/master/test/cat)
+* [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
+* [CSS Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
+* [JPG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minjpg)
+* [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
+* [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
+* [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
+* [Source Stripping](https://github.com/modulejs/modjs/tree/master/test/strip)
+* [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
+* [CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/sprite)
 
 ## Modfile
 
