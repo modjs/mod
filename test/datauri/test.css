@@ -1,9 +1,7 @@
 .logo {
-    /* background-image: url("test.png");  */
     background-image: url("test.png");
 }
 
 .logo2 {
-    /* background-image: url("test.png");  */
-    background-image: url("test.png?tx=123");
+    background-image: url("test.png?20130630520");
 }

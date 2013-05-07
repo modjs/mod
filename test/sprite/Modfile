@@ -1,0 +1,12 @@
+
+module.exports = {
+    plugins: {
+        sprite: "mod-sprite"
+    },
+    tasks : {
+        sprite : {
+            source: "test.css",
+            dest: "test.sprite.css"
+        }
+    }
+};

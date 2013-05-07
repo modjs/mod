@@ -1,0 +1,10 @@
+
+module.exports = {
+    tasks: {
+        datauri: {
+            source: "test.css",
+            dest: "test.datauri.css",
+            igts: true
+        }
+    }
+};
