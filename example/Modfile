@@ -14,11 +14,16 @@ function getTimestamp(){
 var TIMESTAMP = getTimestamp();
 
 module.exports = {
+    // use loader
+    loader: "requirejs",
+
+    // use plugins
     plugins: {
-        "sprite" : "mod-sprite"
+        "sprite": "mod-sprite"
     },
 
     tasks:{
+        // remove files
         rm:{
             clean: {
                 target:'dist'
@@ -53,7 +58,7 @@ module.exports = {
             }
         },
 
-        // minify
+        // minify files
         min : {
             js:{
                 source: "./dist/js/*.js"
@@ -77,17 +82,20 @@ module.exports = {
             "igts": true                                 // optional
         },
 
+        // image compression
         optimage: {
             source: "./css/slice/*.png",
             dest: "./css/slice/"
         },
 
+        // code striping
         strip: {
             "source": "./dist/js/*.js",
             "dest": "dist/js/",
             "nodes": ["console", "alert"]
         },
 
+        // copy files
         "cp": {
             "data": {
                 "source": "./js/data/*.js",
@@ -103,6 +111,7 @@ module.exports = {
             }
         },
 
+        // replace placeholder
         "replace" : {
             html: {
                 "source": "./dist/*.html",
@@ -119,6 +128,7 @@ module.exports = {
 
         },
 
+        // build by templating
         "template" : {
             html: {
                 "source": "./dist/*.html",
@@ -128,6 +138,7 @@ module.exports = {
     },
 
     targets:{
+        // define the dist target
         dist: "rm:clean mkdir compile optimage sprite cp:data cp:img replace template min cp:jquery rm:tmp"
     }
 };
