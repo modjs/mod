@@ -1,0 +1,99 @@
+v0.1.10
+
+* switched to socket.io, now works with Chrome 14+
+
+v0.1.9
+
+* fixed page refresh
+
+v0.1.8
+
+* bug fixes
+
+v0.1.7
+
+* updated dependencies
+
+v0.1.6
+
+* fixed crash on connect when using watch expressions (Issue 25)
+
+v0.1.5
+
+* minor bug fixes
+
+v0.1.4
+
+* experimental support for the profiles panel
+
+v0.1.3
+
+* reverted websocket library to 1.3.53
+
+v0.1.2
+
+* option to save changes from liveEdit
+
+* option to hide files from inspector
+
+* added config.json
+  - webPort (port to host inspector interface)
+  - debugPort (default debugger port to connect to)
+  - saveLiveEdit (save changes to files edited with liveEdit)
+  - hidden (regexp strings of files to hide from interface)
+
+v0.1.1
+
+* Fixed pause button with node 0.3.1+
+
+* Fixed page refresh with node 0.3.1+
+
+* Shortened script file names in script list
+
+* Updated node-websocket-server library
+
+
+v0.1.0
+
+* Require node 0.3+
+
+* Improved Scope Variables display
+  - Better object type info
+  - Inlined Array / Buffer lengths
+
+* Automatically saved application setting
+  - last file shown
+  - console history
+  - watch expressions
+
+* Console object completion on .
+
+* Updated Web Inspector base
+
+* Moved debugger port to query string i.e. /debug?port=5858
+
+* New front-end <-> back-end message protocol
+
+
+v0.0.4
+
+* ctrl+click line number for conditional breakpoints
+
+* enable pause on all exceptions button
+
+
+v0.0.3
+
+* handle multi-byte characters from debugger (Issue 12)
+
+
+v0.0.2
+
+* removed --start --debug-port --fwd-io flags
+
+* added debugger port UI
+
+
+v0.0.1
+
+* added to npm registry
