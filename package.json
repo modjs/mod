@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.2.21",
+    "version": "0.2.22",
     "description": "A build tools for the web",
     "keywords": ["css", "js", "image", "build", "CMD", "AMD", "task", "build"],
     "maintainers": [
