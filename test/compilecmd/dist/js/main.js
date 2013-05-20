@@ -1,0 +1,1 @@
+define(function(require){var e=require("./a"),t=require("jquery");t("#hi").text(JSON.stringify(e))})

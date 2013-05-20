@@ -1,4 +1,3 @@
 define(function (require) {
-    require('./c');
-    return {b:2};
+    return {b:2, c: require('./c')};
 });

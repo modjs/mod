@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.2.23",
+    "version": "0.2.24",
     "description": "A build tools for the web",
     "keywords": ["css", "js", "image", "build", "CMD", "AMD", "task", "build"],
     "maintainers": [
@@ -36,7 +36,7 @@
         "requirejs": "*",
         "almond": "*",
         "seajs": "*",
-        "seajs-build": "*"
+        "cmd-util": "~0.3.6"
     },
     "devDependencies": {
         "node-inspector": "0.1.10"
