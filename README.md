@@ -11,6 +11,10 @@ Mod is a task-based build tool for the web, it help developers quickly build rob
 * [Mod Plugin List](https://github.com/modulejs/modjs/wiki/Plugins)
 * [QQ Find Modfile Example](https://github.com/modulejs/modjs/blob/master/example/Modfile)
 
+## Quick Build Demo
+* [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildrequirejs)
+* [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildseajs)
+
 ## Why another one?
 
 * More built-in tasks

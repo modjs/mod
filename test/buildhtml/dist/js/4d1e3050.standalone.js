@@ -1,1 +1,0 @@
-(function(t){console.log(t)})("alone")

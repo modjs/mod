@@ -2,20 +2,16 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Build</title>
+    <title>Build Demo</title>
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
+<div id="hi"></div>
 <script src="js/standalone.js">
     var i = 0;
 </script>
-<script>
-    <!-- alert(1);
-    alert(2);
-     --> alert(3);
-</script>
-<!-- data-main attribute tells require.js to load
-             scripts/main.js after require.js loads. -->
+<!-- data-main attribute tells require.js to load js/main.js after require.js loads. -->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script data-main="js/main" src="http://requirejs.org/docs/release/2.1.6/minified/require.js"></script>
 </body>
 </html>

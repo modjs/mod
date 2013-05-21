@@ -8,5 +8,5 @@ require.config({
 require([
     '$'
 ], function ($) {
-    console.log($);
+    $('#id').text("Hello ModJS");
 })
