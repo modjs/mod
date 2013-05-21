@@ -4,10 +4,15 @@ module.exports = {
     tasks: {
         compile:{
             // do not combine all require module
-            demo: {
+            demo1: {
                 source: "./js/*.js",
                 dest: "./dist/js/",
                 combine: false
+            },
+            demo2: {
+                source: "./js/main.js",
+                dest: "./dist/js2/",
+                mainConfigFile: "./js/config.js"
             }
         }
     },
