@@ -6,6 +6,15 @@
 
 Mod is a task-based build tool for the web, it help developers quickly build robust and high-performance web applications.
 
+## Installation
+
+Mod is installed using [NPM(Node Package Manager)](http://npmjs.org/)
+
+```shell
+npm install -g modjs
+```
+
+
 ## Wiki
 * [Project Roadmap](https://github.com/modulejs/modjs/wiki/Roadmap)
 * [Mod Plugin List](https://github.com/modulejs/modjs/wiki/Plugins)
@@ -40,46 +49,27 @@ Mod is a task-based build tool for the web, it help developers quickly build rob
 * Extensible, easily write plugins
 * Works on most platforms: Windows, Linux, Mac OS X, Unix...
 
-## Npm Installation
-
-Mod is installed using [NPM(Node Package Manager)](http://npmjs.org/)
-
-```shell
-npm install -g modjs
-```
-
 ## Built-in Tasks
-
 Mod supports a powerful set of high-level commands:
 
-```shell
-                          __   _
-   ____ ___   ____   ____/ /  (_)_____
-  / __ `__ \ / __ \ / __  /  / // ___/
- / / / / / // /_/ // /_/ /  / /(__  )
-/_/ /_/ /_/ \____/ \__,_/__/ //____/
-                        /___/
+* [help](https://github.com/modulejs/modjs/tree/master/doc/tasks/help.md) - Get help on mod
+* [min](https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md) - Minify JavaScript/CSS/HTML/Image source
+* [lint](https://github.com/modulejs/modjs/tree/master/doc/tasks/lint.md) - Validate JavaScript/CSS source
+* [compile](https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md) - Compile JavaScript/CSS/HTML source
+* [create](https://github.com/modulejs/modjs/tree/master/doc/tasks/create.md) - Generate a project skeleton include project directory
+* [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - Generate a project skeleton in target directory
+* [server](https://github.com/modulejs/modjs/tree/master/doc/tasks/server.md) - Start a static web server
+* [pack](https://github.com/modulejs/modjs/tree/master/doc/tasks/pack.md) - Create a tarball from a module
+* [hash](https://github.com/modulejs/modjs/tree/master/doc/tasks/hash.md) - Rename file with it hash value
+* [build](https://github.com/modulejs/modjs/tree/master/doc/tasks/build.md) - Build the project by convention
+* [replace](https://github.com/modulejs/modjs/tree/master/doc/tasks/replace.md) - Replace the contents of files
+* [cat](https://github.com/modulejs/modjs/tree/master/doc/tasks/cat.md) - Concatenate the content of files
+* [cp](https://github.com/modulejs/modjs/tree/master/doc/tasks/cp.md) - Copy one or more files to another location
+* [mkdir](https://github.com/modulejs/modjs/tree/master/doc/tasks/mkdir.md) - Create new folder
+* [mv](https://github.com/modulejs/modjs/tree/master/doc/tasks/mv.md) - Move or rename files or directories
+* [rm](https://github.com/modulejs/modjs/tree/master/doc/tasks/rm.md) - Remove files
+* [strip](https://github.com/modulejs/modjs/tree/master/doc/tasks/strip.md) - Source stripping
 
-Usage: mod COMMAND [ARGS]
-
-mod cat       # Concatenate the content of files
-mod cp        # Copy one or more files to another location
-mod mkdir     # Create new folder
-mod mv        # Move or rename files or directories
-mod rm        # Remove files
-mod strip     # Source stripping
-
-mod min       # Minify js css html image files
-mod lint      # Validate js css files
-mod build     # Build an optimized version of your app, ready to deploy
-
-mod create    # Generate a project skeleton include project directory
-mod init      # Generate a project skeleton in target directory
-mod server    # Start a static web server
-mod pack      # Create a tarball with target directory
-mod hash      # Rename file with it hash value
-mod search    # Search the Github
-```
 
 ## Simple Examples
 * [Concatenate Files](https://github.com/modulejs/modjs/tree/master/test/cat)
