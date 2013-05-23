@@ -1,5 +1,3 @@
-# Documents
-
 ## Tasks
 
 * [help](https://github.com/modulejs/modjs/tree/master/doc/tasks/help.md) - Get help on mod 

@@ -1,28 +1,35 @@
-
-
 ## <a href="#min" name="min">min</a>
+> Minify JavaScript/CSS/HTML/Image source
 
-Usage: `mod min <source>`
+### Usage
 
-## JavaScript
-
-## CSS
-
-## HTML
-
-## Image
-
-```bash
-# GIF
-gifsicle -O2 inputFile -output outputFile
-
-# JPEP
-jpegtran inputFile outputFile
-
-# PNG
-optipng inputFile -out outputFile -strip all -o2
+```sh
+$ mod min <source> [options]
 ```
 
-More about optimize images: http://developer.yahoo.com/performance/rules.html#opt_images
+### Options
+
+#### dest
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination directory or file</p>
+<hr>
+
+#### suffix
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination file suffix append</p>
+<hr>
+
+#### charset
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>utf-8</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file encoding type</p>
+<hr>
+
+
+
+
+
 
 
