@@ -8,10 +8,10 @@ Mod is a task-based build tool for the web, it help developers quickly build rob
 
 ## Installation
 
-Mod is installed using [NPM(Node Package Manager)](http://npmjs.org/)
+[Mod](https://npmjs.org/package/modjs) is installed using [NPM(Node Package Manager)](http://npmjs.org/)
 
-```shell
-npm install -g modjs
+```sh
+$ npm install -g modjs
 ```
 
 
@@ -136,7 +136,7 @@ module.exports = {
 Then run 'dist' target:
 
 ```sh
-mod dist
+$ mod dist
 ```
 
 ## Compression Table
@@ -241,6 +241,8 @@ We utilize a number of useful open-source solutions including:
 
 ![qqfind](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
 ![qqconnect](http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png)
+
+[Tell us you use modjs!](https://github.com/modulejs/modjs/issues/22)
 
 ## License
 
