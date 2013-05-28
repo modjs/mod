@@ -8,6 +8,7 @@
     ],
     "homepage": "http://modulejs.github.com/modjs",
     "dependencies": {
+        "ssh2": "~0.2.5",
         "tar": "~0.1.13",
         "fstream-ignore": "~0.0.5",
         "fstream": "~0.1.18",
