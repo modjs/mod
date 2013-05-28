@@ -1,12 +1,12 @@
 {
     "name": "modjs",
-    "version": "0.2.26",
-    "description": "A build tools for the web",
+    "version": "0.2.27",
+    "description": "JavaScript Workflow Tooling For Web",
     "keywords": ["css", "js", "image", "build", "CMD", "AMD", "task", "build"],
     "maintainers": [
         {"name": "yuanyan", "web": "https://github.com/yuanyan"}
     ],
-    "homepage": "http://modulejs.github.com/modjs",
+    "homepage": "http://madscript.com/modjs",
     "dependencies": {
         "ssh2": "~0.2.5",
         "tar": "~0.1.13",
