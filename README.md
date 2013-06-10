@@ -171,14 +171,14 @@ exports.summary = 'my task';
 exports.usage = '<source> [options]';
 
 exports.options = {
-    "d" : {
-        alias : 'dest'
+    "dest" : {
+        alias : 'd'
         ,default : '<source>'
         ,describe : 'destination file'
     },
 
-    "c" : {
-        alias : 'charset'
+    "charset" : {
+        alias : 'c'
         ,default : 'utf-8'
         ,describe : 'file encoding type'
     }
