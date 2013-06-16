@@ -2,8 +2,8 @@
 module.exports = {
     tasks: {
         compile: {
-            source: "main.css",
-            dest: "main.all.css"
+            source: "index.html",
+            dest: "dist/index.html"
         }
     }
 };
