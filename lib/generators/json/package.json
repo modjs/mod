@@ -11,7 +11,7 @@
     "bugs": {
         "url": ""
     },
-    "license": "",
-    "webDependencies": {
+    "license": "{{license}}",
+    "dependencies": {
     }
 }
