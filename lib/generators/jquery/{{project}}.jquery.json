@@ -1,0 +1,29 @@
+{
+    "name": "{{name}}",
+    "title": "{{title}}",
+    "description": "{{description}}",
+    "version": "0.0.1",
+    "homepage": "{{homepage}}",
+    "demo": "{{demo}}",
+    "docs": "{{docs}}",
+    "author": {
+        "name": "{{author_name}}",
+        "email": "{{author_email}}",
+        "url": "{{author_url}}"
+    },
+    "repository": {
+        "type": "git",
+        "url": "{{repository}}"
+    },
+    "bugs": "{{bugs}}",
+    "dependencies": {
+        "jquery": ">=1.7.2"
+    },
+    "keywords": [{{keywords}}],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ]
+}
