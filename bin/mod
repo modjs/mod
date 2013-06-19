@@ -10,9 +10,14 @@ for (var i = 0; i < process.argv.length; i += 1) {
     if (argv[i] === '--debug') {
         process.argv.splice(i, 1);
         logger.level = 'debug';
-    }else if(argv[i] === '--no-color' || argv[i] === '--no-colors'){
+    }else if(argv[i] === '--no-color' || argv[i] === '--no-colors') {
         process.argv.splice(i, 1);
         colors.mode = 'none';
+        var originLog = console.log;
+        console.log = function(){
+            var string =  utils.argumentsStringify(arguments);
+            originLog( colors.stripColors(string) );
+        };
     }
 }
 
