@@ -16,8 +16,6 @@ for (var i = 0; i < process.argv.length; i += 1) {
     }
 }
 
-console.log(argv)
-
 var cmd = argv.slice(2).shift();
 if (cmd === '-h' || cmd === '--help') {
     core.run('help');
@@ -28,7 +26,7 @@ if (cmd === '-h' || cmd === '--help') {
             return logger.error(err);
         }
         logger.end();
-        console.log(ver);
+        console.log(ver.green);
     });
 }else{
     core.run(cmd);
