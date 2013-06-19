@@ -2,7 +2,7 @@
     "name": "modjs",
     "version": "0.2.30",
     "description": "JavaScript Workflow Tooling For Web",
-    "keywords": ["css", "js", "image", "build", "CMD", "AMD", "task", "build"],
+    "keywords": ["tooling", "workflow", "automation", "build"],
     "maintainers": [
         {"name": "yuanyan", "web": "https://github.com/yuanyan"}
     ],

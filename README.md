@@ -4,7 +4,7 @@
 
 ## What is Mod?
 
-Mod is a task-based build tool for the web, it help developers quickly build robust and high-performance web applications.
+Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance web applications.
 
 ## Installation
 
@@ -14,7 +14,6 @@ Mod is a task-based build tool for the web, it help developers quickly build rob
 $ npm install -g modjs
 ```
 
-
 ## Wiki
 * [Project Roadmap](https://github.com/modulejs/modjs/wiki/Roadmap)
 * [Mod Plugin List](https://github.com/modulejs/modjs/wiki/Plugins)
@@ -23,6 +22,9 @@ $ npm install -g modjs
 ## Quick Build Demo
 * [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildrequirejs)
 * [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildseajs)
+
+## IDE Support
+* [sublime-mod](https://github.com/yuanyan/sublime-mod)
 
 ## Why another one?
 
@@ -75,6 +77,7 @@ Mod supports a powerful set of high-level commands:
 * [Concatenate Files](https://github.com/modulejs/modjs/tree/master/test/cat)
 * [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
 * [CSS Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
+* [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
 * [JPG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minjpg)
 * [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
 * [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
