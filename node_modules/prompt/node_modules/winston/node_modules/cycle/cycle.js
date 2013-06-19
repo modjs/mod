@@ -42,9 +42,15 @@ cycle.decycle = function decycle(object) {
         case 'object':
 
 // typeof null === 'object', so get out if this value is not really an object.
+// Also get out if it is a weird builtin object.
 
-            if (!value) {
-                return null;
+            if (value === null ||
+                  value instanceof Boolean ||
+                  value instanceof Date ||
+                  value instanceof Number ||
+                  value instanceof RegExp ||
+                  value instanceof String) {
+              return value;
             }
 
 // If the value is an object or array, look to see if we have already

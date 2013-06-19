@@ -15,6 +15,11 @@ describe('iduri.resolve', function() {
     should.not.exist(meta);
   });
 
+  it('is valid', function() {
+    meta = iduri.resolve('alipay-css/foo@0.1.5');
+    should.exist(meta);
+  });
+
   it('has a version', function() {
     meta = iduri.resolve('lepture/nico@0.1.5');
     meta.version.should.equal('0.1.5');

@@ -21,3 +21,4 @@ dist/
 .settings
 .yml
 _site
+coverage.html

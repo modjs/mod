@@ -269,7 +269,7 @@ describe('ast.modify', function() {
       "})();"
     ].join('\n');
     code = ast.modify(code, function(v) { return 'jquery-debug'; });
-    code = code.print_to_string();
+    code = code.print_to_string({beautify: true});
     code.should.include('(function()');
     code.should.include('jquery-debug');
   });

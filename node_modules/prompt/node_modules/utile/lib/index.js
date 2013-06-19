@@ -327,13 +327,23 @@ utile.randomString = function (length) {
 // the predicate `pred`
 //
 utile.filter = function (obj, pred) {
-  var copy = Array.isArray(obj) ? [] : {};
-  utile.each(obj, function (val, key) {
-    if (pred(val, key, obj)) {
-      copy[key] = val;
-    }
-  });
-
+  var copy;
+  if (Array.isArray(obj)) {
+    copy = [];
+    utile.each(obj, function (val, key) {
+      if (pred(val, key, obj)) {
+        copy.push(val);
+      }
+    });
+  }
+  else {
+    copy = {};
+    utile.each(obj, function (val, key) {
+      if (pred(val, key, obj)) {
+        copy[key] = val;
+      }
+    });
+  }
   return copy;
 };
 

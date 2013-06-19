@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.2.30",
+    "version": "0.2.31",
     "description": "JavaScript Workflow Tooling For Web",
     "keywords": ["tooling", "workflow", "automation", "build"],
     "maintainers": [
@@ -19,7 +19,6 @@
         "prompt": "~0.2.8",
         "rimraf": "~2.0.1",
         "faye-websocket": "~0.4.3",
-        "ncp": "~0.2.6",
         "request": "~2.9.203",
         "minimatch": "~0.2.9",
         "clean-css": "~0.6.0",
@@ -28,8 +27,8 @@
         "html-minifier": "~0.5.0",
         "jshint": "~0.7.3",
         "csslint": "~0.9.8",
-        "colors": "~0.6.0",
         "optimist": "~0.4.0",
+        "colors": "*",
         "optipng-bin": "*",
         "jpegtran-bin": "*",
         "connect": "*",
