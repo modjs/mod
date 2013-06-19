@@ -6,7 +6,7 @@
 ```sh
 $ mod <%= taskName %> <%= usage %>
 ```
-<% if(typeof options !== 'undefined'){ %>
+<% if(typeof options !== 'undefined' && !_.isEmpty(options)){ %>
 ### Options
 <% _.each(options, function(option, name) { %>
 #### <%= name %>

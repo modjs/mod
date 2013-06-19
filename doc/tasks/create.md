@@ -1,5 +1,5 @@
 ## <a href="#create" name="create">create</a>
-> Generate a project skeleton include project directory
+> Generate project skeleton and create project directory
 
 ### Usage
 

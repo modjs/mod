@@ -7,9 +7,6 @@
 $ mod help [command]
 ```
 
-### Options
-
-
 
 
 

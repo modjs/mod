@@ -1,5 +1,5 @@
 ## <a href="#init" name="init">init</a>
-> Generate a project skeleton in target directory
+> Generate project skeleton from templates
 
 ### Usage
 
