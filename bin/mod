@@ -4,6 +4,7 @@ var utils = require('../lib/utils');
 var logger = require('../lib/utils/logger');
 var core = require('../lib/core');
 var colors = require('colors');
+var _ = require('underscore');
 
 var argv = process.argv;
 for (var i = 0; i < process.argv.length; i += 1) {
@@ -15,8 +16,11 @@ for (var i = 0; i < process.argv.length; i += 1) {
         colors.mode = 'none';
         var originLog = console.log;
         console.log = function(){
-            var string =  utils.argumentsStringify(arguments);
-            originLog( colors.stripColors(string) );
+            var args = _.toArray(arguments);
+            args.map(function(arg){
+                return colors.stripColors(arg);
+            });
+            originLog.apply(this, args);
         };
     }
 }
