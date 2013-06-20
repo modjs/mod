@@ -16,7 +16,11 @@
 #### <%= method.name %>
 <% if(method.describe){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> <%= method.describe %></p><% } %>
 <% if(method.ret){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code><%= method.ret %></code></p><% } %>
-<% if(method.example){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><%= method.example %></code></p><% } %>
+<% if(method.example){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
+```js
+<%= method.example %>
+```
+<% } %>
 <hr>
 <% }); %>
 <% } %>
