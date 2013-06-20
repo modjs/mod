@@ -21,6 +21,12 @@ $ mod cat <source> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file encoding type</p>
 <hr>
 
+#### files
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> multiple files per target</p>
+<hr>
+
 
 
 
