@@ -164,64 +164,9 @@ $ mod dist
 | Cross-platform           | ✓     | ✓         | ✗        |
 ```
 
-## Custom Tasks
-
-In addition to the built-in tasks, you can create your own tasks:
-
-### Plugin Example
-```js
-exports.summary = 'my task';
-
-exports.usage = '<source> [options]';
-
-exports.options = {
-    "dest" : {
-        alias : 'd'
-        ,default : '<source>'
-        ,describe : 'destination file'
-    },
-
-    "charset" : {
-        alias : 'c'
-        ,default : 'utf-8'
-        ,describe : 'file encoding type'
-    }
-};
-
-exports.run = function (options, callback) {
-    var target = options.target;
-    // ...
-};
-```
-
-### Plugin API
-```js
-exports.taskName
-exports.loadTask()
-exports.runTask()
-
-exports.getArgs()
-exports.getConfig()
-exports.getTaskConfig()
-
-exports.log()
-exports.error()
-exports.warn()
-exports.debug()
-
-exports.file
-exports.utils
-
-exports._
-exports.async
-exports.request
-exports.prompt
-```
-
 ## Platform Support
 
 Mod support Windows, OS X, Linux.
-
 
 ## Issue Submission
 

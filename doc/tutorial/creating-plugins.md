@@ -1,4 +1,6 @@
-﻿Tasks are mod's bread and butter. The stuff you do most often, like `min` or `c`. Every time Mod is run, you specify one or more tasks to run, which tells Mod what you'd like it to do.
+﻿Tasks are mod's bread and butter. The stuff you do most often, like `min` or `cat`. Every time Mod is run, you specify one or more tasks to run, which tells Mod what you'd like it to do.
+
+In addition to the built-in tasks, you can create your own task:
 
 ### Plugin skeleton
 ```js
