@@ -1,4 +1,4 @@
-## Api
+## API
 
 * [exports.file](https://github.com/modulejs/modjs/tree/master/doc/api/file.md) - There are many provided methods for reading and writing files, traversing the filesystem and finding files by matching globbing patterns. Many of these methods are wrappers around built-in Node.js file functionality, but with additional error handling, logging and character encoding normalization. 
 * [exports._](http://underscorejs.org/) - Underscore provides 80-odd functions that support both the usual functional suspects: map, select, invoke — as well as more specialized helpers: function binding, javascript templating, deep equality testing, and so on. It delegates to built-in functions, if present, so modern browsers will use the native implementations of forEach, map, reduce, filter, every, some and indexOf.
