@@ -34,9 +34,9 @@
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file suffix append</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{*}</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
-    ```js
-    file.suffiex("jquery.js", "min") // => jquery.min.js
-    ```
+```js
+file.suffiex("jquery.js", "min") // => jquery.min.js
+```
 
 <hr>
 
@@ -104,9 +104,9 @@
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> given a path to a directory, create it, and all the intermediate directories as well</p>
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
-    ```js
-    file.mkdir("/tmp/dir", 755)
-    ```
+```js
+file.mkdir("/tmp/dir", 755)
+```
 
 <hr>
 
@@ -120,13 +120,13 @@
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> recurse into a directory, executing callback for each file.</p>
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
-    ```js
-    file.walkdir("/tmp", function(error, path, dirs, name) {
+```js
+file.walkdir("/tmp", function(error, path, dirs, name) {
 // path is the current directory we're in
 // dirs is the list of directories below it
 // names is the list of files in it
 })
-    ```
+```
 
 <hr>
 
