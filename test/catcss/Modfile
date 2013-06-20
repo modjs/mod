@@ -1,0 +1,10 @@
+
+module.exports = {
+    tasks: {
+        cat: {
+            files: {
+                "foobar.css": ["foo.css","bar.css"]
+            }
+        }
+    }
+};

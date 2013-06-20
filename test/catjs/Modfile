@@ -1,0 +1,9 @@
+
+module.exports = {
+    tasks: {
+        cat: {
+            source: ["foo.js", "bar.js"],
+            dest: "foobar.js"
+        }
+    }
+};

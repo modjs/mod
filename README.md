@@ -74,7 +74,8 @@ Mod supports a powerful set of high-level commands:
 
 
 ## Simple Examples
-* [Concatenate Files](https://github.com/modulejs/modjs/tree/master/test/cat)
+* [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/test/catjs)
+* [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/test/catcss)
 * [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
 * [CSS Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
 * [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
@@ -236,9 +237,10 @@ We utilize a number of useful open-source solutions including:
 * CleanCSS
 * CSSLint
 * HTMLMinifiler
-* Requirejs
-* Twitter Bootstrap
-* HTML5 Boilerplate
+* RequireJS
+* SeaJS
+* OptiPNG
+* JPEGtran
 
 ## Used by people within
 

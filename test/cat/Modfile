@@ -1,9 +1,0 @@
-
-module.exports = {
-    tasks: {
-        cat: {
-            source: ["a.js", "b.js"],
-            dest: "ab.js"
-        }
-    }
-};
