@@ -17,9 +17,3 @@
 * [mv](https://github.com/modulejs/modjs/tree/master/doc/tasks/mv.md) - Move or rename files or directories 
 * [rm](https://github.com/modulejs/modjs/tree/master/doc/tasks/rm.md) - Remove files 
 * [strip](https://github.com/modulejs/modjs/tree/master/doc/tasks/strip.md) - Source stripping 
-
-
-
-
-
-
