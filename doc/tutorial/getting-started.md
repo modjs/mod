@@ -1,4 +1,4 @@
-# Getting started
+﻿# Getting started
 
 Mod and mod plugins are installed and managed via [npm](https://npmjs.org/), the [Node.js](http://nodejs.org/) package manager.
 
@@ -19,6 +19,8 @@ This will put the `mod` command in your system path, allowing it to be run from 
 Each time `mod` is run, it looks for `Modfile` deeply. Because of this, you can run `mod` from any subfolder in your project.
 
 If a `Modfile` is found, mod applies the configuration from your `Modfile`, and if there is a configuration of plugins, mod will automatically install the uninstlled plugins, if a plugin is your own custom task, mod load it by node's `require()` system, then executes any tasks you've requested for it to run.
+
+If you don't specify a target or task, but the only defined target or task will run by default.
 
 Installed Mod tasks can be listed by running `mod --help` but it's usually a good idea to start with the project's documentation.
 
@@ -129,4 +131,5 @@ module.exports = {
 
 ## Further Reading
 
+* The [Configuring Tasks]() guide has an in-depth explanation on how to configure tasks, targets, options and files inside the Modfile, along with an explanation of templates, globbing patterns.
 * For more information about writing custom tasks or Mod plugins.
