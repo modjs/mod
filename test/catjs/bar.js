@@ -1,2 +1,1 @@
-// b.js
-var b=2;
+var bar= '';

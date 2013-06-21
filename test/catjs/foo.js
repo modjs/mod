@@ -1,2 +1,1 @@
-// a.js
-var a=1;
+var foo='';
