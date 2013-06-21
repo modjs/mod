@@ -85,7 +85,8 @@ Mod supports a powerful set of high-level commands:
 * [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
 * [Source Stripping](https://github.com/modulejs/modjs/tree/master/test/strip)
 * [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
-* [CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/sprite)
+* [Plugin: CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/plugintask)
+* [Custom: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/customtask)
 
 ## Modfile
 
