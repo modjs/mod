@@ -1,8 +1,8 @@
-﻿Tasks are mod's bread and butter. The stuff you do most often, like `min` or `cat`. Every time Mod is run, you specify one or more tasks to run, which tells Mod what you'd like it to do.
+Tasks are mod's bread and butter. The stuff you do most often, like `min` or `cat`. Every time Mod is run, you specify one or more tasks to run, which tells Mod what you'd like it to do.
 
 In addition to the built-in tasks, you can create your own task:
 
-### Plugin skeleton
+## Plugin skeleton
 ```js
 exports.summary = 'my task';
 
@@ -26,8 +26,9 @@ exports.run = function (options, callback) {
     var target = options.target;
     // ...
 };
+```
 
-### Plugin API
+## Plugin API
 ```js
 exports.taskName
 exports.loadTask()
@@ -50,3 +51,9 @@ exports.async
 exports.request
 exports.prompt
 ```
+
+
+### Plugin publish
+1. Run `mod init myProjectName -t plugin` in an empty directory.
+1. Author your project `package.json`.
+1. Run `npm publish` to publish the mod plugin to npm

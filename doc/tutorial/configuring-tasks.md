@@ -1,165 +1,146 @@
-﻿This guide explains how to configure tasks for your project using a Modfile.  If you don't know what a Modfile is, please read the [Getting Started]() guide.
+This guide explains how to configure tasks for your project using a Modfile.  If you don't know what a Modfile is, please read the [Getting Started](https://github.com/modulejs/modjs/blob/master/doc/tutorial/getting-started.md) guide.
 
-## Mod Configuration
+# Tasks Configuration
 Task configuration is specified in your Modfile via the `module.exports` propery. This configuration will mostly be under task-named properties, but may contain any arbitrary data. As long as properties don't conflict with properties your tasks require, they will be otherwise ignored.
 
 Also, because this is JavaScript, you're not limited to JSON; you may use any valid JavaScript here. You may even programmatically generate the configuration if necessary.
 
 ```js
 module.exports = {
-  tasks:{
-      cat: {
-        // concat task configuration goes here.
-      },
-      min: {
-        // min task configuration goes here.
-      },
-      // Arbitrary non-task-specific properties.
-      my_property: 'whatever',
-      my_src_files: ['foo/*.js', 'bar/*.js'] 
-  }
+    tasks: {
+        cat: {
+            // concat task configuration goes here.
+        },
+        min: {
+            // min task configuration goes here.
+        },
+
+        // Arbitrary non-task-specific properties.
+        my_property: 'whatever',
+        my_src_files: ['foo/*.js', 'bar/*.js']
+    }
 };
 ```
 
-## Task Configuration and Targets
+## Task Configuration
 
-When a task is run, Mod looks for its configuration under a property of the same name. Multi-tasks can have multiple configurations, defined using arbitrarily named "targets". In the example below, the `cat` task has `foo` and `bar` targets, while the `min` task only has a `bar` target.
+When a task is run, Mod looks for its configuration under a property of the same name. Multi-tasks can have multiple configurations, defined using arbitrarily named "targets". In the example below, the `cat` task has `foo` and `bar` targets, while the `min` task only has a `baz` target.
 
 ```js
 {
-  cat: {
-    foo: {
-      // concat task "foo" target options and files go here.
+    lint: {
+        // lint task options and files go here.
     },
-    bar: {
-      // concat task "bar" target options and files go here.
+    cat: {
+        foo: {
+            // concat task "foo" target options and files go here.
+        },
+        bar: {
+            // concat task "bar" target options and files go here.
+        }
     },
-  },
-  min: {
-    bar: {
-      // min task "bar" target options and files go here.
+    min: {
+        baz: {
+            // min task "baz" target options and files go here.
+        }
     },
-  },
 }
 ```
-Specifying both a task and target like `mod cat:foo` or `mod cat:bar` will process just the specified target's configuration, while running `mod cat` will iterate over _all_ targets, processing each in turn. 
+Specifying both a task and target like `mod cat:foo` or `mod cat:bar` will process just the specified target's configuration, while running `mod cat` will iterate over _all_ targets, processing each in turn.
 
 ## Options
-Inside a task configuration, an `options` property may be specified to override built-in defaults.  In addition, each target may have an `options` property which is specific to that target.  Target-level options will override task-level options.
+Inside a task configuration, an `options` property may be specified to override built-in defaults.  In addition, each target object self is `options` property which is specific to that target.  Target-level options will override task-level options.
 
 The `options` object is optional and may be omitted if not needed.
 
 ```js
 {
-  cat: {
-    options: {
-      // Task-level options may go here, overriding task defaults.
-    },
-    foo: {
-      options: {
-        // "foo" target options may go here, overriding task-level options.
-      },
-    },
-    bar: {
-      // No options specified; this target will use task-level options.
-    },
-  },
+    cat: {
+        options: {
+            // Task-level options may go here, overriding task defaults.
+        },
+        foo: {
+            // "foo" target options may go here, overriding task-level options.
+        },
+        bar: {
+            // "bar" target options may go here, overriding task-level options.
+        }
+    }
 }
 ```
 
-## Files
-Because most tasks perform file operations, Mod has powerful abstractions for declaring on which files the task should operate. There are several ways to define **src-dest** (source-destination) file mappings, offering varying degrees of verbosity and control. Any multi task will understand all the following formats, so choose whichever format best meets your needs.
+## Targets Organization
+There are two ways to organization targets, offering varying degrees of verbosity and control. Any multi task will understand all the following formats, so choose whichever format best meets your needs.
 
-All files formats support `src` and `dest` but the "Compact" and "Files Array" formats support a few additional properties:
-
-* `filter` Either a valid [fs.Stats method name](http://nodejs.org/docs/latest/api/fs.html#fs_class_fs_stats) or a function that is passed the matched `src` filepath and returns `true` or `false`.
-* `matchBase` If set, patterns without slashes will be matched against the basename of the path if it contains slashes. For example, a?b would match the path `/xyz/123/acb`, but not `/xyz/acb/123`.
-
-
-### Compact Format
+### Single target
 This form allows a single **src-dest** (source-destination) file mapping per-target. It is most commonly used for read-only tasks, like `lint`, where a single `src` property is needed, and no `dest` key is relevant. This format also supports additional properties per src-dest file mapping.
 
 ```js
 {
-  lint: {
-    foo: {
-      src: ['src/aa.js', 'src/aaa.js']
+    lint: {
+        foo: {
+            src: ['src/foo.js', 'src/bar.js']
+        }
+    },
+    cat: {
+        bar: {
+            src: ['src/foo.js', 'src/bar.js'],
+            dest: 'dest/foobar.js',
+        }
     }
-  },
-  cat: {
-    bar: {
-      src: ['src/bb.js', 'src/bbb.js'],
-      dest: 'dest/b.js',
+}
+```
+
+### Group targets
+This form supports multiple src-dest file mappings per-target, while also allowing `options` property.
+
+```js
+{
+    cat: {
+        options: {
+            // Task-level options may go here, overriding task defaults.
+        },
+        foo: {
+            group: [
+                {src: ['src/aa.js', 'src/aaa.js'], dest: 'dest/a.js'},
+                {src: ['src/aa1.js', 'src/aaa1.js'], dest: 'dest/a1.js'},
+            ]
+        },
+        bar: {
+            options: {
+                // "bar" target options may go here, overriding task-level options.
+            },
+            group: [
+                {src: ['src/bb.js', 'src/bbb.js'], dest: 'dest/b/'},
+                {src: ['src/bb1.js', 'src/bbb1.js'], dest: 'dest/b1/', filter: 'isFile'},
+            ],
+        }
     }
-  }
 }
 ```
 
-### Files Object Format
-This form supports multiple src-dest mappings per-target, where the property name is the destination file, and its value is the source file(s). Any number of src-dest file mappings may be specified in this way, but additional properties may not be specified per mapping.
+## Custom Filter
+
+The `filter` property can help you target files with a greater level of detail. The `filter` may be a valid [fs.Stats method name](http://nodejs.org/docs/latest/api/fs.html#fs_class_fs_stats), or a regexp, or a function that is passed the matched `src` filepath and returns `true` or `false`.
 
 ```js
 {
-  cat: {
-    foo: {
-      files: {
-        'dest/a.js': ['src/aa.js', 'src/aaa.js'],
-        'dest/a1.js': ['src/aa1.js', 'src/aaa1.js'],
-      },
-    },
-    bar: {
-      files: {
-        'dest/b.js': ['src/bb.js', 'src/bbb.js'],
-        'dest/b1.js': ['src/bb1.js', 'src/bbb1.js'],
-      },
-    },
-  },
-}
-```
-
-### Files Array Format
-This form supports multiple src-dest file mappings per-target, while also allowing additional properties per mapping.
-
-```js
-{
-  cat: {
-    foo: {
-      files: [
-        {src: ['src/aa.js', 'src/aaa.js'], dest: 'dest/a.js'},
-        {src: ['src/aa1.js', 'src/aaa1.js'], dest: 'dest/a1.js'},
-      ]
-    },
-    bar: {
-      files: [
-        {src: ['src/bb.js', 'src/bbb.js'], dest: 'dest/b/'},
-        {src: ['src/bb1.js', 'src/bbb1.js'], dest: 'dest/b1/', filter: 'isFile'},
-      ],
-    },
-  },
-}
-```
-
-### Custom Filter
-The `filter` property can help you target files with a greater level of detail. Simply use a valid [fs.Stats method name](http://nodejs.org/docs/latest/api/fs.html#fs_class_fs_stats). The following will clean only if the pattern matches an actual file:
-
-```js
-{
-  rm: {
-    foo: {
-      src: ['tmp/**/*'],
-      filter: 'isFile',
-    },
-    bar: {
-      src: ['tmp/**/*'],
-      filter: /.*bar.js/,
-    },
-    baz: {
-      src: ['tmp/**/*'],
-      filter: function(filepath){
-        // balabala
-      },
-    },
-  },
+    rm: {
+        foo: {
+            src: ['tmp/**/*'],
+            filter: 'isFile',
+        },
+        bar: {
+            src: ['tmp/**/*'],
+            filter: /.*bar.js/,
+        },
+        baz: {
+            src: ['tmp/**/*'],
+            filter: function(filepath){
+                // balabala
+            },
+        },
+    }
 }
 ```
 
@@ -183,6 +164,7 @@ All most people need to know is that `foo/*.js` will match all files ending with
 Also, in order to simplify otherwise complicated globbing patterns, Mod allows arrays of file paths or globbing patterns to be specified. Patterns are processed in-order, with `!`-prefixed matches excluding matched files from the result set. The result set is uniqued.
 
 ## Templates
+
 Templates specified using `{{ }}` delimiters will be automatically expanded when tasks read them from the config. Templates are expanded recursively until no more remain.
 
 The entire config object is the context in which properties are resolved.
@@ -194,16 +176,16 @@ Given the sample `cat` task configuration below, running `mod cat` will generate
 
 ```js
 {
-  cat: {
-    sample: {
-      src: ['{{ qux }}', 'baz/*.js'],  // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
-      dest: 'build/{{ baz }}.js',      // 'build/abcde.js'
+    cat: {
+        sample: {
+            src: ['{{ qux }}', 'baz/*.js'],  // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
+            dest: 'build/{{ baz }}.js',      // 'build/abcde.js'
+        },
     },
-  },
-  // Arbitrary properties used in task configuration templates.
-  foo: 'c',
-  bar: 'b{{ foo }}d', // 'bcd'
-  baz: 'a{{ bar }}e', // 'abcde'
-  qux: ['foo/*.js', 'bar/*.js'],
+    // Arbitrary properties used in task configuration templates.
+    foo: 'c',
+    bar: 'b{{ foo }}d', // 'bcd'
+    baz: 'a{{ bar }}e', // 'abcde'
+    qux: ['foo/*.js', 'bar/*.js'],
 }
 ```

@@ -2,9 +2,8 @@
 module.exports = {
     tasks: {
         cat: {
-            files: {
-                "foobar.css": ["foo.css","bar.css"]
-            }
+            source: ["foo.css","bar.css"],
+            dest: "foobar.css"
         }
     }
 };

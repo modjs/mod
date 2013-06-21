@@ -1,4 +1,4 @@
-﻿# Getting started
+# Getting started
 
 Mod and mod plugins are installed and managed via [npm](https://npmjs.org/), the [Node.js](http://nodejs.org/) package manager.
 
@@ -27,7 +27,7 @@ Installed Mod tasks can be listed by running `mod --help` but it's usually a goo
 ## Preparing a new mod project
 A typical setup will involve adding only one files to your project: `Modfile`.
 
-**Modfile**: This file used to configure tasks and plugins. 
+**Modfile**: This file used to configure tasks and plugins.
 
 ## The Modfile
 The `Modfile` file is a valid JavaScript file that belongs in the root directory of your project.
@@ -109,10 +109,10 @@ var pkg = {
 };
 
 module.exports = {
-  min: {
-      source: 'src/{{pkg.name}}.js',
-      dest: 'build/{{pkg.name}}.min.js'
-  }
+    min: {
+        source: 'src/{{pkg.name}}.js',
+        dest: 'build/{{pkg.name}}.min.js'
+    }
 };
 ```
 
@@ -128,8 +128,7 @@ module.exports = {
 ```
 
 
-
 ## Further Reading
 
-* The [Configuring Tasks]() guide has an in-depth explanation on how to configure tasks, targets, options and files inside the Modfile, along with an explanation of templates, globbing patterns.
-* For more information about writing custom tasks or Mod plugins.
+* The [Configuring Tasks](https://github.com/modulejs/modjs/blob/master/doc/tutorial/configuring-tasks.md) guide has an in-depth explanation on how to configure tasks, targets, options and files inside the Modfile, along with an explanation of templates, globbing patterns.
+* For more information about writing [custom tasks or Mod plugins](https://github.com/modulejs/modjs/blob/master/doc/tutorial/creating-plugins.md).
