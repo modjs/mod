@@ -53,7 +53,6 @@ exports.prompt
 ```
 
 
-### Plugin publish
-1. Run `mod init myProjectName -t plugin` in an empty directory.
-1. Author your project `package.json`.
+## Plugin publish
+1. Author project's `package.json`.
 1. Run `npm publish` to publish the mod plugin to npm
