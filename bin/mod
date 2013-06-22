@@ -2,7 +2,7 @@
 
 var utils = require('../lib/utils');
 var logger = require('../lib/utils/logger');
-var core = require('../lib/core');
+var runner = require('../lib/runner');
 var colors = require('colors');
 var _ = require('underscore');
 
@@ -27,7 +27,7 @@ for (var i = 0; i < process.argv.length; i += 1) {
 
 var cmd = argv.slice(2).shift();
 if (cmd === '-h' || cmd === '--help') {
-    core.run('help');
+    runner.run('help');
 
 }else if (cmd === '-v' || cmd === '--version') {
     utils.getVersion(function (err, ver) {
@@ -38,6 +38,6 @@ if (cmd === '-h' || cmd === '--help') {
         console.log(ver.green);
     });
 }else{
-    core.run(cmd);
+    runner.run(cmd);
 }
 

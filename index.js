@@ -1,2 +1,2 @@
 // exports modjs api
-module.exports =  require('./lib/core');
+module.exports =  require('./lib/runner');
