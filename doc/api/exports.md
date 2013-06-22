@@ -4,6 +4,10 @@
 
 ### Properties
 
+#### exports.files
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> an array of all file paths that match the given wildcard patterns.</p>
+<hr>
+
 #### exports.taskName
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> current task's name</p>
 <hr>
