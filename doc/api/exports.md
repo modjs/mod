@@ -51,21 +51,9 @@
 
 <hr>
 
-#### exports.getArgs()
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> get command line arguments</p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{array}</code></p>
-
-<hr>
-
-#### exports.getConfig([name])
+#### exports.config([name])
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> get peoject config</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{*}</code></p>
-
-<hr>
-
-#### exports.getTaskConfig(taskName)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> get task config</p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{[type]}</code></p>
 
 <hr>
 
@@ -93,15 +81,9 @@
 
 <hr>
 
-#### exports.showHelp()
+#### exports.help()
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> print task help</p>
 
-
-<hr>
-
-#### exports.getFiles()
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> return an array of all file paths that match the given wildcard patterns.</p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{array} files array</code></p>
 
 <hr>
 

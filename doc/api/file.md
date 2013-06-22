@@ -64,6 +64,16 @@ file.suffiex("jquery.js", "min") // => jquery.min.js
 
 <hr>
 
+#### file.expand(patterns [, options])
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Return a unique array of all file or directory paths that match the given globbing pattern(s).</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{array} matche files</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
+```js
+file.expand(['!./foo/.css', './foo/'])
+```
+
+<hr>
+
 #### file.delete(filepath)
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Delete the specified filepath. Will delete files and folders recursively.</p>
 
