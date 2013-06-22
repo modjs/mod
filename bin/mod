@@ -30,13 +30,8 @@ if (cmd === '-h' || cmd === '--help') {
     runner.run('help');
 
 }else if (cmd === '-v' || cmd === '--version') {
-    utils.getVersion(function (err, ver) {
-        if (err) {
-            return logger.error(err);
-        }
-        logger.end();
-        console.log(ver.green);
-    });
+    var ver = utils.getVersion();
+    console.log(ver.green);
 }else{
     runner.run(cmd);
 }

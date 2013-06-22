@@ -35,7 +35,7 @@ $ mod compile <source> [options]
 
 #### base-url
 
-
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>.</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> All modules are located relative to this path [JS only]</p>
 <hr>
 
