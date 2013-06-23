@@ -1,0 +1,18 @@
+module.exports = {
+    tasks: { 
+        cat: {
+            options: {
+                // Task-level options may go here, overriding task defaults.
+            },
+            foo: {
+                 options: {
+                    // "bar" target options may go here, overriding task-level options.
+                },
+                group: [
+                    {source: ['../catjs/foo.js', '../catjs/bar.js'], dest: './foobar.js'},
+                    {source: ['../catcss/foo.css', '../catcss/bar.css'], dest: './foobar.css'},
+                ]
+            }
+        }
+    }
+};

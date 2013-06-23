@@ -1,0 +1,1 @@
+var bar= '';var foo='';
