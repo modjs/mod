@@ -29,7 +29,51 @@ exports.run = function (options, done) {
 };
 ```
 
+## Options
+
+```
+exports.usage = '<source> [options]';
+
+exports.options = {
+    "dest" : {
+        alias : 'd'
+        ,default : '<source>'
+        ,describe : 'destination file'
+    },
+
+    "charset" : {
+        alias : 'c'
+        ,default : 'utf-8'
+        ,describe : 'file encoding type'
+    }
+};
+```
+
+## Done callback
+
+General task is asynchronous, how mod know task is run over? We use done callback.
+When a asynchronous task is over, call the `done()` method.
+
+```js
+exports.run = function (options, done) {
+    exec(function(){
+        // balabal...
+        done();
+    });
+};
+```
+
+If task is a synchronous, the done callback is optional:
+```js
+exports.run = function (options) {
+    console.log('run done');
+};
+```
+
 ## Plugin API
+
+Mod plugin API are provided directly on the `exports` object for convenience. See the individual api section docs for detailed explanations and examples.
+
 ```js
 exports.taskName
 exports.files
