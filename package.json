@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.2.35",
+    "version": "0.2.36",
     "description": "JavaScript Workflow Tooling For Web",
     "keywords": ["tooling", "workflow", "automation", "build"],
     "maintainers": [
