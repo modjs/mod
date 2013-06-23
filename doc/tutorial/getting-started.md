@@ -104,15 +104,17 @@ module.exports = {
 ### Tasks configuration
 
 ```js
-var pkg = {
-    name: "foo"
-};
-
 module.exports = {
-    min: {
-        source: 'src/{{pkg.name}}.js',
-        dest: 'build/{{pkg.name}}.min.js'
+    tasks: {
+        pkg: {
+            name: "foo"
+        },
+        min: {
+            source: 'src/{{pkg.name}}.js',
+            dest: 'build/{{pkg.name}}.min.js'
+        }
     }
+
 };
 ```
 

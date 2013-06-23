@@ -22,21 +22,20 @@ exports.options = {
     }
 };
 
-exports.run = function (options, callback) {
+exports.run = function (options, done) {
     var target = options.target;
     // ...
+    done();
 };
 ```
 
 ## Plugin API
 ```js
 exports.taskName
+exports.files
 exports.loadTask()
 exports.runTask()
-
-exports.getArgs()
-exports.getConfig()
-exports.getTaskConfig()
+exports.config()
 
 exports.log()
 exports.error()
