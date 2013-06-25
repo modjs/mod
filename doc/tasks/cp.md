@@ -12,13 +12,13 @@ $ mod cp <source> [options]
 #### dest
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination directory or file</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination directory or file</p>
 <hr>
 
 #### parent
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> include source parent directory</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Include source parent directory</p>
 <hr>
 
 

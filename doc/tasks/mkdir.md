@@ -12,7 +12,7 @@ $ mod mkdir <target> [options]
 #### mode
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>0777</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> set permission mode</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Set permission mode</p>
 <hr>
 
 

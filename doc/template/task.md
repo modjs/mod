@@ -12,7 +12,7 @@ $ mod <%= taskName %> <%= usage %>
 #### <%= name %>
 <% if(typeof option.type !== 'undefined'){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code><%= option.type %></code></p><% } %>
 <% if(typeof option.default !== 'undefined'){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><%= option.default %></code></p><% } %>
-<% if(typeof option.describe !== 'undefined'){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> <%= option.describe %></p><% } %>
+<% if(typeof option.describe !== 'undefined'){ %><p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> <%= option.describe.ucfirst() %></p><% } %>
 <hr>
 <% }); %>
 <% } %>

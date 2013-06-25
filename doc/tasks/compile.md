@@ -144,7 +144,7 @@ $ mod compile <source> [options]
 #### format
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>string</code></p>
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> id format, like hello/dist/{{filename}}. [seajs only]</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Id format, like hello/dist/{{filename}}. [seajs only]</p>
 <hr>
 
 #### debug

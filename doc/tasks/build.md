@@ -12,13 +12,13 @@ $ mod build <source> [options]
 #### dest
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>dist</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination build directory</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination build directory</p>
 <hr>
 
 #### charset
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>utf-8</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file encoding type</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File encoding type</p>
 <hr>
 
 

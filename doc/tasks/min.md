@@ -12,19 +12,19 @@ $ mod min <source> [options]
 #### dest
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination directory or file</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination directory or file</p>
 <hr>
 
 #### suffix
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination file suffix append</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination file suffix append</p>
 <hr>
 
 #### charset
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>utf-8</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file encoding type</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File encoding type</p>
 <hr>
 
 

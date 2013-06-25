@@ -7,7 +7,7 @@
 ### Methods
 
 #### file.exists(filepath)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file exists</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File exists</p>
 
 
 <hr>
@@ -31,7 +31,7 @@
 <hr>
 
 #### file.suffix(filename, suffix)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file suffix append</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File suffix append</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{*}</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
@@ -47,19 +47,37 @@ file.suffiex("jquery.js", "min") // => jquery.min.js
 <hr>
 
 #### file.isDirFormat(filepath)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> is dir format</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Is dir format</p>
+
+
+<hr>
+
+#### file.readJSON(filepath)
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Read a file from the filesystem and parse as JSON</p>
+
+
+<hr>
+
+#### file.findPackageJSON
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Looks for a project's package.json file. Walks up the directory tree untilit finds a package.json file or hits the root. Does not throw when nopackages.json is found, just returns null.</p>
+
+
+<hr>
+
+#### file.readPackageJSON( [dir] )
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Read a package.json file's contents, parsing the data as JSON and returning the result</p>
 
 
 <hr>
 
 #### file.listdir(dir, callback)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> list directories within a directory. Filters out regular files andsubversion .svn directory (if any).</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> List directories within a directory. Filters out regular files andsubversion .svn directory (if any).</p>
 
 
 <hr>
 
 #### file.glob(pattern [, rootdir])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> get the pattern matched files, default root dir is cwd</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Get the pattern matched files, default root dir is cwd</p>
 
 
 <hr>
@@ -87,31 +105,31 @@ file.expand(['!./foo/.css', './foo/'])
 <hr>
 
 #### file.write(filepath, contents [, encoding])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> write the specified contents to a file, creating intermediate directories if necessary</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Write the specified contents to a file, creating intermediate directories if necessary</p>
 
 
 <hr>
 
 #### file.writeTemp(filepath, contents [, encoding])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> write the specified contents to a temp file</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Write the specified contents to a temp file</p>
 
 
 <hr>
 
 #### file.copy(src, dest)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> copy a source file or directory to a destination path, creating intermediate directories if necessary</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Copy a source file or directory to a destination path, creating intermediate directories if necessary</p>
 
 
 <hr>
 
 #### file.find(dirpath, filename);
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> search for a filename in the given directory or all parent directories.</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Search for a filename in the given directory or all parent directories.</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{string}</code></p>
 
 <hr>
 
 #### file.mkdir(dirpath [, mode])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> given a path to a directory, create it, and all the intermediate directories as well</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Given a path to a directory, create it, and all the intermediate directories as well</p>
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
@@ -121,13 +139,13 @@ file.mkdir("/tmp/dir", 755)
 <hr>
 
 #### file.mkdirTemp([dirname] [, mode])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> create temp dir</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Create temp dir</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{string}</code></p>
 
 <hr>
 
 #### file.walkdir(rootdir, callback)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> recurse into a directory, executing callback for each file.</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Recurse into a directory, executing callback for each file.</p>
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js

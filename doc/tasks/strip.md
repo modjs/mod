@@ -12,37 +12,37 @@ $ mod strip <source> [options]
 #### dest
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination directory or file</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination directory or file</p>
 <hr>
 
 #### charset
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>utf-8</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file encoding type</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File encoding type</p>
 <hr>
 
 #### bom
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> strip bom</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip bom</p>
 <hr>
 
 #### tab
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> strip tab</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip tab</p>
 <hr>
 
 #### code
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> default strip alert call if enable</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Default strip alert call if enable</p>
 <hr>
 
 #### nodes
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> strip code nodes</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip code nodes</p>
 <hr>
 
 

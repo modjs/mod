@@ -4,32 +4,32 @@
 
 ### Properties
 
-#### exports.files
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> an array of all file paths that match the given wildcard patterns.</p>
-<hr>
-
 #### exports.taskName
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> current task's name</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Current task's name</p>
 <hr>
 
 #### exports.file
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Provided many methods for reading and writing files, traversing the filesystem and finding files by matching globbing patterns. Many of these methods are wrappers around built-in Node.js file functionality, but with additional error handling, logging and character encoding normalization.</p>
 <hr>
 
 #### exports._
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> _ </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Tons of super-useful array, function and object utility methods.</p>
 <hr>
 
 #### exports.async
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> async </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Async utilities for node and the browser</p>
 <hr>
 
 #### exports.request
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> request </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Simplified HTTP request method</p>
 <hr>
 
 #### exports.prompt
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> prompt </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Using prompt is relatively straight forward. There are two core methods you should be aware of: prompt.get() and prompt.addProperties(). There methods take strings representing property names in addition to objects for complex property validation (and more).</p>
+<hr>
+
+#### exports.files
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> An array of all file paths that match the given wildcard patterns.</p>
 <hr>
 
 
@@ -38,55 +38,55 @@
 ### Methods
 
 #### exports.loadTask(taskName)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> load a task</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Load a task</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{object}</code></p>
 
 <hr>
 
 #### exports.runTask(name [, options] [, callback])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> run task</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Run task</p>
 
 
 <hr>
 
 #### exports.runTargets(targets [, callback])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> run targets</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Run targets</p>
 
 
 <hr>
 
 #### exports.config([name])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> get peoject config</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Get peoject config</p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{*}</code></p>
 
 <hr>
 
 #### exports.log(arg1 [,arg2...])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> print log</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print log</p>
 
 
 <hr>
 
 #### exports.debug(arg1 [,arg2...])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> print debug</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print debug</p>
 
 
 <hr>
 
 #### exports.error(arg1 [,arg2...])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> print error</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print error</p>
 
 
 <hr>
 
 #### exports.warn(arg1 [,arg2...])
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> print warning</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print warning</p>
 
 
 <hr>
 
 #### exports.help()
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> print task help</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print task help</p>
 
 
 <hr>

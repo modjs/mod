@@ -12,31 +12,31 @@ $ mod replace <source> [options]
 #### dest
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><source></code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> destination directory or file</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination directory or file</p>
 <hr>
 
 #### search
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> search string</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Search string</p>
 <hr>
 
 #### replace
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> replace string</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Replace string</p>
 <hr>
 
 #### flags
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>gm</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> flags</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Flags</p>
 <hr>
 
 #### charset
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>utf-8</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> file encoding type</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File encoding type</p>
 <hr>
 
 
