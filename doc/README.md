@@ -1,8 +1,8 @@
 # Documents
 ## Tutorials
-* [Getting started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
-* [Configuring tasks](https://github.com/modulejs/modjs/tree/master/doc/tutorial/configuring-task.md)
-* [Creating plugins](https://github.com/modulejs/modjs/tree/master/doc/tutorial/creating-plugins.md)
+* [Getting Started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
+* [Configuring Tasks](https://github.com/modulejs/modjs/tree/master/doc/tutorial/configuring-task.md)
+* [Creating Plugins](https://github.com/modulejs/modjs/tree/master/doc/tutorial/creating-plugins.md)
 ## Tasks
 
 * [help](https://github.com/modulejs/modjs/tree/master/doc/tasks/help.md) - Get help on mod 

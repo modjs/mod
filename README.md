@@ -3,38 +3,39 @@
 ![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
 
 ## What is Mod?
-
 Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance web applications.
 
 ## Installation
-
 [Mod](https://npmjs.org/package/modjs) is installed using [NPM(Node Package Manager)](http://npmjs.org/)
 
 ```sh
-$ npm install -g modjs
+$ npm install modjs -g
 ```
+
+## Tutorials
+* [Getting Started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
+* [Configuring Tasks](https://github.com/modulejs/modjs/tree/master/doc/tutorial/configuring-task.md)
+* [Creating Plugins](https://github.com/modulejs/modjs/tree/master/doc/tutorial/creating-plugins.md)
 
 ## Wiki
 * [Project Roadmap](https://github.com/modulejs/modjs/wiki/Roadmap)
 * [Mod Plugin List](https://github.com/modulejs/modjs/wiki/Plugins)
-* [QQ Find Modfile Example](https://github.com/modulejs/modjs/blob/master/example/Modfile)
+* [Modfile Example](https://github.com/modulejs/modjs/blob/master/example/Modfile)
 
 ## Quick Build Demo
 * [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildrequirejs)
 * [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildseajs)
 
 ## IDE Support
-* [sublime-mod](https://github.com/yuanyan/sublime-mod)
+* [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
 ## Why another one?
-
 * More built-in tasks
 * More simplicity to use
 * Configuration less(even zero), do more
 * Business background, community support
 
 ## Features
-
 * Task-based builds
 * Minify everything: JS, CSS, HTML, Images
 * Source linting: JS, CSS
@@ -53,7 +54,6 @@ $ npm install -g modjs
 
 ## Built-in Tasks
 Mod supports a powerful set of high-level commands:
-
 * [help](https://github.com/modulejs/modjs/tree/master/doc/tasks/help.md) - Get help on mod
 * [min](https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md) - Minify JavaScript/CSS/HTML/Image source
 * [lint](https://github.com/modulejs/modjs/tree/master/doc/tasks/lint.md) - Validate JavaScript/CSS source
@@ -72,7 +72,6 @@ Mod supports a powerful set of high-level commands:
 * [rm](https://github.com/modulejs/modjs/tree/master/doc/tasks/rm.md) - Remove files
 * [strip](https://github.com/modulejs/modjs/tree/master/doc/tasks/strip.md) - Source stripping
 
-
 ## Simple Examples
 * [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/test/catjs)
 * [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/test/catcss)
@@ -89,16 +88,13 @@ Mod supports a powerful set of high-level commands:
 * [Custom: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/customtask)
 
 ## Modfile
-
 Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：
 
 ```js
 module.exports = {
     plugins: {
-        sprite: "mod-sprite",
-        datauri: "mod-datauri"
+        sprite: "mod-sprite"
     },
-
     tasks: {
         "rm" : {
             "target": "./dist"
@@ -131,7 +127,6 @@ module.exports = {
             "tasks": ""
         },
     },
-
     targets: {
         dist: "rm min cat"
     }
@@ -145,7 +140,6 @@ $ mod dist
 ```
 
 ## Compression Table
-
 ```sh
 | Feature                  | Mod    | Grunt      | Yeoman    |
 |--------------------------+--------+------------+-----------|
@@ -166,15 +160,12 @@ $ mod dist
 ```
 
 ## Platform Support
-
 Mod support Windows, OS X, Linux.
 
 ## Issue Submission
-
 Submit a [new issue](https://github.com/modulejs/modjs/issues/new).
 
 ## About
-
 Mod is an open-source project by [Tencent](http://www.tencent.com/en-us/) which builds on top of [Node.js](https://nodejs.org).
 We utilize a number of useful open-source solutions including:
 
@@ -188,13 +179,10 @@ We utilize a number of useful open-source solutions including:
 * OptiPNG
 * JPEGtran
 
-## Used by people within
-
+## Used by people within <a href="https://github.com/modulejs/modjs/issues/22">(JOIN US)</a>
 ![qqfind](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
 ![qqconnect](http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png)
 
-[Tell us you use modjs!](https://github.com/modulejs/modjs/issues/22)
 
 ## License
-
 Mod is released under a [MIT](http://opensource.org/licenses/mit-license.php) license.
