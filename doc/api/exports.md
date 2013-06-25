@@ -1,5 +1,5 @@
 ## <a href="#exports" name="exports">exports</a>
-> exports to task API
+> The exports API
 
 
 ### Properties
