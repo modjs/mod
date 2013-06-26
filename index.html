@@ -28,29 +28,143 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>Mod - Modern project management and comprehension tool for the web <a href="http://travis-ci.org/modulejs/modjs"><img src="https://secure.travis-ci.org/modulejs/modjs.png?branch=master" alt="Build Status"></a>
+          <h1>
+<a name="mod---modern-project-management-and-comprehension-tool-for-the-web-" class="anchor" href="#mod---modern-project-management-and-comprehension-tool-for-the-web-"><span class="octicon octicon-link"></span></a>Mod - Modern project management and comprehension tool for the web <a href="http://travis-ci.org/modulejs/modjs"><img src="https://secure.travis-ci.org/modulejs/modjs.png?branch=master" alt="Build Status"></a>
 </h1>
 
 <p><img src="https://raw.github.com/modulejs/modjs/master/example/screenshot.gif" alt="screenshot"></p>
 
-<h2>What is Mod?</h2>
+<h2>
+<a name="what-is-mod" class="anchor" href="#what-is-mod"><span class="octicon octicon-link"></span></a>What is Mod?</h2>
 
-<p>Mod is a task-based build tool for the web, it help developers quickly build robust and high-performance web applications.</p>
+<p>Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance web applications.</p>
 
-<h2>Wiki</h2>
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p><a href="https://npmjs.org/package/modjs">Mod</a> is installed using <a href="http://npmjs.org/">NPM(Node Package Manager)</a></p>
+
+<div class="highlight"><pre><span class="nv">$ </span>npm install modjs -g
+</pre></div>
+
+<h2>
+<a name="website" class="anchor" href="#website"><span class="octicon octicon-link"></span></a>Website</h2>
+
+<ul>
+<li>English Website：<a href="http://modulejs.github.io/modjs">http://modulejs.github.io/modjs</a>
+</li>
+<li>中文主页：<a href="http://madscript.com/modjs">http://madscript.com/modjs</a>
+</li>
+</ul><h2>
+<a name="tutorials" class="anchor" href="#tutorials"><span class="octicon octicon-link"></span></a>Tutorials</h2>
+
+<ul>
+<li><a href="https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md">Getting Started</a></li>
+<li><a href="https://github.com/modulejs/modjs/blob/master/doc/tutorial/configuring-tasks.md">Configuring Tasks</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/doc/tutorial/creating-plugins.md">Creating Plugins</a></li>
+</ul><h2>
+<a name="built-in-tasks" class="anchor" href="#built-in-tasks"><span class="octicon octicon-link"></span></a>Built-in Tasks</h2>
+
+<p>Mod supports a powerful set of high-level tasks:</p>
+
+<ul>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/help.md">help</a> - get help on mod</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md">min</a> - minify JavaScript/CSS/HTML/Image source</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/lint.md">lint</a> - validate JavaScript/CSS source</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md">compile</a> - compile JavaScript/CSS/HTML source</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/create.md">create</a> - generate project skeleton and create project directory</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md">init</a> - generate project skeleton from templates</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/server.md">server</a> - start a static web server</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/pack.md">pack</a> - create a tarball from a module</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/hash.md">hash</a> - rename file with it hash value</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/build.md">build</a> - build the project by convention</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/replace.md">replace</a> - replace the contents of files</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/cat.md">cat</a> - concatenate the content of files</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/cp.md">cp</a> - copy one or more files to another location</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/mkdir.md">mkdir</a> - create new folder</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/mv.md">mv</a> - move or rename files or directories</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/rm.md">rm</a> - remove files</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/tasks/strip.md">strip</a> - source stripping</li>
+</ul><h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<ul>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/api/exports.md">exports.exports</a> - The exports API</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/api/file.md">exports.file</a> - There are many provided methods for reading and writing files, traversing the filesystem and finding files by matching globbing patterns. Many of these methods are wrappers around built-in Node.js file functionality, but with additional error handling, logging and character encoding normalization.</li>
+<li>
+<a href="https://github.com/modulejs/modjs/tree/master/doc/api/utils.md">exports.utils</a> - Miscellaneous utilities</li>
+<li>
+<a href="http://underscorejs.org/">exports._</a> - Underscore provides 80-odd functions that support both the usual functional suspects: map, select, invoke — as well as more specialized helpers: function binding, javascript templating, deep equality testing, and so on. It delegates to built-in functions, if present, so modern browsers will use the native implementations of forEach, map, reduce, filter, every, some and indexOf.</li>
+<li>
+<a href="https://github.com/caolan/async">exports.async</a> - Async provides around 20 functions that include the usual 'functional' suspects (map, reduce, filter, each…) as well as some common patterns for asynchronous control flow (parallel, series, waterfall…). All these functions assume you follow the node.js convention of providing a single callback as the last argument of your async function.</li>
+<li>
+<a href="https://github.com/mikeal/request">exports.request</a> - Simplified HTTP request method</li>
+<li>
+<a href="https://github.com/flatiron/prompt">exports.prompt</a> - Using prompt is relatively straight forward. There are two core methods you should be aware of: prompt.get() and prompt.addProperties(). There methods take strings representing property names in addition to objects for complex property validation (and more).</li>
+</ul><h2>
+<a name="wiki" class="anchor" href="#wiki"><span class="octicon octicon-link"></span></a>Wiki</h2>
 
 <ul>
 <li><a href="https://github.com/modulejs/modjs/wiki/Roadmap">Project Roadmap</a></li>
 <li><a href="https://github.com/modulejs/modjs/wiki/Plugins">Mod Plugin List</a></li>
-<li><a href="https://github.com/modulejs/modulejs/blob/master/Modfile">Real Modfile Example</a></li>
-</ul><h2>Why another one?</h2>
+<li><a href="https://github.com/modulejs/modjs/blob/master/example/Modfile">Modfile Example</a></li>
+</ul><h2>
+<a name="quick-build-demo" class="anchor" href="#quick-build-demo"><span class="octicon octicon-link"></span></a>Quick Build Demo</h2>
+
+<ul>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/buildrequirejs">RequireJS Project Build</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/buildseajs">SeaJS Project Build</a></li>
+</ul><h2>
+<a name="ide-support" class="anchor" href="#ide-support"><span class="octicon octicon-link"></span></a>IDE Support</h2>
+
+<ul>
+<li><a href="https://github.com/yuanyan/sublime-mod">Sublime-Mod</a></li>
+</ul><h2>
+<a name="simple-examples" class="anchor" href="#simple-examples"><span class="octicon octicon-link"></span></a>Simple Examples</h2>
+
+<ul>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/catjs">Concatenate JS Files</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/catcss">Concatenate CSS Files</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/compilecmd">CMD Modules Compile</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/compilecss">CSS Modules Compile</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/compilehtml">HTML Precompile</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/minjpg">JPG Image Compression</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/minpng">PNG Image Compression</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/minjs">JS Minify</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/mincss">CSS Minify</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/strip">Source Stripping</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/datauri">Inline Images DataURI</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/plugintask">Plugin: CSS Images Sprites</a></li>
+<li><a href="https://github.com/modulejs/modjs/tree/master/test/customtask">Custom: Hello ModJS</a></li>
+</ul><h2>
+<a name="why-another-one" class="anchor" href="#why-another-one"><span class="octicon octicon-link"></span></a>Why another one?</h2>
 
 <ul>
 <li>More built-in tasks</li>
 <li>More simplicity to use</li>
 <li>Configuration less(even zero), do more</li>
 <li>Business background, community support</li>
-</ul><h2>Features</h2>
+</ul><h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
 
 <ul>
 <li>Task-based builds</li>
@@ -68,100 +182,8 @@
 <li>Built-in Web Server</li>
 <li>Extensible, easily write plugins</li>
 <li>Works on most platforms: Windows, Linux, Mac OS X, Unix...</li>
-</ul><h2>Npm Installation</h2>
-
-<p>Mod is installed using <a href="http://npmjs.org/">NPM(Node Package Manager)</a></p>
-
-<pre lang="shell"><code>npm install -g modjs
-</code></pre>
-
-<h2>Built-in Tasks</h2>
-
-<p>Mod supports a powerful set of high-level commands:</p>
-
-<pre lang="shell"><code>                          __   _
-   ____ ___   ____   ____/ /  (_)_____
-  / __ `__ \ / __ \ / __  /  / // ___/
- / / / / / // /_/ // /_/ /  / /(__  )
-/_/ /_/ /_/ \____/ \__,_/__/ //____/
-                        /___/
-
-Usage: mod COMMAND [ARGS]
-
-mod cat       # Concatenate the content of files
-mod cp        # Copy one or more files to another location
-mod mkdir     # Create new folder
-mod mv        # Move or rename files or directories
-mod rm        # Remove files
-mod strip     # Source stripping
-
-mod min       # Minify js css html image files
-mod lint      # Validate js css files
-mod build     # Build an optimized version of your app, ready to deploy
-
-mod create    # Generate a project skeleton include project directory
-mod init      # Generate a project skeleton in target directory
-mod server    # Start a static web server
-mod pack      # Create a tarball with target directory
-mod hash      # Rename file with it hash value
-mod search    # Search the Github
-</code></pre>
-
-<h2>Modfile</h2>
-
-<p>Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：</p>
-
-<div class="highlight"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">sprite</span><span class="o">:</span> <span class="s2">"mod-sprite"</span><span class="p">,</span>
-        <span class="nx">datauri</span><span class="o">:</span> <span class="s2">"mod-datauri"</span>
-    <span class="p">},</span>
-
-    <span class="nx">tasks</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"rm"</span> <span class="o">:</span> <span class="p">{</span>
-            <span class="s2">"target"</span><span class="o">:</span> <span class="s2">"./dist"</span>
-        <span class="p">},</span>
-        <span class="s2">"min"</span> <span class="o">:</span> <span class="p">{</span>
-            <span class="s2">"img"</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"./img/*.png"</span><span class="p">,</span>
-                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/img"</span>
-            <span class="p">},</span>
-            <span class="s2">"css"</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"./dist/css/*.css"</span><span class="p">,</span>
-                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/css"</span>
-            <span class="p">},</span>
-            <span class="s2">"html"</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"*.html"</span><span class="p">,</span>
-                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/"</span>
-            <span class="p">},</span>
-            <span class="s2">"js"</span><span class="o">:</span> <span class="p">{</span>
-                <span class="s2">"source"</span><span class="o">:</span> <span class="s2">"./dist/js/*.js"</span><span class="p">,</span>
-                <span class="s2">"dest"</span><span class="o">:</span> <span class="s2">"./dist/js"</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="s2">"cat"</span><span class="o">:</span> <span class="p">{</span>
-            <span class="s2">"source"</span><span class="o">:</span><span class="p">[</span><span class="s2">"./dist/js/a.js"</span><span class="p">,</span><span class="s2">"./dist/js/b.js"</span><span class="p">],</span>
-            <span class="s2">"dest"</span><span class="o">:</span>  <span class="s2">"./dist/js/ab.js"</span>
-        <span class="p">},</span>
-
-        <span class="s2">"watch"</span> <span class="o">:</span> <span class="p">{</span>
-            <span class="s2">"source"</span><span class="o">:</span> <span class="p">[</span><span class="s2">"*"</span><span class="p">],</span>
-            <span class="s2">"tasks"</span><span class="o">:</span> <span class="s2">""</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-
-    <span class="nx">targets</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">dist</span><span class="o">:</span> <span class="s2">"rm min cat"</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</pre></div>
-
-<p>Then run 'dist' target:</p>
-
-<div class="highlight"><pre>mod dist
-</pre></div>
-
-<h2>Compression Table</h2>
+</ul><h2>
+<a name="compression-table" class="anchor" href="#compression-table"><span class="octicon octicon-link"></span></a>Compression Table</h2>
 
 <div class="highlight"><pre>| Feature                  | Mod    | Grunt      | Yeoman    |
 |--------------------------+--------+------------+-----------|
@@ -181,69 +203,18 @@ mod search    # Search the Github
 | Cross-platform           | ✓     | ✓         | ✗        |
 </pre></div>
 
-<h2>Custom Tasks</h2>
-
-<p>In addition to the built-in tasks, you can create your own tasks:</p>
-
-<h3>Plugin Example</h3>
-
-<div class="highlight"><pre><span class="nx">exports</span><span class="p">.</span><span class="nx">summary</span> <span class="o">=</span> <span class="s1">'my task'</span><span class="p">;</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">usage</span> <span class="o">=</span> <span class="s1">'&lt;source&gt; [options]'</span><span class="p">;</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"d"</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">alias</span> <span class="o">:</span> <span class="s1">'dest'</span>
-        <span class="p">,</span><span class="k">default</span> <span class="o">:</span> <span class="s1">'&lt;source&gt;'</span>
-        <span class="p">,</span><span class="nx">describe</span> <span class="o">:</span> <span class="s1">'destination file'</span>
-    <span class="p">},</span>
-
-    <span class="s2">"c"</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">alias</span> <span class="o">:</span> <span class="s1">'charset'</span>
-        <span class="p">,</span><span class="k">default</span> <span class="o">:</span> <span class="s1">'utf-8'</span>
-        <span class="p">,</span><span class="nx">describe</span> <span class="o">:</span> <span class="s1">'file encoding type'</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">run</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
-    <span class="c1">// ...</span>
-<span class="p">};</span>
-</pre></div>
-
-<h3>Plugin API</h3>
-
-<div class="highlight"><pre><span class="nx">exports</span><span class="p">.</span><span class="nx">taskName</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">loadTask</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">runTask</span><span class="p">()</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">getArgs</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">getConfig</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">getTaskConfig</span><span class="p">()</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">log</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">error</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">warn</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">debug</span><span class="p">()</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">file</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">utils</span>
-
-<span class="nx">exports</span><span class="p">.</span><span class="nx">_</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">async</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">request</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">prompt</span>
-</pre></div>
-
-<h2>Platform Support</h2>
+<h2>
+<a name="platform-support" class="anchor" href="#platform-support"><span class="octicon octicon-link"></span></a>Platform Support</h2>
 
 <p>Mod support Windows, OS X, Linux.</p>
 
-<h2>Issue Submission</h2>
+<h2>
+<a name="issue-submission" class="anchor" href="#issue-submission"><span class="octicon octicon-link"></span></a>Issue Submission</h2>
 
 <p>Submit a <a href="https://github.com/modulejs/modjs/issues/new">new issue</a>.</p>
 
-<h2>About</h2>
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
 
 <p>Mod is an open-source project by <a href="http://www.tencent.com/en-us/">Tencent</a> which builds on top of <a href="https://nodejs.org">Node.js</a>.
 We utilize a number of useful open-source solutions including:</p>
@@ -254,14 +225,18 @@ We utilize a number of useful open-source solutions including:</p>
 <li>CleanCSS</li>
 <li>CSSLint</li>
 <li>HTMLMinifiler</li>
-<li>Requirejs</li>
-<li>Twitter Bootstrap</li>
-<li>HTML5 Boilerplate</li>
-</ul><h2>Used by people within</h2>
+<li>RequireJS</li>
+<li>SeaJS</li>
+<li>OptiPNG</li>
+<li>JPEGtran</li>
+</ul><h2>
+<a name="used-by-people-within-join-us" class="anchor" href="#used-by-people-within-join-us"><span class="octicon octicon-link"></span></a>Used by people within <a href="https://github.com/modulejs/modjs/issues/22">(JOIN US)</a>
+</h2>
 
 <p><img src="http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png" alt="qqfind"><img src="http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png" alt="qqconnect"></p>
 
-<h2>License</h2>
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Mod is released under a <a href="http://opensource.org/licenses/mit-license.php">MIT</a> license.</p>
         </section>
@@ -278,7 +253,7 @@ We utilize a number of useful open-source solutions including:</p>
 
           <p class="repo-owner"><a href="https://github.com/modulejs/modjs"></a> is maintained by <a href="https://github.com/modulejs">modulejs</a>.</p>
 
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
       </div>
     </div>
