@@ -1,7 +1,7 @@
 # Documents
 ## Tutorials
 * [Getting Started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
-* [Configuring Tasks](https://github.com/modulejs/modjs/tree/master/doc/tutorial/configuring-task.md)
+* [Configuring Tasks](https://github.com/modulejs/modjs/blob/master/doc/tutorial/configuring-tasks.md)
 * [Creating Plugins](https://github.com/modulejs/modjs/tree/master/doc/tutorial/creating-plugins.md)
 
 ## Built-in Tasks
@@ -34,4 +34,5 @@ Mod supports a powerful set of high-level tasks:
 * [exports.async](https://github.com/caolan/async) - Async provides around 20 functions that include the usual 'functional' suspects (map, reduce, filter, each…) as well as some common patterns for asynchronous control flow (parallel, series, waterfall…). All these functions assume you follow the node.js convention of providing a single callback as the last argument of your async function.
 * [exports.request](https://github.com/mikeal/request) - Simplified HTTP request method
 * [exports.prompt](https://github.com/flatiron/prompt) - Using prompt is relatively straight forward. There are two core methods you should be aware of: prompt.get() and prompt.addProperties(). There methods take strings representing property names in addition to objects for complex property validation (and more).
+
 
