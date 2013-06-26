@@ -1,0 +1,6 @@
+@import "base.css";
+#only {
+   background:url('../img/icon.png?inline') no-repeat;
+   height: 24px;
+   width: 24px
+}
