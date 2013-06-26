@@ -11,11 +11,13 @@ Mod is a task-based workflow tooling for web, it help developers quickly build r
 ```sh
 $ npm install modjs -g
 ```
-
+## Website
+* English Website：http://modulejs.github.io/modjs
+* 中文主页：http://madscript.com/modjs
 
 ## Tutorials
 * [Getting Started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
-* [Configuring Tasks](https://github.com/modulejs/modjs/tree/master/doc/tutorial/configuring-task.md)
+* [Configuring Tasks](https://github.com/modulejs/modjs/blob/master/doc/tutorial/configuring-tasks.md)
 * [Creating Plugins](https://github.com/modulejs/modjs/tree/master/doc/tutorial/creating-plugins.md)
 
 ## Built-in Tasks
@@ -60,6 +62,21 @@ Mod supports a powerful set of high-level tasks:
 ## IDE Support
 * [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
+## Simple Examples
+* [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/test/catjs)
+* [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/test/catcss)
+* [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
+* [CSS Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
+* [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
+* [JPG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minjpg)
+* [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
+* [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
+* [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
+* [Source Stripping](https://github.com/modulejs/modjs/tree/master/test/strip)
+* [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
+* [Plugin: CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/plugintask)
+* [Custom: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/customtask)
+
 ## Why another one?
 * More built-in tasks
 * More simplicity to use
@@ -82,73 +99,6 @@ Mod supports a powerful set of high-level tasks:
 * Built-in Web Server
 * Extensible, easily write plugins
 * Works on most platforms: Windows, Linux, Mac OS X, Unix...
-
-## Simple Examples
-* [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/test/catjs)
-* [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/test/catcss)
-* [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
-* [CSS Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
-* [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
-* [JPG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minjpg)
-* [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
-* [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
-* [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
-* [Source Stripping](https://github.com/modulejs/modjs/tree/master/test/strip)
-* [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
-* [Plugin: CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/plugintask)
-* [Custom: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/customtask)
-
-## Modfile
-Like Makefile/Rakefile, Modfile is implemented as a NodeJS module：
-
-```js
-module.exports = {
-    plugins: {
-        sprite: "mod-sprite"
-    },
-    tasks: {
-        "rm" : {
-            "target": "./dist"
-        },
-        "min" : {
-            "img": {
-                "source": "./img/*.png",
-                "dest": "./dist/img"
-            },
-            "css": {
-                "source": "./dist/css/*.css",
-                "dest": "./dist/css"
-            },
-            "html": {
-                "source": "*.html",
-                "dest": "./dist/"
-            },
-            "js": {
-                "source": "./dist/js/*.js",
-                "dest": "./dist/js"
-            }
-        },
-        "cat": {
-            "source":["./dist/js/a.js","./dist/js/b.js"],
-            "dest":  "./dist/js/ab.js"
-        },
-
-        "watch" : {
-            "source": ["*"],
-            "tasks": ""
-        },
-    },
-    targets: {
-        dist: "rm min cat"
-    }
-};
-```
-
-Then run 'dist' target:
-
-```sh
-$ mod dist
-```
 
 ## Compression Table
 ```sh
