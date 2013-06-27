@@ -6,7 +6,7 @@ Mod supports a powerful set of high-level tasks:
 * [lint](https://github.com/modulejs/modjs/tree/master/doc/tasks/lint.md) - validate JavaScript/CSS source 
 * [compile](https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md) - compile JavaScript/CSS/HTML source 
 * [create](https://github.com/modulejs/modjs/tree/master/doc/tasks/create.md) - generate project skeleton and create project directory 
-* [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - generate project skeleton from templates 
+* [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - generate project skeleton from template 
 * [server](https://github.com/modulejs/modjs/tree/master/doc/tasks/server.md) - start a static web server 
 * [pack](https://github.com/modulejs/modjs/tree/master/doc/tasks/pack.md) - create a tarball from a module 
 * [hash](https://github.com/modulejs/modjs/tree/master/doc/tasks/hash.md) - rename file with it hash value 
