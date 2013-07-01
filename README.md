@@ -148,4 +148,4 @@ We utilize a number of useful open-source solutions including:
 
 
 ## License
-Mod is released under a [MIT](http://opensource.org/licenses/mit-license.php) license.
+Mod is released under a [MIT](http://yuanyan.mit-license.org/) license.
