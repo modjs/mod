@@ -2,3 +2,10 @@
 @import url("b.css");
 @import url("c.css");
 #main{}
+
+/* if target dev */
+#id { color: blue}
+/* endif */
+/* if target dist /
+#id { color: black}
+/* endif */
