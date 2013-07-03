@@ -8,6 +8,14 @@
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Current task's name</p>
 <hr>
 
+#### exports.template
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Compiles templates into strings</p>
+<hr>
+
+#### exports.utils
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Miscellaneous utilities</p>
+<hr>
+
 #### exports.file
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Provided many methods for reading and writing files, traversing the filesystem and finding files by matching globbing patterns. Many of these methods are wrappers around built-in Node.js file functionality, but with additional error handling, logging and character encoding normalization.</p>
 <hr>

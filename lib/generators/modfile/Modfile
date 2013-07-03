@@ -1,8 +1,10 @@
-// More info: https://github.com/modulejs/modjs/
+// A sample Modfile
+// More info at https://github.com/modulejs/modjs/
+
 module.exports = {
     "tasks": {
-    },
 
+    },
     "targets" : {
     }
 };
