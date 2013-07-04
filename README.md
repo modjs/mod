@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/modulejs/modjs.png)](https://david-dm.org/modulejs/modjs)
 
 ## What is Mod?
-Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance web applications.
+Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance HTML5 applications.
 
 ![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
 
