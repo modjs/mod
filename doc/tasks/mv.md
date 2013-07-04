@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod mv <source> <dest>
+$ mod mv <src> <dest>
 ```
 
 

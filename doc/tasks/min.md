@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod min <source> [options]
+$ mod min <src> [options]
 ```
 
 ### Options

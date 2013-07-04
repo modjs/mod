@@ -4,14 +4,14 @@
 ### Usage
 
 ```sh
-$ mod cat <source> [options]
+$ mod cat <src> [options]
 ```
 
 ### Options
 
 #### dest
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><source></code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><src></code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination file</p>
 <hr>
 

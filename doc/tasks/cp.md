@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod cp <source> [options]
+$ mod cp <src> [options]
 ```
 
 ### Options

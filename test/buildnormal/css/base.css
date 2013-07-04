@@ -1,3 +1,9 @@
 body{
     background-color: grey
 }
+
+#baz {
+    background: url('../img/icon.png') no-repeat;
+    height: 24px;
+    width: 24px
+}

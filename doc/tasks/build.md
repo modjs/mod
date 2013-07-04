@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod build <source> [options]
+$ mod build <src> [options]
 ```
 
 ### Options

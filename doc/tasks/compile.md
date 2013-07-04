@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod compile <source> [options]
+$ mod compile <src> [options]
 ```
 
 ### Options
@@ -24,7 +24,19 @@ $ mod compile <source> [options]
 #### target
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>dist</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Target build level [HTML only]</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Target build level</p>
+<hr>
+
+#### suffix
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The output file suffix</p>
+<hr>
+
+#### output
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>file</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify output type: file pipe</p>
 <hr>
 
 #### loader
@@ -43,12 +55,6 @@ $ mod compile <source> [options]
 
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Deep excludes a module and it's dependencies from the build [JS only]</p>
-<hr>
-
-#### suffix
-
-
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The output file suffix [JS only]</p>
 <hr>
 
 #### exclude-shallow
@@ -77,7 +83,7 @@ $ mod compile <source> [options]
 
 #### main-config-file
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><source></code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><src></code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify the file of the configuration for optimization [JS only]</p>
 <hr>
 

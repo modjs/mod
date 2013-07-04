@@ -4,14 +4,14 @@
 ### Usage
 
 ```sh
-$ mod replace <source> [options]
+$ mod replace <src> [options]
 ```
 
 ### Options
 
 #### dest
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><source></code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><src></code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination directory or file</p>
 <hr>
 

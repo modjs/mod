@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod strip <source> [options]
+$ mod strip <src> [options]
 ```
 
 ### Options

@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod lint <source>
+$ mod lint <src>
 ```
 
 ### Options

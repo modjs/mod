@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod pack <source> [options]
+$ mod pack <src> [options]
 ```
 
 ### Options

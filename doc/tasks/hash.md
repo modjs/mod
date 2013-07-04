@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod hash <source> [options]
+$ mod hash <src> [options]
 ```
 
 ### Options
