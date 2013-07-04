@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         min: {
-            source: "test.css",
+            src: "test.css",
             dest: "test.min.css"
         }
     }

@@ -3,7 +3,7 @@ module.exports = {
     tasks: { 
         cat: {
             sample: {
-                source: ['{{ qux }}', 'baz/*.js'],  // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
+                src: ['{{ qux }}', 'baz/*.js'],  // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
                 dest: 'build/{{ baz }}.js',         // 'build/abcde.js'
             },
         },

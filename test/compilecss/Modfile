@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         compile: {
-            source: "main.css",
+            src: "main.css",
             dest: "main.all.css"
         }
     }

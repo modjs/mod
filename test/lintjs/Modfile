@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         lint: {
-            source: "*.js"
+            src: "*.js"
         }
     }
 };

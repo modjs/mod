@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         datauri: {
-            source: "test.css",
+            src: "test.css",
             dest: "test.datauri.css",
             igts: true
         }

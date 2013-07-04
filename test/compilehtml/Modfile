@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         compile: {
-            source: "index.html",
+            src: "index.html",
             dest: "dist/index.html"
         }
     }

@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         min: {
-            source: "./*.js",
+            src: "./*.js",
             dest: "./dist"
         }
     }

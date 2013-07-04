@@ -5,7 +5,7 @@ module.exports = {
     },
     tasks : {
         sprite : {
-            source: "test.css",
+            src: "test.css",
             dest: "test.sprite.css"
         }
     }

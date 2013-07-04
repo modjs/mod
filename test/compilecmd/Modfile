@@ -5,12 +5,12 @@ module.exports = {
         compile:{
             // do not combine all require module
             demo1: {
-                source: "./js/*.js",
+                src: "./js/*.js",
                 dest: "./dist/js/",
                 combine: false
             },
             demo2: {
-                source: "./js/main.js",
+                src: "./js/main.js",
                 dest: "./dist/js2/",
                 mainConfigFile: "./js/config.js"
             }
