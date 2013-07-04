@@ -2,4 +2,12 @@
 .b {font-family: monospace;}
 .d {font-family: monospace;}
 .c {font-family: monospace;}
-#main{}#id { color: black}
+.icon {
+    background: url(vendor/icon.png?datauri) no-repeat;
+    height: 24px;
+    width: 24px
+}
+#main{      color: black; 
+}#id { color: black}
+
+

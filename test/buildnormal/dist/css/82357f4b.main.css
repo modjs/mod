@@ -1,0 +1,1 @@
+body{background-color:grey}:root{var-url-prepend:"http://cdn.qq.com"}#foo{background:url('../img/icon.png?datauri') no-repeat;height:24px;width:24px}#bar{background:url('../img/icon.png?url-prepend=http://cdn2.qq.com') no-repeat;height:24px;width:24px}#baz{background:url('../img/icon.png') no-repeat;height:24px;width:24px}
