@@ -1,9 +1,13 @@
-# Mod - v0.3.x [![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
+# Mod - v0.3.x
 
-![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
+[![NPM version](https://badge.fury.io/js/modjs.png)](http://badge.fury.io/js/modjs)
+[![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
+[![Dependency Status](https://david-dm.org/modulejs/modjs.png)](https://david-dm.org/modulejs/modjs)
 
 ## What is Mod?
 Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance web applications.
+
+![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
 
 ## Installation
 [Mod](https://npmjs.org/package/modjs) is installed using [NPM(Node Package Manager)](http://npmjs.org/)
