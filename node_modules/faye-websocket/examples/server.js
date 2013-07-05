@@ -10,9 +10,7 @@ var upgradeHandler = function(request, socket, head) {
   var ws = new WebSocket(request, socket, head, ['irc', 'xmpp'], {ping: 5});
   console.log('open', ws.url, ws.version, ws.protocol);
 
-  ws.onmessage = function(event) {
-    ws.send(event.data);
-  };
+  ws.pipe(ws);
 
   ws.onclose = function(event) {
     console.log('close', event.code, event.reason);
@@ -37,7 +35,7 @@ var requestHandler = function(request, response) {
     }, 1000);
   }, 2000);
 
-  es.send('Welcome!\n\nThis is an EventSource server.');
+  fs.createReadStream(__dirname + '/haproxy.conf').pipe(es, {end: false});
 
   es.onclose = function() {
     clearInterval(loop);
@@ -64,7 +62,7 @@ var server = secure
              })
            : http.createServer();
 
-server.addListener('request', requestHandler);
-server.addListener('upgrade', upgradeHandler);
+server.on('request', requestHandler);
+server.on('upgrade', upgradeHandler);
 server.listen(port);
 
