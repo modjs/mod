@@ -1,3 +1,4 @@
+@import "../catcss/foo.css";
 .a {font-family: monospace;}
 .b {font-family: monospace;}
 .d {font-family: monospace;}
