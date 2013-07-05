@@ -35,7 +35,7 @@
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{*}</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
-file.suffiex("jquery.js", "min") // => jquery.min.js
+ file.suffiex("jquery.js", "min") // => jquery.min.js
 ```
 
 <hr>
@@ -87,7 +87,7 @@ file.suffiex("jquery.js", "min") // => jquery.min.js
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Return:</b> <code>{array} matche files</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
-file.expand(['!./foo/.css', './foo/'])
+   file.expand(['!./foo/.css', './foo/'])
 ```
 
 <hr>
@@ -149,11 +149,11 @@ file.mkdir("/tmp/dir", 755)
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
-file.walkdir("/tmp", function(error, path, dirs, name) {
-// path is the current directory we're in
-// dirs is the list of directories below it
-// names is the list of files in it
-})
+    file.walkdir("/tmp", function(error, path, dirs, name) {
+        // path is the current directory we're in
+        // dirs is the list of directories below it
+        // names is the list of files in it
+    })
 ```
 
 <hr>

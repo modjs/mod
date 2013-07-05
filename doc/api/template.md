@@ -28,9 +28,9 @@ template("hello <%= foo %>", {foo:"modjs"}) // => hello modjs
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
-template.registerHelper("echo", function(val){
-console.log(val);
-})
+ template.registerHelper("echo", function(val){
+     console.log(val);
+ })
 ```
 
 <hr>
