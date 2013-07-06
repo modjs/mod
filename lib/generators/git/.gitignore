@@ -24,6 +24,7 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
+.idea
 
 # Dreamweaver added files
 _notes
@@ -44,7 +45,6 @@ dwsync.xml
 .hg
 .svn
 .CVS
-intermediate
-publish
-.idea
+
+
 
