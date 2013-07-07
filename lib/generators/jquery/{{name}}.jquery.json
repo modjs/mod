@@ -2,7 +2,7 @@
     "name": "{{name}}",
     "title": "{{title}}",
     "description": "{{description}}",
-    "version": "0.0.1",
+    "version": "{{version}}",
     "homepage": "{{homepage}}",
     "demo": "{{demo}}",
     "docs": "{{docs}}",
@@ -17,13 +17,13 @@
     },
     "bugs": "{{bugs}}",
     "dependencies": {
-        "jquery": ">=1.7.2"
+        "jquery": "{{jquery_version}}"
     },
     "keywords": [{{keywords}}],
     "licenses": [
         {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/mit-license.php"
+          "type": "{{licenses}}",
+          "url": "{{homepage}}/blob/master/LICENSE-{{licenses}}"
         }
     ]
 }
