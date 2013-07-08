@@ -2,9 +2,15 @@
 // More info at https://github.com/modulejs/modjs/
 
 module.exports = {
-    "tasks": {
+    plugins: {
 
     },
-    "targets" : {
+    tasks: {
+        mkdir: {
+            path: "demo"
+        }
+    },
+    targets : {
+        dist: "mkdir"
     }
 };

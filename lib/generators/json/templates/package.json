@@ -1,36 +1,35 @@
 {
-  "name": "{{name}}",
-  "description": "{{description}}",
-  "version": "{{version}}",
-  "homepage": "{{homepage}}",
-  "author": {
-    "name": "{{author_name}}",
-    "url": "{{author_url}}"
-  },
-  "repository": {
-    "type": "git",
-    "url": "{{repository}}"
-  },
-  "bugs": {
-    "url": "{{bugs}}"
-  },
-  "licenses": [
-    {
-      "type": "{{licenses}}",
-      "url": "{{homepage}}/blob/master/LICENSE-{{licenses}}"
-    }
-  ],
-  "preferGlobal": true,
-  "bin": "{{bin}}",
-  "engines": {
-    "node": "{{node_version}}"
-  },
-  "scripts": {
-    "test": "{{npm_test}}"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
-  "keywords": [{{keywords}}]
+    "name": "{{name}}",
+    "description": "{{description}}",
+    "version": "{{version}}",
+    "homepage": "{{homepage}}",
+    "author": {
+        "name": "{{author_name}}",
+        "url": "{{author_url}}"
+    },
+    "repository": {
+        "type": "git",
+        "url": "{{repository}}"
+    },
+    "bugs": {
+        "url": "{{bugs}}"
+    },
+    "licenses": [
+        {
+            "type": "{{license_type}}",
+            "url": "{{license_url}}"
+        }
+    ],
+    "bin": "{{bin}}",
+    "engines": {
+        "node": "{{node_version}}"
+    },
+    "scripts": {
+        "test": "{{npm_test}}"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+    },
+    "keywords": [{{keywords}}]
 }
