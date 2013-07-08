@@ -1,0 +1,1 @@
+for <= seajs@2.0.0 plugins

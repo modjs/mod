@@ -41,7 +41,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/modulejs/modjs.git"
+        "url": "git://github.com/modulejs/modjs.git"
     },
     "engines": {"node": ">= 0.6.x"},
     "bugs": {"url": "http://github.com/modulejs/modjs/issues"},
