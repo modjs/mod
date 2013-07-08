@@ -45,6 +45,12 @@ $ mod strip <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip code nodes</p>
 <hr>
 
+#### output
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>file</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify output type: file pipe</p>
+<hr>
+
 
 
 

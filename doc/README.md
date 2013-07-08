@@ -20,7 +20,7 @@ Mod supports a powerful set of high-level tasks:
 * [replace](https://github.com/modulejs/modjs/tree/master/doc/tasks/replace.md) - replace the contents of files 
 * [cat](https://github.com/modulejs/modjs/tree/master/doc/tasks/cat.md) - concatenate the content of files 
 * [cp](https://github.com/modulejs/modjs/tree/master/doc/tasks/cp.md) - copy one or more files to another location 
-* [mkdir](https://github.com/modulejs/modjs/tree/master/doc/tasks/mkdir.md) - create new folder 
+* [mkdir](https://github.com/modulejs/modjs/tree/master/doc/tasks/mkdir.md) - make a new directory 
 * [mv](https://github.com/modulejs/modjs/tree/master/doc/tasks/mv.md) - move or rename files or directories 
 * [rm](https://github.com/modulejs/modjs/tree/master/doc/tasks/rm.md) - remove files 
 * [strip](https://github.com/modulejs/modjs/tree/master/doc/tasks/strip.md) - source stripping 

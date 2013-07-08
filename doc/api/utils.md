@@ -12,6 +12,21 @@
 
 <hr>
 
+#### utils.isRelativeURI(uri)
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Is a relative URI? </p>
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
+```js
+ utils.isRelativeURI("../path/to"); // => return true
+ utils.isRelativeURI("path/to"); // => return true
+ utils.isRelativeURI("http://www.qq.com"); // => return false
+ utils.isRelativeURI("/relative/to/root"); // => return false
+ utils.isRelativeURI("//without/protocol"); // => return false
+ utils.isRelativeURI("data:image/gif;base64,lGODlhEAA..."); // => return false
+```
+
+<hr>
+
 #### utils.download(url, local, callback)
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Download file</p>
 

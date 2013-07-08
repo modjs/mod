@@ -33,6 +33,12 @@ $ mod replace <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Flags</p>
 <hr>
 
+#### output
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>file</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify output type: file pipe</p>
+<hr>
+
 #### charset
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>utf-8</code></p>
