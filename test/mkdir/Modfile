@@ -1,0 +1,8 @@
+
+module.exports = {
+    tasks: {
+        mkdir: {
+            dest: "test"
+        }
+    }
+};

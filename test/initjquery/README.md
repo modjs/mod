@@ -1,6 +1,6 @@
 ### Usage
 
 ```sh
-$ mod init jquery modfile
+$ mod init jquery
 ```
 

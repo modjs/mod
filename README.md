@@ -76,8 +76,8 @@ Mod supports a powerful set of high-level tasks:
 * [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
 * [Source Stripping](https://github.com/modulejs/modjs/tree/master/test/strip)
 * [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
-* [Plugin Task: CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/plugintask)
-* [Custom Task: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/customtask)
+* [Plugin Task: CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/pluginnpmtask)
+* [Custom Task: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/pluginlocaltask)
 * [Init Modfile](https://github.com/modulejs/modjs/tree/master/test/initmodfile)
 * [Init jQuery](https://github.com/modulejs/modjs/tree/master/test/initjquery)
 
