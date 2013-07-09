@@ -1,8 +1,11 @@
-# Mod - v0.3.x
+<p align="center">
+<a href="https://f.cloud.github.com/assets/677114/767990/136d7540-e893-11e2-8198-ec674dba5c0f.png" target="_blank"><img src="https://f.cloud.github.com/assets/677114/767990/136d7540-e893-11e2-8198-ec674dba5c0f.png" alt="mod" style="max-width:100%;"></a>
+</p>
 
-[![NPM version](https://badge.fury.io/js/modjs.png)](http://badge.fury.io/js/modjs)
-[![Build Status](https://secure.travis-ci.org/modulejs/modjs.png?branch=master)](http://travis-ci.org/modulejs/modjs)
-[![Dependency Status](https://david-dm.org/modulejs/modjs.png)](https://david-dm.org/modulejs/modjs)
+<p align="center">
+<a href="http://badge.fury.io/js/modjs"><img src="https://badge.fury.io/js/modjs.png" alt="NPM version" style="max-width:100%;"></a>
+<a href="http://travis-ci.org/modulejs/modjs"><img src="https://secure.travis-ci.org/modulejs/modjs.png?branch=master" alt="Build Status" style="max-width:100%;"></a>
+</p>
 
 ## What is Mod?
 Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance HTML5 applications.
