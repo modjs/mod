@@ -9,9 +9,6 @@
     "homepage": "http://madscript.com/modjs",
     "dependencies": {
         "ssh2": "~0.2.5",
-        "tar": "~0.1.13",
-        "fstream-ignore": "~0.0.5",
-        "fstream": "~0.1.18",
         "mkdirp": "~0.3.4",
         "async": "~0.2.9",
         "prompt": "~0.2.8",
