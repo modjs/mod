@@ -1,7 +1,4 @@
-# {{project}}
+{{name}}
+===
 
-
-## Documentation
-
-
-## Examples
+{{description}}
