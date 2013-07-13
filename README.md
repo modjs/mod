@@ -38,6 +38,7 @@ $ npm install modjs -g
 * [Plugin API](https://github.com/modulejs/modjs/tree/master/doc/api)
 
 ## Quick Build Demo
+* [Plain Project Build](https://github.com/modulejs/modjs/tree/master/test/buildnormal)
 * [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildrequirejs)
 * [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildseajs)
 
