@@ -21,8 +21,6 @@
         "esprima": "~1.0.2",
         "html-minifier": "~0.5.0",
         "optimist": "~0.6.0",
-        "jshint": "*",
-        "csslint": "*",
         "underscore": "*",
         "colors": "*",
         "optipng-bin": "*",

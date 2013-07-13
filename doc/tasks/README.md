@@ -3,7 +3,6 @@ Mod supports a powerful set of high-level tasks:
 
 * [help](https://github.com/modulejs/modjs/tree/master/doc/tasks/help.md) - get help on mod 
 * [min](https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md) - minify JavaScript/CSS/HTML/Image source 
-* [lint](https://github.com/modulejs/modjs/tree/master/doc/tasks/lint.md) - validate JavaScript/CSS source 
 * [compile](https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md) - compile JavaScript/CSS/HTML source 
 * [create](https://github.com/modulejs/modjs/tree/master/doc/tasks/create.md) - generate project skeleton and create project directory 
 * [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - generate project skeleton from template 

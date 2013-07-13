@@ -75,16 +75,15 @@ $ npm install modjs -g
 * Live Browser Reloads, instantly see changes in your browser
 * Image Optimization, reduce JPEG, PNG file sizes
 * Project boilerplate generate
-* Built-in Web Server
+* Built-in Web Server: `mod server`
 * Extensible, easily write plugins
-* Works on most platforms: Windows, Linux, Mac OS X, Unix...
 
 ## Preview
 ![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
 
 
 ## Platform Support
-Mod support Windows, OS X, Linux.
+Mod support Windows, OS X, Linux...
 
 ## Issue Submission
 Submit a [new issue](https://github.com/modulejs/modjs/issues/new).
