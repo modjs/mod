@@ -1,5 +1,5 @@
 ## <a href="#build" name="build">build</a>
-> Build the project by convention
+> Build project with html
 
 ### Usage
 

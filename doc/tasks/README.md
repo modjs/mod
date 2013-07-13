@@ -8,9 +8,8 @@ Mod supports a powerful set of high-level tasks:
 * [create](https://github.com/modulejs/modjs/tree/master/doc/tasks/create.md) - generate project skeleton and create project directory 
 * [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - generate project skeleton from template 
 * [server](https://github.com/modulejs/modjs/tree/master/doc/tasks/server.md) - start a static web server 
-* [pack](https://github.com/modulejs/modjs/tree/master/doc/tasks/pack.md) - create a tarball from a module 
-* [hash](https://github.com/modulejs/modjs/tree/master/doc/tasks/hash.md) - rename file with it hash value 
-* [build](https://github.com/modulejs/modjs/tree/master/doc/tasks/build.md) - build the project by convention 
+* [rev](https://github.com/modulejs/modjs/tree/master/doc/tasks/rev.md) - rename file with it hash value 
+* [build](https://github.com/modulejs/modjs/tree/master/doc/tasks/build.md) - build project with html 
 * [replace](https://github.com/modulejs/modjs/tree/master/doc/tasks/replace.md) - replace the contents of files 
 * [cat](https://github.com/modulejs/modjs/tree/master/doc/tasks/cat.md) - concatenate the content of files 
 * [cp](https://github.com/modulejs/modjs/tree/master/doc/tasks/cp.md) - copy one or more files to another location 
