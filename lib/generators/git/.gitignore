@@ -46,5 +46,7 @@ dwsync.xml
 .svn
 .CVS
 
-
+# Node 
+npm-debug.log
+node_modules
 
