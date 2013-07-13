@@ -67,11 +67,10 @@ $ npm install modjs -g
 * Build with html
 * Task-based workflow
 * Source minify: JS, CSS, HTML
-* Source linting: JS, CSS
 * Modular JS for the web: AMD, CMD(will support CommonJS soon)
 * CSS @import file combination
 * Source stripping, automatically remove debugging code
-* Basic operation: cat, rm, mv, mkdir, cp, rev, tar
+* Basic operation: cat, rm, mv, mkdir, cp, rev
 * File watcher, trigger custom tasks when file change
 * Live Browser Reloads, instantly see changes in your browser
 * Image Optimization, reduce JPEG, PNG file sizes
