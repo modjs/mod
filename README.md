@@ -64,7 +64,7 @@ $ npm install modjs -g
 
 
 ## Features
-* Build with html
+* Build with main html
 * Task-based workflow
 * Source minify: JS, CSS, HTML
 * Modular JS for the web: AMD, CMD(will support CommonJS soon)
