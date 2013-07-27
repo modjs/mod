@@ -89,9 +89,7 @@ Mod is an open-source project by [Tencent](http://www.tencent.com/en-us/) which 
 We utilize a number of useful open-source solutions including:
 
 * UglifyJS
-* JSHint
 * CleanCSS
-* CSSLint
 * HTMLMinifiler
 * RequireJS
 * SeaJS
