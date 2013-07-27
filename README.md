@@ -18,10 +18,6 @@ Mod is a task-based workflow tooling for web, it help developers quickly build r
 $ npm install modjs -g
 ```
 
-## Website
-* English Website：http://modulejs.github.io/modjs
-* 中文主页：http://madscript.com/modjs
-
 ## Why another one?
 * Focus on the workflow of web development 
 * Built-in tasks
@@ -67,7 +63,7 @@ $ npm install modjs -g
 * Build with main html
 * Task-based workflow
 * Source minify: JS, CSS, HTML
-* Modular JS for the web: AMD, CMD(will support CommonJS soon)
+* Modular JS Compile: AMD, CMD (will support ES6 Module, CommonJS Module soon)
 * CSS @import file combination
 * Source stripping, automatically remove debugging code
 * Basic operation: cat, rm, mv, mkdir, cp, rev
