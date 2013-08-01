@@ -1,0 +1,9 @@
+module.exports = {
+    tasks:{
+        deploy: {
+            src: ['src/*.js'],
+            // replace with your own ssh server
+            dest: 'yuweiba: @127.0.0.1:/Users/yuweiba/workspace/project/modjs/test/deploy/dest/'
+        }
+    }
+};
