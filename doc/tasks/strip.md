@@ -28,21 +28,21 @@ $ mod strip <src> [options]
 <hr>
 
 #### tab
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip tab</p>
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Convert tab (default replace by 4 spaces if enable)</p>
+<hr>
+
+#### eol
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Convert line ending (default replace by lf if enable)</p>
 <hr>
 
 #### code
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
+
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Default strip alert call if enable</p>
-<hr>
-
-#### nodes
-
-
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip code nodes</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip code (default remove alert call if enable)</p>
 <hr>
 
 #### output

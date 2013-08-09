@@ -3,7 +3,8 @@ module.exports = {
     tasks: {
         strip: {
             src: "before.js",
-            dest: "after.js"
+            dest: "after.js",
+            eol: 'lf'
         }
     }
 };

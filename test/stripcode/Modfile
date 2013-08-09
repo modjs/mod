@@ -1,0 +1,10 @@
+
+module.exports = {
+    tasks: {
+        strip: {
+            src: "before.js",
+            dest: "after.js",
+            code: ['alert']
+        }
+    }
+};

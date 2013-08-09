@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var utils = require('../lib/utils');
+var utils = require('../lib/utils/index');
 var logger = require('../lib/utils/logger');
 var runner = require('../lib/runner');
 var colors = require('colors');
