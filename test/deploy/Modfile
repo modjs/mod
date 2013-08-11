@@ -1,9 +1,17 @@
 module.exports = {
     tasks:{
+        watch: {
+            src: '*.js',
+            tasks: 'deploy'
+        },
         deploy: {
-            src: ['src/*.js'],
+            src: 'src/', // source directory
             // replace with your own ssh server
             dest: 'yuweiba: @127.0.0.1:/Users/yuweiba/workspace/project/modjs/test/deploy/dest/'
         }
+    },
+
+    targets: {
+        dist: 'watch'
     }
 };
