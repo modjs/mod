@@ -4,7 +4,7 @@
 ### Usage
 
 ```sh
-$ mod rm <src>
+$ mod rm <dest>
 ```
 
 
