@@ -45,6 +45,18 @@ $ mod server [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Files be watched and reloaded</p>
 <hr>
 
+#### logging
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Enable remote logging service</p>
+<hr>
+
+#### proxies
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>array</code></p>
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Enable request proxy</p>
+<hr>
+
 #### open
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
