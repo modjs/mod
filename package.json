@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "JavaScript Workflow Tooling For Web",
     "keywords": ["tooling", "workflow", "automation", "build"],
     "maintainers": [
@@ -26,6 +26,7 @@
         "optipng-bin": "0.2.6",
         "jpegtran-bin": "0.1.7",
         "connect": "*",
+        "http-proxy": "~0.10.3",
         "requirejs": "*",
         "almond": "*",
         "seajs": "*",
