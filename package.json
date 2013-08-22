@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "JavaScript Workflow Tooling For Web",
     "keywords": ["tooling", "workflow", "automation", "build"],
     "maintainers": [
@@ -23,8 +23,8 @@
         "optimist": "~0.6.0",
         "underscore": "*",
         "colors": "*",
-        "optipng-bin": "*",
-        "jpegtran-bin": "*",
+        "optipng-bin": "0.2.6",
+        "jpegtran-bin": "0.1.7",
         "connect": "*",
         "requirejs": "*",
         "almond": "*",
