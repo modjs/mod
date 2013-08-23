@@ -274,12 +274,9 @@ function showhelp() {
     ':load &lt;url&gt; - to inject new DOM',
     ':load &lt;script_url&gt; - to inject external library',
     '      load also supports following shortcuts: <br />      jquery, underscore, prototype, mootools, dojo, rightjs, coffeescript, yui.<br />      eg. :load jquery',
-    ':listen [id] - to start <a href="/remote-debugging.html">remote debugging</a> session',
+    ':listen [id] - to start remote debugging session',
     ':clear - to clear the history (accessed using cursor keys)',
-    ':history - list current session history',
-    ':about',
-    '',
-    'Directions to <a href="/inject.html">inject</a> JS Console in to any page (useful for mobile debugging)'
+    ':history - list current session history'
   ];
     
   if (injected) {
@@ -584,11 +581,6 @@ function setHistory(history) {
   } catch (e) {}
 }
 
-function about() {
-  return 'Built by <a target="_new" href="http://twitter.com/rem">@rem</a>';
-}
-
-
 document.addEventListener ? 
   window.addEventListener('message', function (event) {
     post(event.data);
@@ -627,8 +619,7 @@ var exec = document.getElementById('exec'),
     codeCompleteTimer = null,
     keypressTimer = null,
     commands = { 
-      help: showhelp, 
-      about: about,
+      help: showhelp,
       // loadjs: loadScript, 
       load: load,
       history: showHistory,
@@ -657,7 +648,7 @@ var exec = document.getElementById('exec'),
           sse = new EventSource('/remote/' + id + '/log');
           sse.onopen = function () {
             remoteId = id;
-            window.top.info('Connected to "' + id + '"\n\n<script src="http://jsconsole.com/remote.js?' + id + '"></script>');
+            window.top.info('Connected to "' + id + '"\n\n<script src="http://'+ location.host + '/remote.js?' + id + '"></script>');
           };
 
           sse.onmessage = function (event) {

@@ -24,18 +24,7 @@ body { overflow: auto; }
 #console span.gutter { float: left; display: block; width: 5px; }
 
 #output li div { position: relative; }
-#output .echo .permalink { position: absolute; right: 0; overflow: hidden; display: block; background: url(link.png) no-repeat center; height: 20px; width: 30px; text-indent: -200px; top: 0; opacity: 0.5; }
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
-  
-  #output .echo .permalink {
-    background: url(link@2x.png) no-repeat center; 
-    background-size: 16px 16px; 
-  }
-}
-
-
+#output .echo .permalink { position: absolute; right: 0; overflow: hidden; display: block; background: url(link@2x.png) no-repeat center; background-size: 16px 16px;  height: 20px; width: 30px; text-indent: -200px; top: 0; opacity: 0.5; }
 #output .echo .permalink:hover { opacity: 1; }
 
 /* log types */
@@ -174,9 +163,8 @@ body.large #cursor { padding: 5px; }
 
 /* iPhone type display */
 @media screen and (max-device-width: 480px) {
-  -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
-  
-  html, body { height: auto; overflow-y: auto; overflow-x: hidden; }
+
+  html, body { height: auto; overflow-y: auto; overflow-x: hidden; -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */}
   #console { overflow: auto; bottom: 0; border-bottom: 0; margin-bottom: 0; padding-top: 5px; }
   #console { margin-top: 35px; }
   #output .echo .permalink { width: 18px; height: 20px; }
