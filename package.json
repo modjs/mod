@@ -1,6 +1,6 @@
 {
     "name": "modjs",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "description": "JavaScript Workflow Tooling For Web",
     "keywords": ["tooling", "workflow", "automation", "build"],
     "maintainers": [
@@ -43,6 +43,9 @@
     "bugs": {"url": "http://github.com/modulejs/modjs/issues"},
     "bin": {
         "mod": "./bin/mod"
+    },
+    "scripts": {
+        "test": "node ./test/testrunner.js"
     },
     "preferGlobal": true
 }
