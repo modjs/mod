@@ -17,12 +17,12 @@ async.eachSeries(dirs, function (dir, done) {
     console.log('--------------', 'Testing'.green, dir.green, '--------------');
 
     exec('node ' + binPath, {
-    	cwd: dir
+        cwd: dir
     }, function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
-	    done(err);
-	});
+        done(err);
+    });
 
 }, function(err){
     if(err){
