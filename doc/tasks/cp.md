@@ -15,12 +15,6 @@ $ mod cp <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination directory or file</p>
 <hr>
 
-#### parent
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Include source parent directory</p>
-<hr>
-
 
 
 

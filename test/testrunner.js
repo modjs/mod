@@ -1,22 +1,29 @@
 var fs = require('fs');
 var assert = require('assert');
 var path = require('path');
-var taskRunner = require('../');
 var file = require('../lib/utils/file');
-var execFile = require('child_process').execFile;
+var exec = require('child_process').exec;
 var async = require('async');
+var colors = require('colors');
 
 var dirs = file.listdir(__dirname);
+var binPath = path.resolve('bin/mod');
+
 async.eachSeries(dirs, function (dir, done) {
-    console.log(dir)
-    taskRunner.run(null, dir, done);
-    execFile('bin/mod', [], {
+    if( file.exists(path.join(dir, '.testskip')) ){
+        return done();
+    }
+
+    console.log('--------------', 'Testing'.green, dir.green, '--------------');
+
+    exec('node ' + binPath, {
     	cwd: dir
     }, function (err, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
+        console.log(stdout);
+        console.log(stderr);
 	    done(err);
 	});
+
 }, function(err){
     if(err){
         throw err;

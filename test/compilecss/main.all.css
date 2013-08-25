@@ -1,12 +1,7 @@
-.a {font-family: monospace;}
-.b {font-family: monospace;}
-.d {font-family: monospace;}
-.c {font-family: monospace;}
-.icon {
-    background: url(vendor/icon.png?datauri) no-repeat;
-    height: 24px;
-    width: 24px
-}
+@import url("a.css");
+@import url("b.css");
+@import url("c.css");
+@import url("vendor/icon.css");
 #main{      color: black; 
 }#id { color: black}
 

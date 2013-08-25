@@ -45,7 +45,7 @@ $ mod server [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Files be watched and reloaded</p>
 <hr>
 
-#### logging
+#### console
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Enable remote logging service</p>

@@ -4,8 +4,8 @@ module.exports = {
             options: {
                 // Task-level options may go here, overriding task defaults.
             },
-            foo: {
-                 options: {
+            test: {
+                options: {
                     // "bar" target options may go here, overriding task-level options.
                 },
                 group: [
@@ -14,5 +14,8 @@ module.exports = {
                 ]
             }
         }
+    },
+    targets: {
+        dist: 'cat:test'
     }
 };
