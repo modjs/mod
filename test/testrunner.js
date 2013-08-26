@@ -6,6 +6,10 @@ var exec = require('child_process').exec;
 var async = require('async');
 var colors = require('colors');
 
+
+console.log('--------------', 'Print process.env'.green, '--------------');
+console.log(process.env);
+
 var dirs = file.listdir(__dirname);
 var binPath = path.resolve('bin/mod');
 
