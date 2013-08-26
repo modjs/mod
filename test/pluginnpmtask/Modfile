@@ -1,12 +1,14 @@
+// A sample Modfile
+// More info at https://github.com/modulejs/modjs/
 
 module.exports = {
     plugins: {
-        sprite: "mod-sprite"
+        stylus: "mod-stylus"
     },
-    tasks : {
-        sprite : {
-            src: "test.css",
-            dest: "test.sprite.css"
+    tasks: {
+        stylus: {
+            src: "test.styl",
+            dest: "test.css"
         }
     }
 };
