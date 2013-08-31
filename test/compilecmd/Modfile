@@ -1,8 +1,9 @@
 module.exports = {
-    loader: 'seajs',
-
     tasks: {
         compile:{
+            options: {
+                loader: 'seajs'
+            },
             // do not combine all require module
             demo1: {
                 src: "./js/*.js",
@@ -16,9 +17,7 @@ module.exports = {
             }
         }
     },
-
     targets: {
         dist: "compile"
     }
-
 };

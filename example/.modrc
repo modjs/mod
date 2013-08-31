@@ -1,4 +1,3 @@
 {
-   "directory": "lib",
-   "loader": "requirejs"
+   "directory": "lib"
 }
