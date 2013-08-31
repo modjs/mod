@@ -6,7 +6,6 @@ var exec = require('child_process').exec;
 var async = require('async');
 var colors = require('colors');
 
-
 console.log('--------------', 'Print process.env'.green, '--------------');
 console.log(process.env);
 
@@ -34,5 +33,3 @@ async.eachSeries(dirs, function (dir, done) {
         process.exit(1);
     }
 })
-
-

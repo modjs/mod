@@ -34,4 +34,3 @@ if (cmd === '-h' || cmd === '--help') {
 }else{
     runner.run(cmd);
 }
-
