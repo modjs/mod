@@ -1,0 +1,1 @@
+(function(e,t){var n=Zepto,r=e.document,i=e.navigator,s=e.location,o=/ios/i.test(i.userAgent);n("#hi").text("Hello ModJS")})(this)

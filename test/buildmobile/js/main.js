@@ -2,7 +2,8 @@ define([
     './var/$',
     './var/document',
     './var/navigator',
-    './var/location'
-], function ($, document, navigator, location) {
+    './var/location',
+    './ios'
+], function ($, document, navigator, location, ios) {
     $('#hi').text("Hello ModJS");
 })
