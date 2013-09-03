@@ -1,0 +1,11 @@
+
+module.exports = {
+    plugins: {
+        apitesting: "./apitesting"
+    },
+    tasks : {
+        apitesting : {
+            text: "hello modjs"
+        }
+    }
+};
