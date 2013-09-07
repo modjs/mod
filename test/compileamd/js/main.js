@@ -8,7 +8,10 @@ define([
 
     $('#foo').text(syncModule);
     
-    require(['./asyncModule'], function(asyncModule){
-        $('#bar').text(asyncModule);
-    });
+    $('#load').on('click', function(){
+        require(['./asyncModule'], function(asyncModule){
+            $('#bar').text(asyncModule);
+        });
+    })
+
 })

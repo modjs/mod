@@ -6,21 +6,24 @@ module.exports = {
         compile: {
             options: {
                 loader: 'requirejs',
-                baseUrl: "./js",
-                dir: "./dist"
+                baseUrl: './js',
+                dest: './dist/js'
             },
             mainModule: {
-                miniLoader: true,
-                src: "main.js"
+                src: 'main.js',
             },
             asyncModule: {
-                src: "asyncModule.js",
+                src: 'asyncModule.js',
                 exclude: ['./var/navigator']
             }
+        },
+        cp: {
+            src: '*.html',
+            dest: './dist'
         }
     },
     
     targets: {
-        dist: "compile"
+        dist: "compile cp"
     }
 };
