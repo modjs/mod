@@ -58,6 +58,8 @@ $ npm install modjs -g
 * [EOL Stripping](https://github.com/modulejs/modjs/tree/master/test/stripeol)
 * [Tab Stripping](https://github.com/modulejs/modjs/tree/master/test/striptab)
 * [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
+* [Make Dir](https://github.com/modulejs/modjs/tree/master/test/mkdir)
+* [Copy Files](https://github.com/modulejs/modjs/tree/master/test/cp)
 
 ## Plugins Examples
 * [NPM Task: mod-stylus](https://github.com/modulejs/modjs/tree/master/test/pluginnpmtask)
@@ -104,6 +106,7 @@ We utilize a number of useful open-source solutions including:
 * SeaJS
 * OptiPNG
 * JPEGtran
+* JSConsole
 
 ## Used by people within <a href="https://github.com/modulejs/modjs/issues/22">(JOIN US)</a>
 ![qqfind](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
