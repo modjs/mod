@@ -25,5 +25,3 @@ exports.utilsApiTesting = function(){
 exports.templateApiTesting = function(){
     assert.ok(exports.template)
 }
-
-
