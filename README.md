@@ -35,29 +35,38 @@ $ npm install modjs -g
 
 ## Quick Build Demo
 * [Plain Project Build](https://github.com/modulejs/modjs/tree/master/test/buildnormal)
+* [Mobile Project Build](https://github.com/modulejs/modjs/tree/master/test/buildmobile)
 * [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildrequirejs)
 * [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildseajs)
 
 ## IDE Support
 * [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
-## Simple Examples
+## Built-in Task Examples
 * [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/test/catjs)
 * [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/test/catcss)
+* [AMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compileamd)
 * [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
-* [CSS Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
+* [Mutil-page Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
+* [CSS Precompile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
 * [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
 * [JPG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minjpg)
 * [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
 * [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
 * [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
-* [Source Stripping](https://github.com/modulejs/modjs/tree/master/test/strip)
+* [Code Stripping](https://github.com/modulejs/modjs/tree/master/test/stripcode)
+* [EOL Stripping](https://github.com/modulejs/modjs/tree/master/test/stripeol)
+* [Tab Stripping](https://github.com/modulejs/modjs/tree/master/test/striptab)
 * [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
-* [Plugin Task: CSS Images Sprites](https://github.com/modulejs/modjs/tree/master/test/pluginnpmtask)
-* [Custom Task: Hello ModJS](https://github.com/modulejs/modjs/tree/master/test/pluginlocaltask)
-* [Init Modfile](https://github.com/modulejs/modjs/tree/master/test/initmodfile)
-* [Init jQuery](https://github.com/modulejs/modjs/tree/master/test/initjquery)
 
+## Plugins Examples
+* [NPM Task: mod-stylus](https://github.com/modulejs/modjs/tree/master/test/pluginnpmtask)
+* [Local Task: mytask.js](https://github.com/modulejs/modjs/tree/master/test/pluginlocaltask)
+* [Grunt Task: grunt-contrib-concat](https://github.com/modulejs/modjs/tree/master/test/plugingrunttask)
+
+## Built-in Web Server Examples
+* [Server with remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/test/serverconsole)
+* [Server with proxy setting](https://github.com/modulejs/modjs/tree/master/test/serverproxy)
 
 ## Features
 * Build with main html
