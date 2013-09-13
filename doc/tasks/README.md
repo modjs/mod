@@ -6,7 +6,7 @@ Mod supports a powerful set of high-level tasks:
 * [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - generate project skeleton from template 
 * [server](https://github.com/modulejs/modjs/tree/master/doc/tasks/server.md) - start a static web server 
 * [watch](https://github.com/modulejs/modjs/tree/master/doc/tasks/watch.md) - run tasks whenever watched files change 
-* [deploy](https://github.com/modulejs/modjs/tree/master/doc/tasks/deploy.md) - deploy 
+* [deploy](https://github.com/modulejs/modjs/tree/master/doc/tasks/deploy.md) - remote deployment via ssh 
 * [compile](https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md) - compile JavaScript/CSS/HTML source 
 * [min](https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md) - minify JavaScript/CSS/HTML/Image source 
 * [replace](https://github.com/modulejs/modjs/tree/master/doc/tasks/replace.md) - replace the contents of files 

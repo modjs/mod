@@ -87,6 +87,12 @@ $ mod compile <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify the file of the configuration for optimization [JS only]</p>
 <hr>
 
+#### strip-define
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip all definitions in generated source [requirejs only]</p>
+<hr>
+
 #### mini-loader
 
 
@@ -113,7 +119,7 @@ $ mod compile <src> [options]
 
 #### minify
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> If minify concatenated file with UglifyJS [requirejs only]</p>
 <hr>
 

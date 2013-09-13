@@ -21,6 +21,18 @@ $ mod build <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File encoding type</p>
 <hr>
 
+#### wrap
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Wrap any build bundle in a start and end text specified by wrap</p>
+<hr>
+
+#### strip-define
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip all definitions in generated source</p>
+<hr>
+
 
 
 

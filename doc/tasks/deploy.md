@@ -1,5 +1,5 @@
 ## <a href="#deploy" name="deploy">deploy</a>
-> deploy
+> Remote deployment via ssh
 
 ### Usage
 
@@ -18,7 +18,7 @@ $ mod deploy <src> [options]
 #### dest
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The remote, like username:password@host:/path/to/</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The remote, eg. username:password@host:/path/to/</p>
 <hr>
 
 #### port

@@ -12,21 +12,21 @@ module.exports = {
                 dest: "./b"
             },
             subdir: {
-                src: ["./a/"],
+                src: ["../catjs/foo.js"],
                 dest: "./b/bb"
             },
             fileAndDir: {
-                src: ["./b/*"],
-                dest: "./c"
-            },
-            fileAndDir: {
-                src: ["./b/*"],
-                flatten: true,
+                src: ["./b"],
                 dest: "./c"
             },
             fileAndDirFlatten: {
-                src: ["./b/**/*.js"],
+                src: ["./b"],
+                flatten: true,
                 dest: "./d"
+            },
+            flattenSrc: {
+                src: ["./b/**/*.js"],
+                dest: "./e"
             }
         }
     },
