@@ -1,0 +1,17 @@
+
+module.exports = {
+    plugins: {
+        echo: function (options, done) {
+            var text = options.text;
+            setTimeout(function(){
+                console.log(text);
+                done();
+            }, 100);
+        }
+    },
+    tasks : {
+        echo : {
+            text: "hello modjs"
+        }
+    }
+};

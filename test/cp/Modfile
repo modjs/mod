@@ -2,9 +2,35 @@
 module.exports = {
     tasks: {
         cp: {
-            src: ["../catjs/*.js", "../catcss/*.css"],
-            dest: "./",
-            filter: /foobar/
+            file: {
+                src: ["../catjs/*.js", "../catcss/*.css"],
+                dest: "./a",
+                filter: /foobar/
+            },
+            dir: {
+                src: ["./a/"],
+                dest: "./b"
+            },
+            subdir: {
+                src: ["./a/"],
+                dest: "./b/bb"
+            },
+            fileAndDir: {
+                src: ["./b/*"],
+                dest: "./c"
+            },
+            fileAndDir: {
+                src: ["./b/*"],
+                flatten: true,
+                dest: "./c"
+            },
+            fileAndDirFlatten: {
+                src: ["./b/**/*.js"],
+                dest: "./d"
+            }
         }
+    },
+    targets: {
+        dist: "cp"
     }
 };
