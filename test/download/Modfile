@@ -10,12 +10,12 @@ module.exports = {
                 dest: "./js"
             },
             github: {
-                src: "jquery/jquery", 
-                dest: "./lib"
+                src: "jquery/jquery",
+                dest: "./lib/jquery"
             }
         }
     },
     targets: {
-        dist: "download:jquery"
+        dist: "download"
     }
 };
