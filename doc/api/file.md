@@ -71,7 +71,7 @@
 <hr>
 
 #### file.listdir(dir, callback)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> List directories within a directory. </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> List directories within a directory.</p>
 
 
 <hr>
