@@ -54,6 +54,7 @@ $ npm install modjs -g
 * [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
 * [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
 * [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
+* [HTML Minify](https://github.com/modulejs/modjs/tree/master/test/minhtml)
 * [Code Stripping](https://github.com/modulejs/modjs/tree/master/test/stripcode)
 * [EOL Stripping](https://github.com/modulejs/modjs/tree/master/test/stripeol)
 * [Tab Stripping](https://github.com/modulejs/modjs/tree/master/test/striptab)
