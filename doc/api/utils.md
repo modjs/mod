@@ -6,7 +6,7 @@
 
 ### Methods
 
-#### utils.getHttpPorxy( hostname )
+#### utils.getHttpProxy( hostname )
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Get the system's http proxy</p>
 
 
