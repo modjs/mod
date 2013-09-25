@@ -1,0 +1,77 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    /* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+    -webkit-text-size-adjust: 100%;
+    /* Remove default margin. */
+    margin: 0;
+}
+
+html, body {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+a, img {
+    /* Prevent callout */
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.scrollable {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollable > * {
+    -webkit-transform: translateZ(0px);
+}
+
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
