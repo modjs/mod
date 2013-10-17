@@ -1,9 +1,6 @@
 (function stand(status){
     window['console'] && console.log(status);
-})('foo');
+})('quux');;
 (function stand(status){
     window['console'] && console.log(status);
-})('bar');
-(function stand(status){
-    window['console'] && console.log(status);
-})('baz');
+})('corge');
