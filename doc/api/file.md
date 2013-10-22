@@ -46,8 +46,8 @@
 
 <hr>
 
-#### file.isDirFormat(filepath)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Is dir format</p>
+#### file.isDirname(filepath)
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Is dir format name</p>
 
 
 <hr>

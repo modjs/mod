@@ -40,7 +40,7 @@ exports.fileApiTesting = function(){
     assert.ok(file.isUTF8EncodingFile)
     assert.ok(file.suffix)
     assert.ok(file.isDir)
-    assert.ok(file.isDirFormat)
+    assert.ok(file.isDirname)
     assert.ok(file.readJSON)
     assert.ok(file.findPackageJSON)
     assert.ok(file.readPackageJSON)
