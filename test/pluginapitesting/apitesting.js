@@ -67,7 +67,6 @@ exports.utilsApiTesting = function(){
     exports.log("utils Api Testing")
     var utils = exports.utils
     assert.ok(utils.getHttpProxy)
-    assert.ok(utils.isRelativeURI)
     assert.ok(utils.download)
     assert.ok(utils.isPlainObject)
     assert.ok(utils.clone)
@@ -76,5 +75,13 @@ exports.utilsApiTesting = function(){
     assert.ok(utils.merge)
     assert.ok(utils.arrayify)
     assert.ok(utils.open)
+
+    assert.ok(utils.isRelativeURI)
+    assert.equal(utils.isRelativeURI("../path/to"), true); // => return true
+    assert.equal(utils.isRelativeURI("path/to"), true); // => return true
+    assert.equal(utils.isRelativeURI("http://www.qq.com"), false); // => return false
+    assert.equal(utils.isRelativeURI("/relative/to/root"), false); // => return false
+    assert.equal(utils.isRelativeURI("//without/protocol"), false); // => return false
+    assert.equal(utils.isRelativeURI("data:image/gif;base64,lGODlhEAA..."), false); // => return false
 }
 
