@@ -68,13 +68,43 @@ exports.utilsApiTesting = function(){
     var utils = exports.utils
     assert.ok(utils.getHttpProxy)
     assert.ok(utils.download)
-    assert.ok(utils.isPlainObject)
-    assert.ok(utils.clone)
+    assert.ok(utils.open) 
+
     assert.ok(utils.walk)
-    assert.ok(utils.namespace)
+    utils.walk( {foo: { bar:{ baz:1 } }}, function(val){
+        assert.equal(val, 1)
+    })
+
     assert.ok(utils.merge)
-    assert.ok(utils.arrayify)
-    assert.ok(utils.open)
+    assert.deepEqual(utils.merge( {foo:1}, {bar: 2} ), {foo:1, bar:2})
+
+    assert.ok(utils.namespace)
+    assert.equal(utils.namespace( {foo: { bar:{ baz:1 } }}, 'foo.bar.baz' ), 1)
+    
+    assert.ok(utils.arrayify);
+    assert.deepEqual(utils.arrayify(1), [1])
+    assert.deepEqual(utils.arrayify(), [])
+    assert.deepEqual(utils.arrayify(null), [null])
+    assert.deepEqual(utils.arrayify(undefined), [undefined])
+    assert.deepEqual(utils.arrayify('1'), ['1'])
+    assert.deepEqual(utils.arrayify(1,2,3), [1,2,3])
+    assert.deepEqual(utils.arrayify('1','2','3'), ['1','2','3'])
+    assert.deepEqual(utils.arrayify('1,2,3'), ['1','2','3'])
+    assert.deepEqual(utils.arrayify('1, 2, 3'), ['1','2','3'])
+    assert.deepEqual(utils.arrayify(' 1 , 2 , 3 '), ['1','2','3']);
+    (function() {
+        assert.deepEqual(utils.arrayify(arguments), [1,2]) // => [1, 2]
+    })(1, 2);
+
+    assert.ok(utils.clone)
+    assert.equal(utils.clone("123"), 123); 
+    assert.deepEqual(utils.clone({foo: 1, bar:2}), {foo: 1, bar:2}); 
+
+    assert.ok(utils.isPlainObject)
+    assert.equal(utils.isPlainObject("123"), false); 
+    assert.equal(utils.isPlainObject({}), true); 
+    assert.equal(utils.isPlainObject(new Object), true); 
+    assert.equal(utils.isPlainObject(new Error), false); 
 
     assert.ok(utils.isRelativeURI)
     assert.equal(utils.isRelativeURI("../path/to"), true); // => return true
