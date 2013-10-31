@@ -49,7 +49,7 @@ When a task is run, Mod looks for its configuration under a property of the same
 Specifying both a task and target like `mod cat:foo` or `mod cat:bar` will process just the specified target's configuration, while running `mod cat` will iterate over _all_ targets, processing each in turn.
 
 ## Options
-Inside a task configuration, an `options` property may be specified to override built-in defaults.  In addition, each target object self is `options` property which is specific to that target.  Target-level options will override task-level options.
+Inside a task configuration, an `options` property may be specified to override built-in defaults.  In addition, each target object self has `options` property which is specific to that target.  Target-level options will override task-level options.
 
 The `options` object is optional and may be omitted if not needed.
 
