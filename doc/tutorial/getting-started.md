@@ -123,8 +123,8 @@ module.exports = {
 ```js
 module.exports = {
     targets: {
-        dev:  "cat min:js"
-        dist: "sprite min",
+        dev:  "cat min:js",
+        dist: "sprite min"
     }
 };
 ```
