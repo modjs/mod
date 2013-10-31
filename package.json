@@ -42,7 +42,8 @@
     "engines": {"node": ">= 0.8.x"},
     "bugs": {"url": "http://github.com/modulejs/modjs/issues"},
     "bin": {
-        "mod": "./bin/mod"
+        "mod": "./bin/mod",
+        "m": "./bin/mod"
     },
     "scripts": {
         "test": "node ./test/testrunner.js"
