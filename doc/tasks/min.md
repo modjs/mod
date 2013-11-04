@@ -18,7 +18,7 @@ $ mod min <src> [options]
 #### suffix
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination file suffix append</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Destination file suffix append, default suffix is ".min" when "dest" parameter is not set</p>
 <hr>
 
 #### charset

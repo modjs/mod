@@ -11,7 +11,7 @@ Mod supports a powerful set of high-level tasks:
 * [build](https://github.com/modulejs/modjs/tree/master/doc/tasks/build.md) - build project with html 
 * [init](https://github.com/modulejs/modjs/tree/master/doc/tasks/init.md) - generate project skeleton from template 
 * [server](https://github.com/modulejs/modjs/tree/master/doc/tasks/server.md) - start a static web server 
-* [watch](https://github.com/modulejs/modjs/tree/master/doc/tasks/watch.md) - run tasks whenever watched files change 
+* [watch](https://github.com/modulejs/modjs/tree/master/doc/tasks/watch.md) - run predefined tasks whenever watched files change 
 * [deploy](https://github.com/modulejs/modjs/tree/master/doc/tasks/deploy.md) - remote deployment via ssh 
 * [download](https://github.com/modulejs/modjs/tree/master/doc/tasks/download.md) - download resource from URI 
 * [compile](https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md) - compile JavaScript/CSS/HTML source 

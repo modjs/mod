@@ -85,6 +85,19 @@
 
 <hr>
 
+#### exports.notify
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Push message to OSX notification system</p>
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
+```js
+exports.notify({
+    title: 'Hi',
+    message: 'I am ok'
+});
+```
+
+<hr>
+
 #### exports.help()
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print task help</p>
 

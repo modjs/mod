@@ -17,7 +17,7 @@ $ mod server [options]
 
 #### port
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>80</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>3000</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Server port</p>
 <hr>
 

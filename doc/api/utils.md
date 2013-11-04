@@ -13,7 +13,7 @@
 <hr>
 
 #### utils.isRelativeURI(uri)
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Is a relative URI? </p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Is a relative URI?</p>
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b></p>
 ```js
