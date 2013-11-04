@@ -26,6 +26,14 @@ exports.exportsApiTesting = function(){
     assert.ok(exports.debug)
     assert.ok(exports.error)
     assert.ok(exports.warn)
+
+    assert.ok(exports.notify)
+    exports.notify('OK');
+    exports.notify({
+        title: "Title",
+        message: "message"
+    });
+
     assert.ok(exports.help)
     assert.ok(exports.request)
     assert.ok(exports.prompt)
