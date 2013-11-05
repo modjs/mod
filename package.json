@@ -38,8 +38,7 @@
     "requirejs": "*",
     "almond": "*",
     "seajs": "*",
-    "cmd-util": "~0.3.6",
-    "node-notifier": "~1.0.0-beta"
+    "cmd-util": "~0.3.6"
   },
   "devDependencies": {
     "node-inspector": "0.1.10"
