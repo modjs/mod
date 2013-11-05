@@ -1,6 +1,6 @@
 <p align="center">
-<a href="https://f.cloud.github.com/assets/677114/781449/97479306-ea22-11e2-8c06-a6f403e0f81a.png" target="_blank">
-<img src="https://f.cloud.github.com/assets/677114/781449/97479306-ea22-11e2-8c06-a6f403e0f81a.png" alt="mod" style="max-width:100%;">
+<a href="http://madscript.com/modjs" target="_blank">
+<img src="https://f.cloud.github.com/assets/677114/1474125/3f5b2460-4629-11e3-8a3d-6b4e0162e0cf.png" alt="mod" style="max-width:100%;">
 </a>
 </p>
 
