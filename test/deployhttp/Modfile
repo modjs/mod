@@ -1,0 +1,18 @@
+module.exports = {
+    tasks:{
+        watch: {
+            tasks: 'deploy'
+        },
+        deploy: {
+            src: './dist/*.js',
+            token: 'private',
+            dest: '/Users/yuanyan/Github/modjs/test/deployhttp/tmp',
+            protocol: 'http',
+            url: 'http://localhost:3000/upload'
+        }
+    },
+
+    targets: {
+        default: 'deploy watch'
+    }
+};
