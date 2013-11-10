@@ -10,7 +10,7 @@
 </p>
 
 
-Mod is a task-based workflow tooling for web, it help developers quickly build robust and high-performance HTML5 applications.
+Mod is a [task-based](https://github.com/taskjs/spec) workflow tooling for web, it help developers quickly build robust and high-performance HTML5 applications.
 
 ## Installation
 [Mod](https://npmjs.org/package/modjs) is installed using [NPM(Node Package Manager)](http://npmjs.org/)
