@@ -19,10 +19,12 @@ $ npm install modjs -g
 ```
 
 ## Why another one?
-* Focus on the workflow of web development 
-* Built-in tasks
-* More simplicity plugin mechanism
+* Focus on the workflow of web development
+* Much built-in tasks, most pleasant out-of-the-box experience
+* More simplicity plugin mechanism, auto-install plugins
 * Configuration less(even zero), do more
+* Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/test/serverconsole)
+* Compatible with Grunt plugins
 
 ## Tutorials
 * [Getting Started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
