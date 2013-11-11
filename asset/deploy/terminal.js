@@ -347,14 +347,14 @@ var Terminal = function(containerId) {
     }
 
     function exec(cmd, cb){
-        var baseUrl = './deploy?';
+        var baseUrl = './exec?';
         var params = ['token='+ (localStorage.token || ''), 'command='+cmd, 'cwd='+ process.cwd()].join('&');
         var url = baseUrl + params;
         ajax(url, cb);
     }
 
     function init(){
-        var baseUrl = './deploy?';
+        var baseUrl = './exec?';
         var params = ['init=true'].join('&');
         var url = baseUrl + params;
         ajax(url, function(cwd){
