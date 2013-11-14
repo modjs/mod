@@ -52,9 +52,18 @@ exports.fileApiTesting = function(){
     assert.ok(file.readJSON)
     assert.ok(file.findPackageJSON)
     assert.ok(file.readPackageJSON)
-    assert.ok(file.listdir)
-    assert.ok(file.glob)
-    assert.ok(file.expand)
+    assert.ok(file.listdir);
+
+    assert.ok(file.glob);
+    assert.deepEqual(file.glob("."), ["."]);
+    assert.deepEqual(file.glob("./"), ["./"]);
+    assert.deepEqual(file.glob("/"), ["/"]);
+
+    assert.ok(file.expand);
+    assert.deepEqual(file.expand("."), ["."]);
+    assert.deepEqual(file.expand("./"), ["./"]);
+    assert.deepEqual(file.expand("/"), ["/"]);
+
     assert.ok(file.delete)
     assert.ok(file.read)
     assert.ok(file.write)

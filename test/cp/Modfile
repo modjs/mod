@@ -13,7 +13,8 @@ module.exports = {
             },
             subdir: {
                 src: ["../catjs/foo.js"],
-                dest: "./b/bb"
+                dest: "./b/bb",
+                backup: false
             },
             fileAndDir: {
                 src: ["./b"],
@@ -27,10 +28,14 @@ module.exports = {
             flattenSrc: {
                 src: ["./b/**/*.js"],
                 dest: "./e"
+            },
+            fileCopyRoot: {
+                src: "./",
+                dest: "./f"
             }
         }
     },
     targets: {
-        dist: "cp"
+        default: "cp"
     }
 };
