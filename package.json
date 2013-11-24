@@ -33,6 +33,7 @@
     "colors": "*",
     "optipng-bin": "0.2.6",
     "jpegtran-bin": "0.1.7",
+    "amdclean": "~0.2.6",
     "connect": "2.9.0",
     "http-proxy": "~0.10.3",
     "requirejs": "*",
