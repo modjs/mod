@@ -1,5 +1,5 @@
 define([
-    './var/$',
+    './var/zepto',
     './var/document',
     './var/navigator',
     './var/location',
