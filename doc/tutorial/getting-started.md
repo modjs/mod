@@ -2,7 +2,7 @@
 
 Mod and mod plugins are installed and managed via [npm](https://npmjs.org/), the [Node.js](http://nodejs.org/) package manager.
 
-_Mod 0.2.x requires Node.js version `>= 0.6.0`._
+_Mod 0.3.x requires Node.js version `>= 0.8.0`._
 
 ## Installing
 
@@ -25,7 +25,7 @@ If you don't specify a target or task, but the only defined target or task will 
 Installed Mod tasks can be listed by running `mod --help` but it's usually a good idea to start with the project's documentation.
 
 ## Preparing a new mod project
-A typical setup will involve adding only one files to your project: `Modfile`.
+A typical setup will involve adding only one file to your project: `Modfile`.
 
 **Modfile**: This file used to configure tasks and plugins.
 
