@@ -30,7 +30,7 @@ A typical setup will involve adding only one file to your project: `Modfile`.
 **Modfile**: This file used to configure tasks and plugins.
 
 ## The Modfile
-The `Modfile` file is a valid JavaScript file that belongs in the root directory of your project.
+The `Modfile` or `Modfile.js` file is a valid JavaScript file that belongs in the root directory of your project.
 
 A Modfile is comprised of the following parts:
 
