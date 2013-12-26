@@ -1,0 +1,26 @@
+module.exports = function(options, done){
+
+    var runner = {
+        tasks: {
+            cat: {
+                options: {
+                    // Task-level options may go here, overriding task defaults.
+                },
+                test: {
+                    options: {
+                        // "bar" target options may go here, overriding task-level options.
+                    },
+                    group: [
+                        {src: ['../catjs/foo.js', '../catjs/bar.js'], dest: './foobar.js'},
+                        {src: ['../catcss/foo.css', '../catcss/bar.css'], dest: './foobar.css'},
+                    ]
+                }
+            }
+        },
+        targets: {
+            dist: 'cat:test'
+        }
+    };
+
+    done(runner);
+}
