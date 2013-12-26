@@ -19,6 +19,7 @@
 ```js
  utils.isRelativeURI("../path/to"); // => return true
  utils.isRelativeURI("path/to"); // => return true
+ utils.isRelativeURI("#id"); // => return false
  utils.isRelativeURI("http://www.qq.com"); // => return false
  utils.isRelativeURI("/relative/to/root"); // => return false
  utils.isRelativeURI("//without/protocol"); // => return false

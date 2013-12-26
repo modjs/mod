@@ -15,6 +15,12 @@ $ mod deploy <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Local file or directory</p>
 <hr>
 
+#### basedir
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Local file base dir</p>
+<hr>
+
 #### dest
 
 
@@ -49,6 +55,24 @@ $ mod deploy <src> [options]
 
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The remote path</p>
+<hr>
+
+#### protocol
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>ssh</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Deploy tunnel protocol, ssh or http</p>
+<hr>
+
+#### url
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The upload url</p>
+<hr>
+
+#### overwrite
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Overwrite existed file</p>
 <hr>
 
 

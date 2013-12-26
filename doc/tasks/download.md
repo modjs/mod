@@ -17,7 +17,7 @@ $ mod download <src> [options]
 
 #### dest
 
-
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>./</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The file or directory where to store the requested resource(s)</p>
 <hr>
 

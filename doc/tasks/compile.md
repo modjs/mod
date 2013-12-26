@@ -36,7 +36,7 @@ $ mod compile <src> [options]
 #### output
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>file</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify output type: file pipe</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify output type: file or pipe</p>
 <hr>
 
 #### loader
