@@ -1,1 +1,0 @@
-seajs.config({plugins:["shim"],alias:{jquery:{src:"http://code.jquery.com/jquery-1.9.1.min.js",exports:"jQuery"}}})

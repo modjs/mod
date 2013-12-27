@@ -23,7 +23,7 @@ $ npm install modjs -g
 * Much built-in tasks, most pleasant out-of-the-box experience
 * More simplicity plugin mechanism, auto-install plugins
 * Configuration less(even zero), do more
-* Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/test/serverconsole)
+* Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
 * Compatible with Grunt plugins
 
 ## Tutorials
@@ -36,40 +36,40 @@ $ npm install modjs -g
 * [Plugin API](https://github.com/modulejs/modjs/tree/master/doc/api)
 
 ## Quick Build Demo
-* [Plain Project Build](https://github.com/modulejs/modjs/tree/master/test/buildnormal)
-* [Mobile Project Build](https://github.com/modulejs/modjs/tree/master/test/buildmobile)
-* [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildrequirejs)
-* [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/test/buildseajs)
+* [Plain Project Build](https://github.com/modulejs/modjs/tree/master/example/buildnormal)
+* [Mobile Project Build](https://github.com/modulejs/modjs/tree/master/example/buildmobile)
+* [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/example/buildrequirejs)
+* [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/example/buildseajs)
 
 ## IDE Support
 * [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
 ## Built-in Task Examples
-* [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/test/catjs)
-* [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/test/catcss)
-* [AMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compileamd)
-* [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
-* [Mutil-page Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
-* [CSS Precompile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
-* [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
-* [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
-* [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
-* [HTML Minify](https://github.com/modulejs/modjs/tree/master/test/minhtml)
-* [Code Stripping](https://github.com/modulejs/modjs/tree/master/test/stripcode)
-* [EOL Stripping](https://github.com/modulejs/modjs/tree/master/test/stripeol)
-* [Tab Stripping](https://github.com/modulejs/modjs/tree/master/test/striptab)
-* [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/test/datauri)
-* [Make Dir](https://github.com/modulejs/modjs/tree/master/test/mkdir)
-* [Copy Files](https://github.com/modulejs/modjs/tree/master/test/cp)
+* [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/example/catjs)
+* [Concatenate CSS Files](https://github.com/modulejs/modjs/tree/master/example/catcss)
+* [AMD Modules Compile](https://github.com/modulejs/modjs/tree/master/example/compileamd)
+* [CMD Modules Compile](https://github.com/modulejs/modjs/tree/master/example/compilecmd)
+* [Mutil-page Modules Compile](https://github.com/modulejs/modjs/tree/master/example/compilecmd)
+* [CSS Precompile](https://github.com/modulejs/modjs/tree/master/example/compilecss)
+* [HTML Precompile](https://github.com/modulejs/modjs/tree/master/example/compilehtml)
+* [JS Minify](https://github.com/modulejs/modjs/tree/master/example/minjs)
+* [CSS Minify](https://github.com/modulejs/modjs/tree/master/example/mincss)
+* [HTML Minify](https://github.com/modulejs/modjs/tree/master/example/minhtml)
+* [Code Stripping](https://github.com/modulejs/modjs/tree/master/example/stripcode)
+* [EOL Stripping](https://github.com/modulejs/modjs/tree/master/example/stripeol)
+* [Tab Stripping](https://github.com/modulejs/modjs/tree/master/example/striptab)
+* [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/example/datauri)
+* [Make Dir](https://github.com/modulejs/modjs/tree/master/example/mkdir)
+* [Copy Files](https://github.com/modulejs/modjs/tree/master/example/cp)
 
 ## Plugins Examples
-* [NPM Task: mod-stylus](https://github.com/modulejs/modjs/tree/master/test/pluginnpmtask)
-* [Local Task: mytask.js](https://github.com/modulejs/modjs/tree/master/test/pluginlocaltask)
-* [Grunt Task: grunt-contrib-concat](https://github.com/modulejs/modjs/tree/master/test/plugingrunttask)
+* [NPM Task: mod-stylus](https://github.com/modulejs/modjs/tree/master/example/pluginnpmtask)
+* [Local Task: mytask.js](https://github.com/modulejs/modjs/tree/master/example/pluginlocaltask)
+* [Grunt Task: grunt-contrib-concat](https://github.com/modulejs/modjs/tree/master/example/plugingrunttask)
 
 ## Built-in Web Server Examples
-* [Server with remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/test/serverconsole)
-* [Server with proxy setting](https://github.com/modulejs/modjs/tree/master/test/serverproxy)
+* [Server with remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
+* [Server with proxy setting](https://github.com/modulejs/modjs/tree/master/example/serverproxy)
 
 ## Features
 * Build with main html

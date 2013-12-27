@@ -6,10 +6,12 @@ var exec = require('child_process').exec;
 var async = require('async');
 var colors = require('colors');
 
-console.log('--------------', 'Print process.env'.green, '--------------');
+console.log('Print process env ...'.green);
 console.log(process.env);
 
-var dirs = file.listdir(__dirname);
+var testDirs = file.listdir(__dirname);
+var exampleDirs = file.listdir(path.join(__dirname, '../example'));
+var dirs = testDirs.concat(exampleDirs);
 var binPath = path.resolve('bin/mod');
 
 async.eachSeries(dirs, function (dir, done) {
@@ -17,7 +19,7 @@ async.eachSeries(dirs, function (dir, done) {
         return done();
     }
 
-    console.log('--------------', 'Testing'.green, dir.green, '--------------');
+    console.log('Testing'.green, dir.green, '...'.green);
 
     exec('node ' + binPath, {
         cwd: dir

@@ -4,8 +4,6 @@ module.exports = {
         apitesting: "./apitesting"
     },
     tasks : {
-        apitesting : {
-            text: "hello modjs"
-        }
+        apitesting : {}
     }
 };
