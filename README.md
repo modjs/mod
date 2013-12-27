@@ -52,8 +52,6 @@ $ npm install modjs -g
 * [Mutil-page Modules Compile](https://github.com/modulejs/modjs/tree/master/test/compilecmd)
 * [CSS Precompile](https://github.com/modulejs/modjs/tree/master/test/compilecss)
 * [HTML Precompile](https://github.com/modulejs/modjs/tree/master/test/compilehtml)
-* [JPG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minjpg)
-* [PNG Image Compression](https://github.com/modulejs/modjs/tree/master/test/minpng)
 * [JS Minify](https://github.com/modulejs/modjs/tree/master/test/minjs)
 * [CSS Minify](https://github.com/modulejs/modjs/tree/master/test/mincss)
 * [HTML Minify](https://github.com/modulejs/modjs/tree/master/test/minhtml)
@@ -83,7 +81,6 @@ $ npm install modjs -g
 * Basic operation: cat, rm, mv, mkdir, cp, rev
 * File watcher, trigger custom tasks when file change
 * Live Browser Reloads, instantly see changes in your browser
-* Image Optimization, reduce JPEG, PNG file sizes
 * Project boilerplate generate
 * Built-in Web Server: `mod server`
 * Extensible, easily write plugins
