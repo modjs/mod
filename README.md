@@ -22,11 +22,10 @@ Mod is a [task-based](https://github.com/taskjs/spec) workflow tooling for web, 
     - Built-in basic file operation: `cat, rm, mv, mkdir, cp, rev`
     - Built-in file watcher, trigger custom tasks when file change
     - Built-in live browser reloads, instantly see changes in your browser
-    - Built-in Web Server: `mod server`
+    - Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
 * More simplicity plugin mechanism, auto-install plugins
 * Configuration less(even zero), do more
     - Build by html: `mod build index.html`
-* Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
 * Compatible with [Grunt](http://gruntjs.com) plugins, with literally hundreds of plugins to choose from
 
 ## Installation
