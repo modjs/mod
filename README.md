@@ -12,19 +12,28 @@
 
 Mod is a [task-based](https://github.com/taskjs/spec) workflow tooling for web, it help developers quickly build robust and high-performance HTML5 applications.
 
+## Why modjs?
+* Focus on the workflow of web development
+* Much built-in tasks, most pleasant out-of-the-box experience
+    - Built-in source minify: `JS, CSS, HTML`
+    - Built-in modular JS compile: `AMD, CMD (will support ES6 Module, CommonJS Module soon)`
+    - Built-in CSS @import file combination
+    - Built-in source stripping, automatically remove debugging code
+    - Built-in basic file operation: `cat, rm, mv, mkdir, cp, rev`
+    - Built-in file watcher, trigger custom tasks when file change
+    - Built-in live browser reloads, instantly see changes in your browser
+    - Built-in Web Server: `mod server`
+* More simplicity plugin mechanism, auto-install plugins
+* Configuration less(even zero), do more
+    - Build by html: `mod build index.html`
+* Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
+* Compatible with [Grunt](http://gruntjs.com) plugins, with literally hundreds of plugins to choose from
+
 ## Installation
 [Mod](https://npmjs.org/package/modjs) is installed using [NPM(Node Package Manager)](http://npmjs.org/)
 ```sh
 $ npm install modjs -g
 ```
-
-## Why another one?
-* Focus on the workflow of web development
-* Much built-in tasks, most pleasant out-of-the-box experience
-* More simplicity plugin mechanism, auto-install plugins
-* Configuration less(even zero), do more
-* Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
-* Compatible with Grunt plugins
 
 ## Tutorials
 * [Getting Started](https://github.com/modulejs/modjs/tree/master/doc/tutorial/getting-started.md)
@@ -40,9 +49,6 @@ $ npm install modjs -g
 * [Mobile Project Build](https://github.com/modulejs/modjs/tree/master/example/buildmobile)
 * [RequireJS Project Build](https://github.com/modulejs/modjs/tree/master/example/buildrequirejs)
 * [SeaJS Project Build](https://github.com/modulejs/modjs/tree/master/example/buildseajs)
-
-## IDE Support
-* [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
 ## Built-in Task Examples
 * [Concatenate JS Files](https://github.com/modulejs/modjs/tree/master/example/catjs)
@@ -71,23 +77,8 @@ $ npm install modjs -g
 * [Server with remote logging for mobile development](https://github.com/modulejs/modjs/tree/master/example/serverconsole)
 * [Server with proxy setting](https://github.com/modulejs/modjs/tree/master/example/serverproxy)
 
-## Features
-* Build with main html
-* Task-based workflow
-* Source minify: JS, CSS, HTML
-* Modular JS Compile: AMD, CMD (will support ES6 Module, CommonJS Module soon)
-* CSS @import file combination
-* Source stripping, automatically remove debugging code
-* Basic operation: cat, rm, mv, mkdir, cp, rev
-* File watcher, trigger custom tasks when file change
-* Live Browser Reloads, instantly see changes in your browser
-* Project boilerplate generate
-* Built-in Web Server: `mod server`
-* Extensible, easily write plugins
-
-## Preview
-![screenshot](https://raw.github.com/modulejs/modjs/master/example/screenshot.gif)
-
+## IDE Support
+* [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
 ## Platform Support
 Mod support Windows, OS X, Linux...
@@ -104,8 +95,6 @@ We utilize a number of useful open-source solutions including:
 * HTMLMinifiler
 * RequireJS
 * SeaJS
-* OptiPNG
-* JPEGtran
 * JSConsole
 
 ## Used by people within <a href="https://github.com/modulejs/modjs/issues/22">(JOIN US)</a>
