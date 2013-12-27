@@ -7,7 +7,10 @@ var async = require('async');
 var colors = require('colors');
 
 console.log('Print process env ...'.green);
-console.log(process.env);
+
+for(var key in process.env){
+    console.log(key, ':', process.env[key]);
+}
 
 var testDirs = file.listdir(__dirname);
 var exampleDirs = file.listdir(path.join(__dirname, '../example'));
@@ -24,8 +27,8 @@ async.eachSeries(dirs, function (dir, done) {
     exec('node ' + binPath, {
         cwd: dir
     }, function (err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
+        stdout && console.log(stdout);
+        stderr && console.log(stderr);
         done(err);
     });
 
