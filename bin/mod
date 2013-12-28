@@ -28,8 +28,10 @@ for (var i = 0; i < process.argv.length; i += 1) {
 
 var cmd = argv.slice(2).shift();
 if (cmd === '-h' || cmd === '--help') {
-    runner.run('help');
-} else if (cmd === '-v' || cmd === '--version') {
+    cmd = 'help';
+}
+
+if (cmd === '-v' || cmd === '--version') {
     var ver = utils.getVersion();
     console.log(ver.green);
 } else {
