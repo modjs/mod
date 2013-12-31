@@ -9,20 +9,24 @@ var _ = require('underscore');
 
 var argv = process.argv;
 for (var i = 0; i < process.argv.length; i += 1) {
-    if (argv[i] === '--debug') {
+    var arg = argv[i];
+    if (arg === '--debug') {
         process.argv.splice(i, 1);
         logger.level = 'debug';
-    }else if(argv[i] === '--no-color' || argv[i] === '--no-colors') {
+    } else if (arg === '--no-color' || arg === '--no-colors') {
         process.argv.splice(i, 1);
         colors.mode = 'none';
         var originLog = console.log;
-        console.log = function(){
+        console.log = function () {
             var args = _.toArray(arguments);
-            args.map(function(arg){
+            args.map(function (arg) {
                 return colors.stripColors(arg);
             });
             originLog.apply(this, args);
         };
+    } else if (arg === '--force') {
+        process.argv.splice(i, 1);
+        logger.force = true;
     }
 }
 
