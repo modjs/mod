@@ -66,6 +66,7 @@ $ npm install modjs -g
 * [Inline Images DataURI](https://github.com/modulejs/modjs/tree/master/example/datauri)
 * [Make Dir](https://github.com/modulejs/modjs/tree/master/example/mkdir)
 * [Copy Files](https://github.com/modulejs/modjs/tree/master/example/cp)
+* [String Replace](https://github.com/modulejs/modjs/tree/master/example/replace)
 
 ## Plugins Examples
 * [NPM Task: mod-stylus](https://github.com/modulejs/modjs/tree/master/example/pluginnpmtask)
