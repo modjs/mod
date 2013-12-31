@@ -9,7 +9,7 @@ Mod supports a powerful set of high-level tasks:
 * [deploy](https://github.com/modulejs/modjs/tree/master/doc/tasks/deploy.md) - remote deployment via ssh 
 * [download](https://github.com/modulejs/modjs/tree/master/doc/tasks/download.md) - download resource from URI 
 * [compile](https://github.com/modulejs/modjs/tree/master/doc/tasks/compile.md) - compile JavaScript/CSS/HTML source 
-* [min](https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md) - minify JavaScript/CSS/HTML/Image source 
+* [min](https://github.com/modulejs/modjs/tree/master/doc/tasks/min.md) - minify JavaScript/CSS/HTML source 
 * [replace](https://github.com/modulejs/modjs/tree/master/doc/tasks/replace.md) - replace the contents of files 
 * [cat](https://github.com/modulejs/modjs/tree/master/doc/tasks/cat.md) - concatenate the content of files 
 * [cp](https://github.com/modulejs/modjs/tree/master/doc/tasks/cp.md) - copy one or more files to another location 

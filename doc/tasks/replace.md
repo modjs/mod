@@ -18,19 +18,19 @@ $ mod replace <src> [options]
 #### search
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Search string</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> A string or regular expression that will be replaced by the new value</p>
 <hr>
 
 #### replace
 
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Replace string</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> A string that replaces the search string or a function to be invoked to create the new string</p>
 <hr>
 
 #### flags
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>gm</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Flags</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> A String containing any combination of the RegExp flags: g - global match, i - ignore case, m - match over multiple lines. This parameter is only used if the search parameter is a string</p>
 <hr>
 
 #### output

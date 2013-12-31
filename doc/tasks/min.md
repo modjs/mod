@@ -1,5 +1,5 @@
 ## <a href="#min" name="min">min</a>
-> Minify JavaScript/CSS/HTML/Image source
+> Minify JavaScript/CSS/HTML source
 
 ### Usage
 
