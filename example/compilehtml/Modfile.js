@@ -2,8 +2,7 @@
 module.exports = {
     tasks: {
         compile: {
-            src: "main.css",
-            dest: "main.all.css"
+            src: "conditional.html"
         }
     }
 };

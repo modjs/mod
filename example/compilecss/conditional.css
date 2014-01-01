@@ -1,0 +1,11 @@
+#main{
+    /* #if @target dev */ color: blue; /* #endif */
+    /* #if @target default /  color: black; /* #endif */
+}
+/* #if @target dev */
+#id { color: blue}
+/* #endif */
+/* #if @target default /
+#id { color: black}
+/* #endif */
+

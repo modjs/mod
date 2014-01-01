@@ -1,15 +1,16 @@
 <!-- grammer 1 -->
+
 <!--(if target dev)><!-->
     <link rel="stylesheet" href="./css/main.css"/>
 <!--<!(endif)-->
-<!--(if target dist)>
+<!--(if target default)>
     <link rel="stylesheet" href="http://pub.idqqimg.com/qqfind/css/<%= rev('dist/css/find.css') %>"/>
 <!--<!(endif)-->
 
 <!-- grammer 2 -->
-<!-- if target dev-->
+<!-- #if @target dev-->
     <link rel="stylesheet" href="./css/main.css"/>
-<!--endif-->
-<!--if target dist>
+<!-- #endif-->
+<!-- #if @target default>
     <link rel="stylesheet" href="http://pub.idqqimg.com/qqfind/css/<%= rev('dist/css/find.css') %>"/>
-<!--endif-->
+<!-- #endif-->
