@@ -21,10 +21,16 @@ $ mod compile <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> File encoding type</p>
 <hr>
 
-#### target
+#### conditional
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>dist</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Target build level</p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Activates conditional compilation.</p>
+<hr>
+
+#### variables
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>[object Object]</code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Variables are available for conditional compilation</p>
 <hr>
 
 #### suffix
@@ -41,14 +47,26 @@ $ mod compile <src> [options]
 
 #### loader
 
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>requirejs</code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Use the Modules Loader [JS only]</p>
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The Modules Loader [JS only]</p>
 <hr>
 
-#### base-url
+#### baseUrl
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>.</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> All modules are located relative to this path [JS only]</p>
+<hr>
+
+#### mainFile
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> The main file [JS only]</p>
+<hr>
+
+#### mainConfigFile
+
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify the file of the configuration for optimization [JS only]</p>
 <hr>
 
 #### exclude
@@ -57,19 +75,19 @@ $ mod compile <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Deep excludes a module and it's dependencies from the build [JS only]</p>
 <hr>
 
-#### exclude-shallow
+#### excludeShallow
 
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Shallow excludes a module from the build (it's dependencies will still be included) [JS only]</p>
 <hr>
 
-#### package-dir
+#### packageDir
 
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Modules directory to use [JS only]</p>
 <hr>
 
-#### ascii-only
+#### asciiOnly
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>true</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Ascii encoding only [JS only]</p>
@@ -81,25 +99,19 @@ $ mod compile <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Combine require modules if existed [JS only]</p>
 <hr>
 
-#### main-config-file
-
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code><src></code></p>
-<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify the file of the configuration for optimization [JS only]</p>
-<hr>
-
-#### strip-define
+#### stripDefine
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip all definitions in generated source [requirejs only]</p>
 <hr>
 
-#### mini-loader
+#### miniLoader
 
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Use the lighweight almond shim instead of RequireJS, smaller filesize but can only load bundled resources and cannot request additional modules [requirejs only]</p>
 <hr>
 
-#### include-loader
+#### includeLoader
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Type:</b> <code>boolean</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> If include module loader [requirejs only]</p>
@@ -129,7 +141,7 @@ $ mod compile <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> If include license comments [requirejs only]</p>
 <hr>
 
-#### stub-modules
+#### stubModules
 
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Specify modules to stub out in the optimized file [requirejs only]</p>
