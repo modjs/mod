@@ -12,7 +12,7 @@ module.exports = {
             },
             dist: {
               src: ['foo.js', 'bar.js'],
-              dest: 'foobar.js',
+              dest: 'dist/foobar.js',
             },
         }
     }

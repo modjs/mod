@@ -4,34 +4,34 @@ module.exports = {
         cp: {
             file: {
                 src: ["../catjs/*.js", "../catcss/*.css"],
-                dest: "./a",
+                dest: "./dist/a",
                 filter: /foobar/
             },
             dir: {
-                src: ["./a/"],
-                dest: "./b"
+                src: ["./dist/a/"],
+                dest: "./dist/b"
             },
             subdir: {
                 src: ["../catjs/foo.js"],
-                dest: "./b/bb",
+                dest: "./dist/b/bb",
                 backup: false
             },
             fileAndDir: {
-                src: ["./b"],
-                dest: "./c"
+                src: ["./dist/b"],
+                dest: "./dist/c"
             },
             fileAndDirFlatten: {
-                src: ["./b"],
+                src: ["./dist/b"],
                 flatten: true,
-                dest: "./d"
+                dest: "./dist/d"
             },
             flattenSrc: {
-                src: ["./b/**/*.js"],
-                dest: "./e"
+                src: ["./dist/b/**/*.js"],
+                dest: "./dist/e"
             },
             fileCopyRoot: {
-                src: "./",
-                dest: "./f"
+                src: "./dist",
+                dest: "./dist/f"
             }
         }
     },

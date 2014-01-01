@@ -3,7 +3,7 @@ module.exports = {
         cat: {
             test: {
                 src: ['{{ qux }}', 'baz/*.js'],     // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
-                dest: 'build/{{ baz }}.js',         // 'build/abcde.js'
+                dest: 'dist/{{ baz }}.js',         // 'build/abcde.js'
             }
         },
         // Arbitrary properties used in task configuration templates.

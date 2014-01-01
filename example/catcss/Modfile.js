@@ -3,7 +3,7 @@ module.exports = {
     tasks: {
         cat: {
             src: ["foo.css","bar.css"],
-            dest: "foobar.css"
+            dest: "dist/foobar.css"
         }
     }
 };

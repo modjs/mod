@@ -2,8 +2,8 @@
 module.exports = {
     tasks: {
         strip: {
-            src: "before.js",
-            dest: "after.js",
+            src: "foo.js",
+            dest: "dist/foo.js",
             code: ['alert']
         }
     }

@@ -7,11 +7,11 @@ module.exports = {
         download: {
             jquery: {
                 src: ["http://code.jquery.com/jquery-1.8.2.js"],
-                dest: "./js"
+                dest: "./dist/js"
             },
             github: {
                 src: "jquery/jquery",
-                dest: "./lib/jquery"
+                dest: "./dist/lib/jquery"
             }
         }
     },

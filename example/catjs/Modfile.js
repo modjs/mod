@@ -3,7 +3,7 @@ module.exports = {
     tasks: {
         cat: {
             src: ["foo.js", "bar.js"],
-            dest: "foobar.js"
+            dest: "dist/foobar.js"
         }
     }
 };

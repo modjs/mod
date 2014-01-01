@@ -2,7 +2,7 @@
 module.exports = {
     tasks: {
         mkdir: {
-            dest: "test"
+            dest: "dist"
         }
     }
 };

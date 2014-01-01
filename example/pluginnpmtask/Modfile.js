@@ -8,7 +8,7 @@ module.exports = {
     tasks: {
         stylus: {
             src: "test.styl",
-            dest: "test.css"
+            dest: "dist/test.css"
         }
     }
 };
