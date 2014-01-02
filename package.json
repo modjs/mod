@@ -1,6 +1,6 @@
 {
   "name": "modjs",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "JavaScript Workflow Tooling For Web",
   "keywords": [
     "tooling",
@@ -37,7 +37,8 @@
     "requirejs": "*",
     "almond": "*",
     "seajs": "*",
-    "cmd-util": "~0.3.6"
+    "cmd-util": "~0.3.6",
+    "semver": "~2.2.1"
   },
   "devDependencies": {
     "node-inspector": "0.1.10"
