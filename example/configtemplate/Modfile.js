@@ -2,15 +2,17 @@ module.exports = {
     tasks: {
         cat: {
             test: {
-                src: ['{{ qux }}', 'baz/*.js'],     // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
-                dest: 'dist/{{ baz }}.js',         // 'build/abcde.js'
+                src: ['{{ qux.src }}', 'baz/*.js'],    // [['foo/*.js', 'bar/*.js'], 'baz/*.js']
+                dest: 'dist/abc.js'                    // 'dist/abc.js'
             }
         },
         // Arbitrary properties used in task configuration templates.
-        foo: 'c',
-        bar: 'b{{ foo }}d', // 'bcd'
-        baz: 'a{{ bar }}e', // 'abcde'
-        qux: ['foo/*.js', 'bar/*.js']
+        foo: 'foo',
+        bar: '{{ foo }}/*', // 'foo/*'
+        baz: '{{ bar }}.js', // 'foo/*.js'
+        qux: {
+            src: ['{{ baz }}', 'bar/*.js']
+        }
     },
     targets: {
         dist: 'cat:test'
