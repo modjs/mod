@@ -22,7 +22,7 @@
     "prompt": "~0.2.8",
     "rimraf": "~2.2.0",
     "faye-websocket": "~0.6.0",
-    "request": "~2.21.0",
+    "request": "2.33.0",
     "glob": "~3.2.7",
     "clean-css": "~1.0.10",
     "uglify-js": "~1.3.4",
