@@ -5,7 +5,7 @@ var logger = require('../lib/utils/logger');
 var runner = require('../lib/runner');
 var config = require('../lib/config');
 var colors = require('colors');
-var _ = require('underscore');
+var _ = require('lodash');
 
 var argv = process.argv;
 for (var i = 0; i < process.argv.length; i += 1) {
