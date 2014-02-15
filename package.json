@@ -35,6 +35,7 @@
     "connect": "2.9.0",
     "http-proxy": "~0.10.3",
     "requirejs": "*",
+    "es6-promise": "0.1.1",
     "almond": "*",
     "seajs": "*",
     "cmd-util": "~0.3.6",
@@ -55,7 +56,7 @@
   },
   "bin": {
     "mod": "./bin/mod",
-    "m": "./bin/mod"
+    "modjs": "./bin/mod"
   },
   "scripts": {
     "test": "node ./test/testrunner.js"
