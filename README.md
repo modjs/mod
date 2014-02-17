@@ -21,8 +21,6 @@ Mod.js is a [task-based](https://github.com/taskjs/spec) workflow tooling for we
     - Built-in source stripping, automatically remove debugging code
     - Built-in basic file operation: `cat, rm, mv, mkdir, cp, rev`
     - Built-in file watcher, trigger custom tasks when file change
-    - Built-in live browser reloads, instantly see changes in your browser
-    - Built-in web server with very useful feature like [remote logging for mobile development](https://github.com/modjs/mod/tree/master/example/serverconsole)
 * More simplicity plugin mechanism, auto-install plugins
 * Configuration less(even zero), do more
     - Build by html: `mod build index.html`
