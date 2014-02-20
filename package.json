@@ -33,7 +33,6 @@
     "amdclean": "~0.3.0",
     "requirejs": "*",
     "almond": "*",
-    "seajs": "*",
     "cmd-util": "~0.3.6",
     "semver": "~2.2.1"
   },
