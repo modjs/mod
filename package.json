@@ -1,6 +1,6 @@
 {
   "name": "modjs",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "JavaScript Workflow Tooling For Web",
   "keywords": [
     "tooling",
@@ -32,7 +32,6 @@
     "colors": "*",
     "amdclean": "~0.3.0",
     "requirejs": "*",
-    "es6-promise": "0.1.1",
     "almond": "*",
     "seajs": "*",
     "cmd-util": "~0.3.6",
