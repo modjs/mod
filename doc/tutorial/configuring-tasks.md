@@ -1,4 +1,4 @@
-This guide explains how to configure tasks for your project using a Modfile.  If you don't know what a Modfile is, please read the [Getting Started](https://github.com/modulejs/modjs/blob/master/doc/tutorial/getting-started.md) guide.
+This guide explains how to configure tasks for your project using a Modfile.  If you don't know what a Modfile is, please read the [Getting Started](https://github.com/modjs/mod/blob/master/doc/tutorial/getting-started.md) guide.
 
 # Tasks Configuration
 Task configuration is specified in your Modfile via the `module.exports` propery. This configuration will mostly be under task-named properties, but may contain any arbitrary data. As long as properties don't conflict with properties your tasks require, they will be otherwise ignored.

@@ -132,5 +132,5 @@ module.exports = {
 
 ## Further Reading
 
-* The [Configuring Tasks](https://github.com/modulejs/modjs/blob/master/doc/tutorial/configuring-tasks.md) guide has an in-depth explanation on how to configure tasks, targets, options and files inside the Modfile, along with an explanation of templates, globbing patterns.
-* For more information about writing [custom tasks or Mod plugins](https://github.com/modulejs/modjs/blob/master/doc/tutorial/creating-plugins.md).
+* The [Configuring Tasks](https://github.com/modjs/mod/blob/master/doc/tutorial/configuring-tasks.md) guide has an in-depth explanation on how to configure tasks, targets, options and files inside the Modfile, along with an explanation of templates, globbing patterns.
+* For more information about writing [custom tasks or Mod plugins](https://github.com/modjs/mod/blob/master/doc/tutorial/creating-plugins.md).

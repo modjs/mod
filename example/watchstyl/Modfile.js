@@ -1,5 +1,5 @@
 // Modfile
-// More info at https://github.com/modulejs/modjs/
+// More info at https://github.com/modjs/mod/
 
 module.exports = {
     plugins: {

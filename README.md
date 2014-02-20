@@ -94,7 +94,6 @@ We utilize a number of useful open-source solutions including:
 * HTMLMinifiler
 * RequireJS
 * SeaJS
-* JSConsole
 
 ## Used by people within <a href="https://github.com/modjs/mod/issues/22">(JOIN US)</a>
 ![qqfind](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)

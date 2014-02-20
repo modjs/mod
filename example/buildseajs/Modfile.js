@@ -1,5 +1,5 @@
-// A sample Modfile
-// More info at https://github.com/modulejs/modjs/
+// Mod.js
+// More info at https://github.com/modjs/mod/
 
 module.exports = {
     tasks: {
