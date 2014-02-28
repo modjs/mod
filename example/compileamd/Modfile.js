@@ -10,10 +10,10 @@ module.exports = {
                 dest: './dist/js'
             },
             mainModule: {
-                src: 'main.js',
+                src: 'js/main.js'
             },
             asyncModule: {
-                src: 'asyncModule.js',
+                src: 'js/asyncModule.js',
                 exclude: ['./var/navigator']
             }
         },
