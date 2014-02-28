@@ -1,6 +1,6 @@
 {
   "name": "modjs",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "JavaScript Workflow Tooling For Web",
   "keywords": [
     "tooling",
@@ -38,13 +38,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/modulejs/modjs.git"
+    "url": "git://github.com/modjs/mod.git"
   },
   "engines": {
     "node": ">= 0.8.x"
   },
   "bugs": {
-    "url": "http://github.com/modulejs/modjs/issues"
+    "url": "http://github.com/modjs/mod/issues"
   },
   "bin": {
     "mod": "./bin/mod",
