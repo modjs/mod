@@ -82,7 +82,8 @@ Submit a [new issue](https://github.com/modjs/mod/issues/new).
 
 ## Release History
 
-* 2014-02-20   v0.4.5   Remove built-in `server` task.        
+* 2014-02-28    v0.4.6    Fix r.js build error.
+* 2014-02-20    v0.4.5    Remove built-in `server` task.     
 
 ## About
 Mod is an open-source project by [Tencent](http://www.tencent.com/en-us/) which builds on top of [Node.js](https://nodejs.org).
