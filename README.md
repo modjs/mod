@@ -9,7 +9,6 @@
 <a href="http://travis-ci.org/modjs/mod"><img src="https://secure.travis-ci.org/modjs/mod.png?branch=master" alt="Build Status" style="max-width:100%;"></a>
 </p>
 
-
 Mod.js is a [task-based](https://github.com/taskjs/spec) workflow tooling for web, it helps developers quickly build robust and high-performance HTML5 applications.
 
 ## Why Mod.js?
@@ -72,10 +71,6 @@ $ npm install modjs -g
 * [Local Task: mytask.js](https://github.com/modjs/mod/tree/master/example/pluginlocaltask)
 * [Grunt Task: grunt-contrib-concat](https://github.com/modjs/mod/tree/master/example/plugingrunttask)
 
-## Built-in Web Server Examples
-* [Server with remote logging for mobile development](https://github.com/modjs/mod/tree/master/example/serverconsole)
-* [Server with proxy setting](https://github.com/modjs/mod/tree/master/example/serverproxy)
-
 ## IDE Support
 * [Sublime-Mod](https://github.com/yuanyan/sublime-mod)
 
@@ -85,6 +80,10 @@ Mod support Windows, OS X, Linux...
 ## Issue Submission
 Submit a [new issue](https://github.com/modjs/mod/issues/new).
 
+## Release History
+
+* 2014-02-20   v0.4.5   Remove built-in `server` task.        
+
 ## About
 Mod is an open-source project by [Tencent](http://www.tencent.com/en-us/) which builds on top of [Node.js](https://nodejs.org).
 We utilize a number of useful open-source solutions including:
@@ -93,12 +92,9 @@ We utilize a number of useful open-source solutions including:
 * CleanCSS
 * HTMLMinifiler
 * RequireJS
-* SeaJS
 
 ## Used by people within <a href="https://github.com/modjs/mod/issues/22">(JOIN US)</a>
-![qqfind](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
-![qqconnect](http://0.web.qstatic.com/webqqpic/pubapps/0/16/images/big.png)
-
+![tencent](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
 
 ## License
-Mod is released under a [MIT](http://yuanyan.mit-license.org/) license.
+Mod.js is released under a [MIT](http://yuanyan.mit-license.org/) license.
