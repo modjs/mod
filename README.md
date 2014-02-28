@@ -94,7 +94,7 @@ We utilize a number of useful open-source solutions including:
 * RequireJS
 
 ## Used by people within <a href="https://github.com/modjs/mod/issues/22">(JOIN US)</a>
-![tencent](http://0.web.qstatic.com/webqqpic/pubapps/0/50/images/big.png)
+![tencent](http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tencent_Logo.svg/500px-Tencent_Logo.svg.png)
 
 ## License
 Mod.js is released under a [MIT](http://yuanyan.mit-license.org/) license.
