@@ -33,7 +33,13 @@ $ mod build <src> [options]
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Wrap any build bundle in a start and end text specified by wrap</p>
 <hr>
 
-#### strip-define
+#### urlPrepend
+
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code></code></p>
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Url prepend with relative address</p>
+<hr>
+
+#### stripDefine
 
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Default:</b> <code>false</code></p>
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Strip all definitions in generated source</p>

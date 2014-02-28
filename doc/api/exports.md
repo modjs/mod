@@ -61,6 +61,12 @@
 
 <hr>
 
+#### exports.logger
+<p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Logging object</p>
+
+
+<hr>
+
 #### exports.log(arg1 [,arg2...])
 <p> <b>&nbsp;&nbsp;&nbsp;&nbsp;Describe:</b> Print log</p>
 
