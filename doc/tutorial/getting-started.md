@@ -2,7 +2,7 @@
 
 Mod and mod plugins are installed and managed via [npm](https://npmjs.org/), the [Node.js](http://nodejs.org/) package manager.
 
-_Mod 0.3.x requires Node.js version `>= 0.8.0`._
+_Mod 0.4.x requires Node.js version `>= 0.8.0`._
 
 ## Installing
 
@@ -52,7 +52,7 @@ module.exports = {
     // Project configuration.
     tasks: {
         sprite: {
-            "source": "./css/find.css",                 // required
+            "src": "./css/find.css",                 // required
             "dest": "./dist/css/find.css",              // required
             "destImageRoot": "./sprites/",              // optional relative to  dest path, default "./sprites/"
             "maxSize": 60,                              // optional "kb"
@@ -62,15 +62,15 @@ module.exports = {
         },
         "min" : {
             "css": {
-                "source": "./dist/css/*.css",
+                "src": "./dist/css/*.css",
                 "dest": "./dist/css"
             },
             "html": {
-                "source": "*.html",
+                "src": "*.html",
                 "dest": "./dist/"
             },
             "js": {
-                "source": "./dist/js/*.js",
+                "src": "./dist/js/*.js",
                 "dest": "./dist/js"
             }
         }
