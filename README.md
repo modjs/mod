@@ -44,7 +44,6 @@ $ npm install modjs -g
 * [Plain Project Build](https://github.com/modjs/mod/tree/master/example/buildnormal)
 * [Mobile Project Build](https://github.com/modjs/mod/tree/master/example/buildmobile)
 * [RequireJS Project Build](https://github.com/modjs/mod/tree/master/example/buildrequirejs)
-* [SeaJS Project Build](https://github.com/modjs/mod/tree/master/example/buildseajs)
 
 ## Built-in Task Examples
 * [Concatenate JS Files](https://github.com/modjs/mod/tree/master/example/catjs)
