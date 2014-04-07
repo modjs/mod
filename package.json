@@ -1,6 +1,6 @@
 {
   "name": "modjs",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "JavaScript Workflow Tooling For Web",
   "keywords": [
     "tooling",
@@ -10,8 +10,8 @@
   ],
   "maintainers": [
     {
-      "name": "yuanyan",
-      "web": "https://github.com/yuanyan"
+      "name": "Yuanyan Cao",
+      "mail": "yuanyan.cao@gmail.com"
     }
   ],
   "homepage": "http://madscript.com/modjs",
@@ -30,7 +30,7 @@
     "optimist": "~0.6.0",
     "lodash": "2.4.1",
     "colors": "*",
-    "amdclean": "~0.3.0",
+    "amdclean": "^1.5.0",
     "requirejs": "*",
     "almond": "*",
     "cmd-util": "~0.3.6",
