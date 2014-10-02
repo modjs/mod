@@ -1,3 +1,5 @@
+<h2>Stopped developping on modjs and switched to <a href="http://chajs.org"><img src="https://avatars0.githubusercontent.com/u/6767978?v=2&s=25">chajs.org</a></h2>
+            
 <p align="center">
 <a href="http://madscript.com/modjs" target="_blank">
 <img src="https://f.cloud.github.com/assets/677114/1474125/3f5b2460-4629-11e3-8a3d-6b4e0162e0cf.png" alt="Mod.js" style="max-width:100%;">
