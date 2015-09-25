@@ -1,4 +1,4 @@
-<h2>Stopped developping on modjs and switched to <a href="http://chajs.org"><img src="https://avatars0.githubusercontent.com/u/6767978?v=2&s=25">chajs.org</a></h2>
+<h2>Stopped developping on modjs and switched to <a href="http://github.com/chajs/cha"><img src="https://avatars0.githubusercontent.com/u/6767978?v=2&s=25">chajs</a></h2>
             
 <p align="center">
 <a href="http://madscript.com/modjs" target="_blank">
